@@ -2,7 +2,8 @@
 
 ## Gameplan - 
 
-	⁃	Location: Asper Building - since many asper students are interested and deal in the financial markets on our daily basis, they will be a subset of our primary users. 
+	⁃	Location: Asper Building - since many asper students are interested and deal in the financial markets
+	on our daily basis, they will be a subset of our primary users. 
 	⁃	Ask them to Finish the following tasks in Finviz:
 	⁃	Add a column
 	⁃	Filter Result
