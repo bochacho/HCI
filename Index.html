@@ -50,25 +50,32 @@ body{
     overflow: hidden;
 }
 
-.categories h1.category::after{
+.categories h1.category{
+    margin-left: 20px;
+}
+
+.categories div.selected{
+    background-color:rgb(101, 101, 101);
+    display: flex;
+    padding: 20px;
+}
+.categories .selected img{
     float: left;
     margin-left: 20px;
 }
 
-.categories img.selected{
-    background-color:rgba(119, 114, 114, 0.67);
-    display: block;
-}
-
-.categories h1.productName{
-    float: left;
+.categories .selected b{
+    margin-left: 20px;
+    color: white;
     font-size: 30px;
-    margin-left: 50px; 
 }
 
-.categories row{
-    background-color:rgba(51, 51, 51, 0.889);
+.categories .selected description{
+    margin-left: 20px;
+    color: white;
+    font-size: 17px;
 }
+
 </style>
 
 <body>
@@ -82,17 +89,27 @@ body{
     </nav>
 
     <items class="categories">
-        <h1 class = "category">Apparel<br></h1>
-        <img class = "selected" src = "Images/pokemon_rowlet.png" height = 400px width = 500px>
-        <h1 class = "productName">Rowlet Plush</h1>
-        <row><img src = "Images/Logo_white.png" height = 100px width = 100px></row>
-        <h1 class = "category">Electronics</h1>
+        <h1>Apparel</h1>
+        <div class = selected>
+            <img src = "Images/Logo_white.png" height = 400px width = 400px>
+            <br>Rowlet Plush</br>
+            <description>It's fluffy and I love it and you need it, but you'll have to pay for it</description>
+        </div>
+
+        <h1>Electronics</h1>
+        <hr>
         <row></row>
-        <h1 class = "category">Trading Cards</h1>
+
+        <h1>Trading Cards</h1>
+        <hr>
         <row></row>
-        <h1 class = "category">Vehicles</h1>
+
+        <h1>Vehicles</h1>
+        <hr>
         <row></row>
-        <h1 class = "category">Video Games</h1>
+
+        <h1>Video Games</h1>
+        <hr>
         <row></row>
     </items>
 </body>
