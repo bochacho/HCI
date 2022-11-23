@@ -9,7 +9,7 @@
 
 <style>
 body{
-    margin = 0;
+    margin: 0;
 }
 
 .topnav{
@@ -21,7 +21,7 @@ body{
     float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 20px 20px;
+    padding: 20px 40px;
     text-decoration: none;
     font-size: 30px;
 }
@@ -35,14 +35,25 @@ body{
     background-color: #04AA6D;
     color: white;
 }
+
+.topnav input[type=text] {
+  float: left;
+  padding: 6px;
+  border: none;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 17px;
+}
 </style>
 
 <body>
     <nav class="topnav">
-        <a class = "active" href = "#home"><img src = "Images/pokemon_rowlet.png" height = 30px width = 30px></a>
+        <a class = "active" href = "#home"><img src = "Images/pokemon_rowlet.png" height = 25px width = 30px></a>
         <a href="#Browse">Browse</a>
         <a href="#Sell">Sell</a>
         <a href="#Bid Watch">Bid Watch</a>
+        <input type="text" placeholder="Search...">
+        <a href="#Account">Account</a>
     </nav>
 </body>
 </html>
