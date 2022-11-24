@@ -64,38 +64,23 @@
             <div style = "position: absolute; top: 18%; left: 10px;", 
                 class = "filter-prod-count" >
                 <h1 style= "font-family:Helvetica;"> Filter </h1>
-                <h3 style = "left: 12px;"> Price </h3>
+                <ul>
                 <div style = "display:flex; align-items: center; justify-content: space-between;
                             margin-left: 20px;" 
                         class = "individual-filter-elements">
-                    <input type = "checkbox" class = "custom-control-input"  for = "price-all">
-                    $0 - $100
+                        <h3 style = "left: 12px;"><li> Price &nbsp </li></h3>
+                        <select name="Pricing" id="Price">
+                            <option value="100">$0-$100</option>
+                            <option value="200">$100-$200</option>
+                            <option value="500">$200-$500</option>
+                            <option value="1000">$500-$1000</option>
+                          </select>
                 </div>
-
-                <div style = "display:flex; align-items: center; justify-content: space-between;
-                margin-left: 20px;" 
-                    class = "individual-filter-elements">
-                    <input type = "checkbox" class = "custom-control-input"  for = "price-all">
-                        $100 - $200
-                </div>
-
-                <div style = "display:flex; align-items: center; justify-content: space-between;
-                margin-left: 20px;" 
-                        class = "individual-filter-elements">
-                    <input type = "checkbox" class = "custom-control-input"  for = "price-all">
-                    $200 - $500
-                </div>
-
-                <div style = "display:flex; align-items: center; justify-content: space-between;
-                margin-left: 20px;" 
-                    class = "individual-filter-elements">
-                    <input type = "checkbox" class = "custom-control-input"  for = "price-all">
-                        $500 - $1000
-                </div>
-                    <!-- <span class = "filter-prod-count"> 1000 </span> -->
+                    
                 
-                
+                </ul>
             </div>
+        
         </section>
     </body>
 </html>
