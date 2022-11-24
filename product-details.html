@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22G Auction</title>
+</head>
+
+<style>
+body{
+    margin: 0;
+}
+
+.topnav{
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 80px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.topnav a:hover{
+    background-color: #ddd;
+    color: black
+}
+
+.topnav a.active{
+    float: left;
+    padding: 8px 80px;
+    background-color: rgb(101, 101, 101);
+}
+
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 20px;
+    margin-right: 40px;
+    font-size: 17px;
+}
+
+.categories{
+    overflow: hidden;
+}
+
+.categories h1.category{
+    float: left;
+    margin-left: 20px;
+    
+}
+
+.categories selected{
+    background-color:rgba(119, 114, 114, 0.67)
+}
+
+.categories row{
+    background-color:rgba(51, 51, 51, 0.889)
+}
+</style>
+
+<body>
+    <nav class="topnav">
+        <a class = "active" href="#Index"><img src = "Images/Logo_green.png" height = 51px width = 51px></a>
+        <a href="#Browse">Browse</a>
+        <a href="#Sell">Sell</a>
+        <a href="#Bid Watch">Bid Watch</a>
+        <a href="#Account">Account</a>
+        <input type="text" placeholder="Search...">
+    </nav>
+
+    <items class="categories">
+        <h1 class = "category">Apparel<br></h1>
+        <selected><img src = "Images/pokemon_rowlet.png" height = 400px width = 500px></selected>
+        <row><img src = "Images/Logo_white.png" height = 100px width = 100px></row>
+        <h1 class = "category">Electronics</h1>
+        <selected></selected>
+        <row></row>
+        <h1 class = "category">Trading Cards</h1>
+        <selected></selected>
+        <row></row>
+        <h1 class = "category">Vehicles</h1>
+        <selected></selected>
+        <row></row>
+        <h1 class = "category">Video Games</h1>
+        <selected></selected>
+        <row></row>
+    </items>
+</body>
+</html>
