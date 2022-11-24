@@ -58,29 +58,55 @@
             <a href="#Account">Account</a>
             <input type="text" placeholder="Search...">
         </nav>
-
-        <section>
-
-            <div style = "position: absolute; top: 18%; left: 10px;", 
+        
+        <div style = "position: absolute; top: 18%; left: 10px;", 
                 class = "filter-prod-count" >
                 <h1 style= "font-family:Helvetica;"> Filter </h1>
-                <ul>
-                <div style = "display:flex; align-items: center; justify-content: space-between;
-                            margin-left: 20px;" 
-                        class = "individual-filter-elements">
-                        <h3 style = "left: 12px;"><li> Price &nbsp </li></h3>
-                        <select name="Pricing" id="Price">
-                            <option value="100">$0-$100</option>
-                            <option value="200">$100-$200</option>
-                            <option value="500">$200-$500</option>
-                            <option value="1000">$500-$1000</option>
-                          </select>
-                </div>
+                <aside>
+                    <section>
+
+                        
+                            <ul>
+                            <div style = "display:flex; align-items: center; justify-content: space-between;
+                                        margin-left: 20px;" 
+                                    class = "individual-filter-elements">
+                                    <h3 style = "left: 12px;"><li> Price &nbsp </li></h3>
+                                    <select name="Pricing" id="Price">
+                                        <option value="100">$0-$100</option>
+                                        <option value="200">$100-$200</option>
+                                        <option value="500">$200-$500</option>
+                                        <option value="1000">$500-$1000</option>
+                                    </select>
+                            </div>
+                                
+                            
+                            </ul>
                     
-                
-                </ul>
-            </div>
-        
-        </section>
+                    </section>
+                </aside>
+
+                <aside>
+                    <section>
+
+                            <ul>
+                            <div style = "display:flex; align-items: center; justify-content: space-between;
+                                        margin-left: 20px;" 
+                                    class = "individual-filter-elements">
+                                    <h3 style = "left: 12px;"><li> Colour &nbsp </li></h3>
+                                    <select name="Pricing" id="Price">
+                                        <option value="red"><strong> RED </strong> </option>
+                                        <option value="blue"><strong> BLUE </strong> </option>
+                                        <option value="green"><strong> GREEN </strong> </option>
+                                        <option value="black"><strong> BLACK </strong> </option>
+                                        <option value="grey"><strong> GREY </strong> </option>
+                                        <option value="white"><strong> WHITE </strong> </option>
+                                        <!-- Need to change this, on clicking custom a custom wheel should appear-->
+                                        <option value="Custom-color", type="color" id="colorpicker" value="#0000ff"> CUSTOM </option>
+                                    </select>
+                            </div>
+                            </ul>
+                        </section>
+                    </aside>
+                </div>
     </body>
 </html>
