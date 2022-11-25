@@ -52,10 +52,22 @@ body{
     font-size: 17px;
 }
 
+.PageTitle_h1 {
+  font-size: 250%;
+  margin-left: 10%;
+  text-align: left;
+}
+
 .productImage {
    border-radius: 8px;
-   width: 320px;
-   height: 320px;
+   width: 400px;
+   height: 400px;
+}
+
+.description_h2 {
+  /* font-size: 150% */
+  margin-left: 10%;
+  text-align: left;
 }
 </style>
 
@@ -71,6 +83,8 @@ body{
     </nav>
 
     <!-- product details -->
+    <h1 class="PageTitle_h1">Product Page</h1>
+
     <div class = "container">
         <div class = "row">
             <div class = "col-8">
@@ -81,12 +95,17 @@ body{
                     >
                 </div>
                 <div class = "row">
-                    hello world 
+                    <h2 class="description_h2">Description</h2>
                 </div>
             </div>
             <div class = "col-4">
-                hello world
-                <button type="button" class="btn btn-primary">Primary</button>
+                Asking Price:
+                <div class = "row">
+                    Highest Bid:
+                    <button type="button" class="btn btn-success">BUY</button>
+                    <button type="button" class="btn btn-primary">BID</button>
+                </div>
+                
             </div>
         </div>
     </div>
