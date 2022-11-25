@@ -10,59 +10,9 @@
     </head>
 
     <style>
-        body{
-            margin: 0;
-        }
         
-        .navbar-expand-lg{
-            overflow: hidden;
-            background-color: #333;
-        }
-        
-        .navbar-expand-lg a{
-            float: left;
-            color: #f2f2f2;
-            text-align: center;
-        
-            padding: 20px 80px;
-            text-decoration: none;
-            font-size: 30px;
-        }
-        
-        .navbar-expand-lg a:hover{
-            background-color: #ddd;
-            color: black
-        }
-        
-        .navbar-expand-lg a.active{
-            background-color: #333;
-        }
-        
-        .navbar-expand-lg input[type=text] {
-          float: right;
-          padding: 6px;
-          border: none;
-          margin-top: 20px;
-          margin-right: 40px;
-        
-          font-size: 17px;
-        }
 
-        .wrapper{
-            display:grid;
-            grid-template-columns: 1fr 1fr ;
-            grid-auto-rows: minmax(100px, auto);
-            
-            
-        }
-        .Opaque{
-            opacity: 0.6;
-        }
-        .Opaque:hover{
-            opacity: 1;
-        }
-
-        .nested{
+        /* .nested{
             display:grid;
 
         }
@@ -71,7 +21,7 @@
         {
             padding: 1em;
             background: #eee;
-        }
+        } */
 
         </style>
 
@@ -89,19 +39,40 @@
         </nav>
 
         <div class = "Opaque"> 
+          
             <img src="Images\Add_Image.png" name = "Add_Image" 
-                width="40%"  style= "padding-top: 50px; padding-left: 80px;" >
-
+              style= "padding-top: 70px; padding-left: 80px;" >
         </div>
-        <div class = "wrapper">
-                
-                <div class = "nested">
+        <div class = "Details" style="padding-left: 50%; padding-top: ;">
+            <input type = "text" placeholder="Enter Product Name">
+            <br>
+            <br>
+            <input type = "number" placeholder="Price in $">
+            <h1> Sell 
+                <input type="checkbox" class="toggle-switch">
+                Ask
+            </h1>
+            <label> Min : &nbsp</label>
+            <input type = "number" placeholder="Price in $">
+            <br>
+            <label> Category </label> 
+            <br>
+            <select name="Category" id="category_id" multiple>
+                <option value="Electronics">Electronics</option>
+                <option value="Trading Cards">Trading Cards</option>
+                <option value="Apparel">Apparel</option>
+                <option value="Artifacts">Artifacts</option>
+              </select>
 
-                    <input type = "text" placeholder="Enter Product Name">
-                    <input type = "number" placeholder="Price in $">
-                </div>
-            </div>
+              
         </div>
-
+        <br> <br>
+        <label>
+            <input type = "text" placeholder="Product Description" maxlength="60">
+            <span class = "Submit" style ="padding-left: 80%; width: 15%;" >
+                    <button type="button">Clear</button>
+                    <button type="button">Confirm</button>
+            </span>
+        </label>
 
     </body>
