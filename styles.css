@@ -42,53 +42,6 @@ body{
   font-size: 17px;
 }
 
-/* .topnav{
-    overflow: hidden;
-    background-color: #333;
-}
-
-.topnav_a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 20px 80px;
-    text-decoration: none;
-    font-size: 30px;
-}
-
-<<<<<<< HEAD
-=======
-.topnav b{
-    float: left;
-    color: #f2f2f2;
-    padding: 10px 80px;
-}
-
->>>>>>> Jonas */
-/* .topnav a:hover{
-    background-color: #ddd;
-    color: black
-} */
-
-/* <<<<<<< HEAD */
-/* .topnav a.active{
-    background-color: #333;
-=======
-.topnav b:hover{
-    background-color: #ddd;
-    color: black
->>>>>>> Jonas
-} */
-
-/* .topnav input[type=text] {
-  float: right;
-  padding: 6px;
-  border: none;
-  margin-top: 20px;
-  margin-right: 40px;
-  font-size: 17px;
-} */
-
 .currentBids_h1 {
   font-size: 250%;
   margin-left: 10%;
@@ -118,15 +71,12 @@ body{
 
 .currentBids_image {
   display: block;
-  /* border: 5px outset yellow;
-  background-color: lightblue; */
   max-width: 250px;
   width: 250px;
   margin-left: 10%;
   height: 200px;
-  /* text-align: center; */
   float: left;
-    overflow: visible;
+  overflow: visible;
 }
 
 .currentBids_product {
@@ -143,26 +93,16 @@ body{
 
 .currentBids_time {
   display: block;
-  /* border: 5px outset yellow;
-  background-color: lightblue; */
   max-width: 280px;
   width: 280px;
   height: 200px;
   float: left;
-  /* text-align: center; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  /* text-align: center; */
-  /* vertical-align: middle; */
-
   line-height: 200px;
 
 }
 
 .currentBids_price {
   display: block;
-  /* border: 5px outset yellow;
-  background-color: lightblue; */
   max-width: 180px;
   width: 180px;
   height: 200px;
@@ -239,8 +179,6 @@ body{
   padding: 15px 32px;
   margin-left: 25%;
   cursor: pointer;
-
-
 }
 
 .currentBids_bidButton:hover {
