@@ -8,6 +8,45 @@ body{
     background-color: #333;
 }
 
+.topnav a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 80px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.topnav b{
+    float: left;
+    color: #f2f2f2;
+    padding: 10px 80px;
+}
+
+.topnav a:hover{
+    background-color: #ddd;
+    color: black
+}
+
+.topnav b:hover{
+    background-color: #ddd;
+    color: black
+}
+
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 20px;
+  margin-right: 40px;
+  font-size: 17px;
+}
+
+/* .topnav{
+    overflow: hidden;
+    background-color: #333;
+}
+
 .topnav_a {
     float: left;
     color: #f2f2f2;
@@ -25,13 +64,13 @@ body{
     padding: 10px 80px;
 }
 
->>>>>>> Jonas
+>>>>>>> Jonas */
 /* .topnav a:hover{
     background-color: #ddd;
     color: black
 } */
 
-<<<<<<< HEAD
+/* <<<<<<< HEAD */
 /* .topnav a.active{
     background-color: #333;
 =======
@@ -41,14 +80,14 @@ body{
 >>>>>>> Jonas
 } */
 
-.topnav input[type=text] {
+/* .topnav input[type=text] {
   float: right;
   padding: 6px;
   border: none;
   margin-top: 20px;
   margin-right: 40px;
   font-size: 17px;
-}
+} */
 
 .currentBids_h1 {
   font-size: 250%;
