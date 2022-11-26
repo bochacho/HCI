@@ -54,20 +54,25 @@ body{
 
 .PageTitle_h1 {
   font-size: 250%;
-  margin-left: 10%;
+  margin-left: 20%;
   text-align: left;
 }
 
 .productImage {
    border-radius: 8px;
-   width: 400px;
-   height: 400px;
+   width: 450px;
+   height: 450px;
+   margin-left: 150px;
 }
 
-.description_h2 {
+.subtitle_h2 {
   /* font-size: 150% */
-  margin-left: 10%;
+  margin-left: 0%;
   text-align: left;
+}
+
+.space_down{
+  padding-bottom: 100px;
 }
 </style>
 
@@ -95,18 +100,54 @@ body{
                     >
                 </div>
                 <div class = "row">
-                    <h2 class="description_h2">Description</h2>
+                    <h2 class="subtitle_h2">Description</h2>
+                    <p>this is the description</p>
+
                 </div>
             </div>
             <div class = "col-4">
-                <h2 class="description_h2">Rowlet</h2>
-                <div class = "row">
-                    Asking Price: $600.00
-                    <button type="button" class="btn btn-success btn-lg">BUY</button>
+                <h2 class="subtitle_h2">Rowlet</h2>
+                  <div class = "row space_down">
+
+                  <div class = "col">
+                    Asking Price:
+                  </div>
+
+                  <div class = "col">
+                    $600.00
+                  </div>
+                     
+                  <button type="button" class="btn btn-success btn-lg">BUY</button>
                 </div>
                 <div class = "row">
-                    Highest Bid: $0.00
-                    <button type="button" class="btn btn-primary btn-lg">BID</button>
+                  <div class = row>
+                    <div class = "col">
+                      Highest Bid:
+                    </div>
+  
+                    <div class = "col" id = "topBid">
+                      $0.00
+                    </div>
+                  </div>
+                  
+                  <div class = row>
+                    <div class = "col">
+                      Your Current Bid:
+                    </div>
+  
+                    <div class = "col" id = "CurrentBid">
+                      $0.00
+                    </div>
+                  </div>
+
+                  <div class="input-group mb-3" style ="margin: 0;">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text">Your Bid $</span>
+                    </div>
+                    <input type="text" class="form-control" aria-label="Amount">
+                  </div>
+
+                  <button type="button" class="btn btn-primary btn-lg">BID</button>
                 </div>
             </div>
         </div>
