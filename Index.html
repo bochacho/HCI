@@ -50,65 +50,112 @@ body{
     overflow: hidden;
 }
 
-.categories h1.category{
-    float: left;
+.categories h1{
     margin-left: 20px;
 }
 
-.categories div.selected{
-    background-color:rgb(101, 101, 101);
-    display: flex;
-    padding: 20px;
-}
-.categories .selected img{
-    float: left;
-    margin-left: 20px;
-}
-
-.categories .selected b{
-    margin-left: 20px;
-    color: white;
-    font-size: 30px;
+.scroll-images {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
 }
 
-.categories .selected description{
-    margin-left: 20px;
-    color: white;
-    font-size: 17px;
+.scroll-images::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background-color: #aaa;
+}
+
+.scroll-images::-webkit-scrollbar-thumb {
+  background-color: black;
+}
+
+.child {
+  width: 120px;
+  height: 100px;
+  margin: 1px 10px;
+  overflow: hidden;
+}
+
+.cover {
+  padding: 0px 30px;
+  position: relative;
+}
+
+.left {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: "left_arrow.png";
+}
+.right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-image: "right_arrow.png";
 }
 </style>
 
+<script>
+    function leftScroll() {
+      const left = document.querySelector(".scroll-images");
+      left.scrollBy(200, 0);
+    }
+    function rightScroll() {
+      const right = document.querySelector(".scroll-images");
+      right.scrollBy(-200, 0);
+    }
+</script>
+
 <body>
     <nav class="topnav">
-        <a class = "active" href="#Index"><img src = "Images/Logo_green.png" height = 51px width = 51px></a>
-        <a href="#Browse">Browse</a>
-        <a href="#Sell">Sell</a>
-        <a href="#Bid Watch">Bid Watch</a>
-        <a href="#Account">Account</a>
+        <a class = "active" href="Index.html"><img src = "Images/Logo_green.png" height = 51px width = 51px></a>
+        <a href="Browse.html">Browse</a>
+        <a href="Sell_page.html">Sell</a>
+        <a href="Bid_watch.html">Bid Watch</a>
+        <a href="Account.html">Account</a>
         <input type="text" placeholder="Search...">
     </nav>
 
     <items class="categories">
         <h1>Apparel</h1>
-        <div class = selected>
-            <img src = "Images/Logo_white.png" height = 400px width = 400px>
-            <b>Rowlet Plush</b>
-            <description>It's fluffy and I love it and you need it, but you'll have to pay for it</description>
-            <input type = "image">
-        </div>
-
+            <div class="cover">
+                <div class="cover">
+                    <button class="left" onclick="leftScroll()">Left</button>
+                    <div class="scroll-images">
+                        <div class="child">
+                            <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                        </div>
+                        <div class="child">
+                            <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                        </div>
+                        <div class="child">
+                            <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                        </div>
+                        <div class="child">
+                            <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                        </div>
+                        <div class="child">
+                            <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                        </div>
+                        <div class="child">
+                            <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                        </div>
+                    </div>
+                    <button class="right" onclick="rightScroll()">Right</button>
+                </div>
+            </div>
         <h1 class = "category">Electronics</h1>
-        <selected></selected>
-        <row></row>
         <h1 class = "category">Trading Cards</h1>
-        <selected></selected>
-        <row></row>
         <h1 class = "category">Vehicles</h1>
-        <selected></selected>
-        <row></row>
         <h1 class = "category">Video Games</h1>
-        <selected></selected>
-        <row></row>
     </items>
 </body>
 </html>
