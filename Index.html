@@ -61,7 +61,7 @@ body{
 
 .scroll-images {
     width: 100%;
-    height: auto;
+    height: 375px;
     display: flex;
     flex-wrap: nowrap;
     overflow: hidden;
@@ -69,10 +69,21 @@ body{
 }
 
 .product {
-    width: 120px;
-    height: 100px;
-    margin: 1px 10px;
+    width: 300px;
+    height: 300px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px; 
     overflow: visible;
+    color: white;
+}
+
+.product b{
+    font-size: 20px;
+}
+
+.product a{
+
 }
 
 .product-img{
@@ -82,7 +93,7 @@ body{
 .cover {
     padding: 0px 30px;
     position: relative;
-    background-color:rgb(101, 101, 101);
+    background-color:rgb(49, 49, 49);
 }
 
 .left {
@@ -102,11 +113,11 @@ body{
 <script>
     function leftScroll() {
       const left = document.querySelector(".scroll-images");
-      left.scrollBy(-300, 0);
+      left.scrollBy(-930, 0);
     }
     function rightScroll() {
       const right = document.querySelector(".scroll-images");
-      right.scrollBy(300, 0);
+      right.scrollBy(930, 0);
     }
 </script>
 
@@ -124,33 +135,23 @@ body{
         <h1>Apparel</h1>
             <div class="cover">
                 <div class="cover">
-                    <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+                    <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=60px width= 30px></button>
                     <div class="scroll-images">
                         <div class="product">
-                            <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
-                            <br>
-                            <b>Rowlet Plush</b>
+                            <a href="product_page.html">
+                                <img class="product-img" src="Images/Logo_green.png" alt="image" height = 80%/>
+                                <b>
+                                    <br>Rowlet Plush<br>Time Left: 10 Hours<br>Top Bid: $100<br>Buy Now: $150<br>
+                                </b>
+                            </a>
                         </div>
                         <div class="product">
-                            <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
-                        </div>
-                        <div class="product">
-                            <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
-                        </div>
-                        <div class="product">
-                            <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
-                        </div>
-                        <div class="product">
-                            <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
-                        </div>
-                        <div class="product">
-                            <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
-                        </div>
-                        <div class="product">
-                            <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
-                        </div>
-                        <div class="product">
-                            <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                            <a href="product_page.html">
+                                <img class="product-img" src="Images/Logo_green.png" alt="image" height = 80%/>
+                                <b>
+                                    <br>Rowlet Plush<br>Time Left: 10 Hours<br>Top Bid: $100<br>Buy Now: $150<br>
+                                </b>
+                            </a>
                         </div>
                         <div class="product">
                             <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
@@ -174,31 +175,7 @@ body{
                             <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                         </div>
                         <div class="product">
-                            <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
-                        </div>
-                        <div class="product">
-                            <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
-                        </div>
-                        <div class="product">
-                            <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
-                        </div>
-                        <div class="product">
-                            <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
-                        </div>
-                        <div class="product">
-                            <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
-                        </div>
-                        <div class="product">
-                            <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
-                        </div>
-                        <div class="product">
-                            <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
-                        </div>
-                        <div class="product">
-                            <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
-                        </div>
-                        <div class="product">
-                            <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                            <a>See more options</a>
                         </div>
                     </div>
                     <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
