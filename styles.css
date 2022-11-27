@@ -48,7 +48,7 @@ body{
 }
 .currentBids_name:hover{
   display: block;
-  max-width: 30%
+  max-width: 30%;
   font-size: 20px;
   text-align: center;
   justify-content: center;
@@ -87,7 +87,8 @@ body{
 .listContainer {
     margin-top: 10%;
     margin-bottom: 3%;
-    display: grid
+    display: grid;
+    min-width: 50rem;
 }
 .listCard {
     display: grid;
@@ -137,7 +138,7 @@ body{
   width: 70%;
   float: right;
   margin-right: 8%;
-  margin-top: 0%
+  margin-top: 0%;
   color: gray;
 }
 .line {
