@@ -56,12 +56,26 @@ body{
     
 }
 
-.categories selected{
-    background-color:rgba(119, 114, 114, 0.67)
+.categories div.selected{
+    background-color:rgb(101, 101, 101);
+    display: flex;
+    padding: 20px;
+}
+.categories .selected img{
+    float: left;
+    margin-left: 20px;
 }
 
-.categories row{
-    background-color:rgba(51, 51, 51, 0.889)
+.categories .selected b{
+    margin-left: 20px;
+    color: white;
+    font-size: 30px;
+}
+
+.categories .selected description{
+    margin-left: 20px;
+    color: white;
+    font-size: 17px;
 }
 </style>
 
@@ -76,9 +90,14 @@ body{
     </nav>
 
     <items class="categories">
-        <h1 class = "category">Apparel<br></h1>
-        <selected><img src = "Images/pokemon_rowlet.png" height = 400px width = 500px></selected>
-        <row><img src = "Images/Logo_white.png" height = 100px width = 100px></row>
+        <h1>Apparel</h1>
+        <div class = selected>
+            <img src = "Images/Logo_white.png" height = 400px width = 400px>
+            <b>Rowlet Plush</b>
+            <description>It's fluffy and I love it and you need it, but you'll have to pay for it</description>
+            <input type = "image">
+        </div>
+
         <h1 class = "category">Electronics</h1>
         <selected></selected>
         <row></row>
