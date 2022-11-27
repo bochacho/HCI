@@ -63,10 +63,9 @@ body{
     width: 70%;
     float: right;
     margin-right: 8%;
-
 }
 .listContainer {
-    margin-top: 1%;
+    margin-top: 10%;
     margin-bottom: 3%;
     display: grid
 }

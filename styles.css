@@ -129,8 +129,8 @@ body{
 
 .currentBids_name:hover{
   display: block;
-  max-width: 280px;
-  float: left;
+  max-width: 30%
+  /* float: left; */
   font-size: 20px;
   text-align: center;
   justify-content: center;
@@ -146,7 +146,6 @@ body{
   color: black;
   text-align: center;
   font-size: 20px;
-  text-align: center;
   justify-content: center;
   align-items: center;
   line-height: normal;
@@ -155,7 +154,7 @@ body{
 .currentBids_losingprice {
   display: block;
   white-space: nowrap;
-  color: black;
+  color: red;
   text-decoration: line-through;
   text-align: center;
   font-size: 20px;
@@ -190,4 +189,73 @@ body{
    border-radius: 8px;
    width: 180px;
    height: 180px;
+}
+
+
+/* ////////////////////////////// */
+
+.itemsContainer {
+    width: 70%;
+    float: right;
+    margin-right: 8%;
+}
+
+.listContainer {
+    margin-top: 10%;
+    margin-bottom: 3%;
+    display: grid
+}
+.listCard {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    justify-content: flex-start;
+    transition: 0.3s;
+    gap: 30px;
+    border-radius: 0.5em;
+}
+.listCard:hover{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.listCardImage {
+    width: 100%;
+    border-radius: 0.5em;
+    margin: 2%;
+}
+.listCardMiddle {
+    width: 100%;
+    flex-direction: column;
+}
+.bidWatch {
+  width: 70%;
+  float: right;
+  margin-right: 8%;
+  margin-top: 3%
+}
+.bidWatch1 {
+  width: 70%;
+  float: right;
+  margin-right: 8%;
+  margin-top: 2%;
+  margin-bottom: 0%;
+}
+.bidWatch2{
+  width: 70%;
+  float: right;
+  margin-right: 8%;
+  margin-top: 3%
+}
+.bidWatch3{
+  width: 70%;
+  float: right;
+  margin-right: 8%;
+  margin-top: 3%
+  color: gray;
+}
+.line {
+  width:70%;
+  text-align:right;
+  margin-left:0
+  color: gray;
+  margin-right: 8%;
+  background-color: gray;
 }
