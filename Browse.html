@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22G Auction</title>
+</head>
+
+<style>
+body{
+    margin: 0;
+}
+
+.topnav{
+    overflow: hidden;
+    background-color: #333;
+}
+
+.topnav a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 80px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.topnav b{
+    float: left;
+    color: #f2f2f2;
+    padding: 10px 80px;
+}
+
+.topnav a:hover{
+    background-color: #ddd;
+    color: black
+}
+
+.topnav b:hover{
+    background-color: #ddd;
+    color: black
+}
+
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 20px;
+  margin-right: 40px;
+  font-size: 17px;
+}
+
+.card {
+  /* Add shadows to create the "card" effect */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  border-radius: 0.5em;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* Add some padding inside the card container */
+.container {
+  padding: 2px 16px;
+}
+
+.itemsContainer {
+    width: 70%;
+    float: right;
+    margin-right: 8%;
+
+}
+.listContainer {
+    margin-top: 1%;
+    margin-bottom: 3%;
+    display: grid
+}
+.listCard {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    justify-content: flex-start;
+    transition: 0.3s;
+    gap: 30px;
+    border-radius: 0.5em;
+}
+.listCard:hover{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.listCardImage {
+    width: 100%;
+    border-radius: 0.5em;
+    margin: 2%;
+}
+.listCardMiddle {
+    width: 100%;
+    flex-direction: column;
+}
+.listCardPrices {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.listCardBuyNow {
+    display: inline;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-bottom: -2%;
+    margin-top: -1%;
+}
+.listCardBuyNowButton {
+    font-size:120%;
+}
+.listCardBidInput {
+    width: 60%;
+    font-size: 1em;
+}
+
+</style>
+
+<body>
+    <div>
+        <nav class="topnav">
+            <b href="#home"><img src = "Images/Logo_green.png" height = 50px width = 50px></b>
+            <a href="#Browse">Browse</a>
+            <a href="#Sell">Sell</a>
+            <a href="#Bid Watch">Bid Watch</a>
+            <a href="#Account">Account</a>
+            <input type="text" placeholder="Search...">
+        </nav>
+    </div>
+
+
+    <div class="itemsContainer">
+        <container class="listContainer">
+            <div class="listCard">
+                <img src="Images/Jordan1.jpg" class="listCardImage"/>
+                <div class="listCardMiddle">
+                    <h2>Air Jordan 1</h2>
+                    <p>This is a pair of blue jordans </p>
+                </div>
+                <div class="listCardPrices">
+                    <p class="listCardBuyNow">$250</p>
+                    <button class="listCardBuyNowButton">Buy Now</button>
+                    <p class="listCardBuyNow">$250</p>
+                    <input class="listCardBidInput" type="text" placeholder="Enter Bid Amount">
+                    <button class="listCardBuyNowButton">Place Bid</button>
+                </div>
+            </div>
+            <div class="listCard">
+                <img src="Images/Jordan1.jpg" class="listCardImage"/>
+                <div class="listCardMiddle">
+                    <h2>Air Jordan 1</h2>
+                    <p>This is a pair of blue jordans</p>
+                </div>
+                <div class="listCardPrices">    
+                    <p class="listCardBuyNow">$250</p>
+                    <button class="listCardBuyNowButton">Buy Now</button>
+                    <p class="listCardBuyNow">$250</p>
+                    <input class="listCardBidInput" type="text" placeholder="Enter Bid Amount">
+                    <button class="listCardBuyNowButton">Place Bid</button>
+
+                </div>
+            </div>
+            
+        </container>
+    </div>
+
+</body>
+</html>
