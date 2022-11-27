@@ -37,34 +37,37 @@
                 <input type="text" placeholder="Search...">
             </div>
         </nav>
+        <!-- style= "padding-top: 70px; padding-left: 80px;" -->
+        <!-- style="padding-left: 50%; padding: top 10%;" -->
+        <div class="aligning" style="display :flex; flex-direction: column">
+            <div class = "Opaque" > 
+                <img src="Images\Add_Image.png" name = "Add_Image" width="8%">
+            </div>
+            <div class = "Details"  >
+                <form>
+                <input type = "text" placeholder="Enter Product Name">
+                <br>
+                <br>
+                <input type = "number" placeholder="Price in $">
+                <h1> Sell 
+                    <input type="checkbox" class="toggle-switch">
+                    Ask
+                </h1>
+                <label> Min : &nbsp</label>
+                <input type = "number" placeholder="Price in $">
+                <br>
+                <label> Category </label> 
+                <br>
+                <select name="Category" id="category_id" multiple>
+                    <option value="Electronics">Electronics</option>
+                    <option value="Trading Cards">Trading Cards</option>
+                    <option value="Apparel">Apparel</option>
+                    <option value="Artifacts">Artifacts</option>
+                </select>
 
-        <div class = "Opaque"> 
-          
-            <img src="Images\Add_Image.png" name = "Add_Image" 
-              style= "padding-top: 70px; padding-left: 80px;" >
-        </div>
-        <div class = "Details" style="padding-left: 50%; padding: top 10%;">
-            <input type = "text" placeholder="Enter Product Name">
-            <br>
-            <br>
-            <input type = "number" placeholder="Price in $">
-            <h1> Sell 
-                <input type="checkbox" class="toggle-switch">
-                Ask
-            </h1>
-            <label> Min : &nbsp</label>
-            <input type = "number" placeholder="Price in $">
-            <br>
-            <label> Category </label> 
-            <br>
-            <select name="Category" id="category_id" multiple>
-                <option value="Electronics">Electronics</option>
-                <option value="Trading Cards">Trading Cards</option>
-                <option value="Apparel">Apparel</option>
-                <option value="Artifacts">Artifacts</option>
-              </select>
+                </form>
+            </div>
 
-              
         </div>
         <br> <br>
         <label>
