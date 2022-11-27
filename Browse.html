@@ -23,6 +23,8 @@
     align-items: center;
     height: 3.9em;
     justify-content: space-between;
+    width: 100%;
+    position: fixed;
 }
 .topnav div{
     display: flex;
@@ -49,13 +51,13 @@
     margin-right: 3%;
 } 
 
-.topnav b{
+.topnavLogo{
     color: #f2f2f2;
     margin-left: 2%;
     padding: 0.2%;
 } 
 
-.topnav b:hover{
+.topnavLogo:hover{
     cursor: pointer;
     background-color:azure;
     border-radius: 50%;
@@ -90,6 +92,7 @@
     width: 70%;
     float: right;
     margin-right: 8%;
+    margin-top: 7%;
 
 }
 .listContainer {
@@ -99,7 +102,7 @@
 }
 .listCard {
     display: grid;
-    grid-template-columns: 20% 40% 10% 30%;
+    grid-template-columns: 20% 50% 30%;
     justify-content: flex-start;
     transition: 0.3s;
     gap: 30px;
@@ -116,7 +119,23 @@
 }
 .listCardMiddle {
     width: 100%;
+    padding-top: ;
+    flex-direction: row;
+}
+.listCardPrices {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+.listCardSection {
+    display:flex;
+    flex-direction: column;
+    justify-content: left;
+    row-gap: 1em;
+}
+.listCardPricesText {
+    font-size: 1.2em;
+    font-weight: 700;
 }
 
 /* .listCardPrices {
@@ -141,9 +160,9 @@
 </style>
 
 <body>
-    <div class="topNavDiv">
+    <div class="topNavDiv" >
         <nav class="topnav">
-            <b href="#home"><img src = "Images/Logo_green.png" height = 50px width = 50px></b>
+            <a href="#home" class="topnavLogo"><img src = "Images/Logo_green.png" height = 50px width = 50px></a>
             <div>
                 <a class = "active" href="#Browse">Browse</a>
                 <a href="#Sell">Sell</a>
@@ -158,23 +177,6 @@
     <div class="itemsContainer">
         <!--Items Container-->
         <container class="listContainer">
-            <!--Item 1-->
-            <div class="listCard">
-                <img src="Images/Jordan1.jpg" class="listCardImage"/>
-                <div class="listCardMiddle">
-                    <h2>Air Jordan 1</h2>
-                    <p>This is a pair of blue jordans </p>
-                </div>
-                <div class="listCardPrices">
-                    <p class="listCardBuyNow">$250</p>
-                    <button class="btn btn-outline-primary" style="white-space: nowrap;">Buy Now</button>
-                </div>
-                <div class="listCardPrices">
-                    <p class="listCardBuyNow">$250</p>
-                    <input class="listCardBidInput" type="text" placeholder="Enter Bid Amount">
-                    <button class="btn btn-outline-primary" style="white-space: nowrap;">Place Bid</button>
-                </div>
-            </div>
             <!--Item 2-->
             <div class="listCard">
                 <img src="Images/Jordan1.jpg" class="listCardImage"/>
@@ -183,16 +185,15 @@
                     <p>This is a pair of blue jordans</p>
                 </div>
                 <div class="listCardPrices">
-                    <p style="white-space: nowrap;"> Buy Now Price:</p>
-                    <p class="listCardBuyNow">$250</p>
-                    <button class="btn btn-outline-primary" style="white-space: nowrap;">Buy Now</button>
-                </div>
-                <div class="listCardPrices">
-                    <p class="listCardBuyNow">$250</p>
-                    <input class="listCardBidInput" type="text" placeholder="Enter Bid Amount">
-                    <button class="btn btn-outline-primary" style="white-space: nowrap;">Place Bid</button>
-
-                </div>
+                    <div class="listCardSection">
+                        <p style="white-space: nowrap;">Buy Now Price:</p>
+                        <p class="listCardPricesText">$250</p>
+                    </div>
+                    <div class="listCardSection">
+                        <p style="white-space: nowrap;">Top Bid:</p>
+                        <p class="listCardPricesText">$250</p>
+                    </div>
+                </div> 
             </div>
 
         </container>
