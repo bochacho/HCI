@@ -49,11 +49,11 @@
         <div class = "container">
             <div class = "row">
                 <div class = "col-sm-8">
-                    <div class = "row mx-auto" style= "padding-left: 30%; padding-right: 30%; padding-top: 10%;" >
-                        <img src="Images\Add_Image.png">
+                    <div class = "row mx-auto" style= "padding-left: 15%; padding-right: 25%; padding-top: 10%;" >
+                        <a href="upload"><img src="Images\Add_Image.png"></a>
                     </div>
                     <div class = "row" style = "padding-top: 10%; padding-right: 20px;">
-                        <input type = "text" placeholder="Product Description" maxlength="60">
+                        <input type = "text" placeholder="Product Description" style="height:200px;font-size:14pt;" maxlength="60">
                     </div>
                 </div>
 
@@ -107,14 +107,68 @@
                         <h3> Category </h3> 
                         <div class = row style = "padding-bottom: 10px;  margin-left: auto;">
                             <br>
-                            <select name="Category"  id="category_id" multiple>
-                                <option value="Apparel">Apparel</option>
-                                <option value="Trading Cards">Trading Cards</option>
-                                <option value="Video games">Video games</option>
-                                <option value="Electronics">Electronics</option>                                
-                                <option value="Vehicle">Vehicle</option>
-                                
-                            </select>
+
+                            <!-- PSuedo dropdown code -->
+                            <div class="dropdown">
+                                <button class="dropdown-btn">Apparel
+                                  <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-container">
+                                    <button onclick = "collapse()"> Tops </button>
+                                    <button onclick = "collapse()"> Bottoms </button>
+                                    <button onclick = "collapse()"> Shoe</button>
+                                    <button onclick = "collapse()"> Outerwear</button>
+                                    <button onclick = "collapse()"> Garments</button>
+                                    <button onclick = "collapse()">  Other </button>
+                                </div>
+                                <button class="dropdown-btn">Trading Cards 
+                                  <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-container">
+                                    <button onclick = "collapse()"> Pokemon cards </button>
+                                    <button onclick = "collapse()"> Yu-gi-oh </button>
+                                    <button onclick = "collapse()">  Magic the Gathering </button>
+                                    <button onclick = "collapse()">  Chaotic </button>
+                                    <button onclick = "collapse()">  Other </button>
+                                </div>
+                                <button class="dropdown-btn">Video games 
+                                  <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-container">
+                                    <button onclick = "collapse()"> Racing </button>
+                                    <button onclick = "collapse()"> Shooting </button>
+                                    <button onclick = "collapse()"> Multiplayer </button>
+                                    <button onclick = "collapse()"> RPG </button>
+                                    <button onclick = "collapse()"> Open World </button>
+                                    <button onclick = "collapse()"> Puzzle </button>
+                                    <button onclick = "collapse()"> Other </button>
+                                </div>
+                                <button class="dropdown-btn">Electronics 
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-container">
+                                    <button onclick = "collapse()"> Laptops </button>
+                                    <button onclick = "collapse()"> Cell Phones </button>
+                                    <button onclick = "collapse()"> Headphones and Speakers </button>
+                                    <button onclick = "collapse()"> Wearable Tech </button>
+                                    <button onclick = "collapse()"> TVs and other Home Tech </button>
+                                    <button onclick = "collapse()"> Other  </button>
+                                </div>
+                                <button class="dropdown-btn">Vehicle 
+                                    <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-container">
+                                    <button onclick = "collapse()"> SEDAN </button>
+                                    <button onclick = "collapse()"> SPORTS CAR </button>
+                                    <button onclick = "collapse()"> HATCHBACK </button>
+                                    <button onclick = "collapse()"> SUV  </button>
+                                    <button onclick = "collapse()"> Motarbike </button>
+                                    <button onclick = "collapse()"> Bicycle </button>
+                                    <button onclick = "collapse()"> Other </button>
+                                    
+                                </div>
+                              </div>
+
                         </div>
                         <div class="row" style = "padding-bottom: 100px;" ></div>
                         <div class="row" style = "margin-left: auto;" >
@@ -127,5 +181,31 @@
                 </div>
             </div>
         </div>
+
+
+        <!-- Script for the dropdown functioning -->
+        <script>
+            /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+            var dropdown = document.getElementsByClassName("dropdown-btn");
+            var i;
+
+            for (i = 0; i < dropdown.length; i++) {
+                dropdown[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var dropdownContent = this.nextElementSibling;
+                    if (dropdownContent.style.display === "block") {
+                        dropdownContent.style.display = "none";
+                    } 
+                    else {
+                        dropdownContent.style.display = "block";
+                    }
+                });
+            }
+
+            function collapse()
+            {
+                
+            }
+        </script>
     </body>
 </html>
