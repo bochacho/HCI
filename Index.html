@@ -83,40 +83,50 @@ body{
     flex-wrap: nowrap;
     overflow: hidden;
     scroll-behavior: smooth;
+    gap: 25px
+
 }
 
 .product{
     width: 300px;
     height: 300px;
-    margin-left: 40px;
     margin-top: 10px;
     margin-bottom: 10px; 
-    overflow: visible;
     color: white;
     display: flex;
     background-color: darkgray;
-    padding-bottom: 55px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 25px;
+    border-radius: 10px;
 }
-
-.product text{
-    font-size: 20px;
-}
-
-.product-img{
-    height: 80%;
-    border-radius: 20px;
-}
-
 .product :hover{
     background-color:silver;
+    border-radius: 10px;
+}
+
+.product img{
+    width: 300px;
+    height: 200px;
+    object-fit:contain;
+    display: flex;
 }
 
 .product b{
-    font-size: 30px;
+    font-size: 1.7em;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    justify-content: center;
 }
+
+.product text{
+    font-size: 1em;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* .product b{
+    font-size: 30px;
+} */
 
 .product a{
     text-decoration: none;
@@ -175,22 +185,25 @@ body{
                 <div class="cover">
                     <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
                     <div class="scroll-images">
+
+                        <!---->
                         <div class="product">
                             <a href="product_page.html">
-                                <img class="product-img" src="Images/Logo_green.png" alt="image" height = 80%/>
-                                <text>
-                                    <b>Rowlet Plush</b>
-                                    <br>Time Left: 10 Hours<br>Top Bid: $100<br>Buy Now: $150<br>
-                                </text>
+                                <img class="product-img" src="Images/Logo_green.png" alt="image"/>
+                                <b>Rowlet Plush<br></b>
+                                <text>Time Left: 10 Hours<br></text>
+                                <text>Top Bid: $100<br></text>
+                                <text>Buy Now: $150</text>
                             </a>
                         </div>
+                        <!---->
                         <div class="product">
                             <a href="product_page.html">
-                                <img class="product-img" src="Images/Logo_green.png" alt="image" height = 80%/>
-                                <text>
-                                    <b>Rowlet Plush</b>
-                                    <br>Time Left: 10 Hours<br>Top Bid: $100<br>Buy Now: $150<br>
-                                </text>
+                                <img class="product-img" src="Images/Logo_green.png" alt="image"/>
+                                <b>Rowlet Plush<br></b>
+                                <text>Time Left: 10 Hours<br></text>
+                                <text>Top Bid: $100<br></text>
+                                <text>Buy Now: $150</text>
                             </a>
                         </div>
                         <div class="product">
