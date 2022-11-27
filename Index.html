@@ -15,6 +15,10 @@ body{
 .topnav{
     overflow: hidden;
     background-color: #333;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .topnav a{
@@ -44,6 +48,7 @@ body{
     margin-top: 20px;
     margin-right: 40px;
     font-size: 17px;
+    height: 18px;
 }
 
 .categories{
@@ -55,59 +60,53 @@ body{
 }
 
 .scroll-images {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: hidden;
-  overflow-y: hidden;
-  scroll-behavior: smooth;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    scroll-behavior: smooth;
 }
 
-.scroll-images::-webkit-scrollbar {
-  width: 5px;
-  height: 8px;
-  background-color: #aaa;
+.product {
+    width: 120px;
+    height: 100px;
+    margin: 1px 10px;
+    overflow: visible;
 }
 
-.scroll-images::-webkit-scrollbar-thumb {
-  background-color: black;
-}
-
-.child {
-  width: 120px;
-  height: 100px;
-  margin: 1px 10px;
-  overflow: visible;
+.product-img{
+    background-color:#ddd;
 }
 
 .cover {
-  padding: 0px 30px;
-  position: relative;
+    padding: 0px 30px;
+    position: relative;
+    background-color:rgb(101, 101, 101);
 }
 
 .left {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
 .right {
-  position: absolute;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%) rotateY(180deg);
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotateY(180deg);
 }
 </style>
 
 <script>
     function leftScroll() {
       const left = document.querySelector(".scroll-images");
-      left.scrollBy(-200, 0);
+      left.scrollBy(-300, 0);
     }
     function rightScroll() {
       const right = document.querySelector(".scroll-images");
-      right.scrollBy(200, 0);
+      right.scrollBy(300, 0);
     }
 </script>
 
@@ -127,77 +126,79 @@ body{
                 <div class="cover">
                     <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
                     <div class="scroll-images">
-                        <div class="child">
-                            <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                        <div class="product">
+                            <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                            <br>
+                            <b>Rowlet Plush</b>
                         </div>
-                        <div class="child">
-                            <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                        <div class="product">
+                            <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                         </div>
-                        <div class="child">
-                            <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                        <div class="product">
+                            <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                         </div>
-                        <div class="child">
-                            <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                        <div class="product">
+                            <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                         </div>
-                        <div class="child">
-                            <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                        <div class="product">
+                            <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                         </div>
-                        <div class="child">
-                            <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                        <div class="product">
+                            <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                         </div>
-                        <div class="child">
-                            <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                        <div class="product">
+                            <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                         </div>
-                        <div class="child">
-                            <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                        <div class="product">
+                            <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                         </div>
-                        <div class="child">
-                            <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                        <div class="product">
+                            <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                         </div>
-                        <div class="child">
-                            <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                        <div class="product">
+                            <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                         </div>
-                        <div class="child">
-                            <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                        <div class="product">
+                            <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                         </div>
-                        <div class="child">
-                            <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                        <div class="product">
+                            <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                         </div>
-                        <div class="child">
-                            <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                        <div class="product">
+                            <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                         </div>
-                        <div class="child">
-                            <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                        <div class="product">
+                            <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                         </div>
-                        <div class="child">
-                            <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                        <div class="product">
+                            <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                         </div>
-                        <div class="child">
-                            <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                        <div class="product">
+                            <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                         </div>
-                        <div class="child">
-                            <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                        <div class="product">
+                            <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                         </div>
-                        <div class="child">
-                            <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                        <div class="product">
+                            <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                         </div>
-                        <div class="child">
-                            <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                        <div class="product">
+                            <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                         </div>
-                        <div class="child">
-                            <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                        <div class="product">
+                            <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                         </div>
-                        <div class="child">
-                            <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                        <div class="product">
+                            <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                         </div>
-                        <div class="child">
-                            <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                        <div class="product">
+                            <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                         </div>
-                        <div class="child">
-                            <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                        <div class="product">
+                            <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                         </div>
-                        <div class="child">
-                            <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                        <div class="product">
+                            <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                         </div>
                     </div>
                     <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
@@ -208,77 +209,77 @@ body{
             <div class="cover">
                 <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
                 <div class="scroll-images">
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
                 </div>
                 <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
@@ -289,77 +290,77 @@ body{
             <div class="cover">
                 <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
                 <div class="scroll-images">
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
                 </div>
                 <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
@@ -370,77 +371,77 @@ body{
             <div class="cover">
                 <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
                 <div class="scroll-images">
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
                 </div>
                 <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
@@ -451,77 +452,77 @@ body{
             <div class="cover">
                 <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
                 <div class="scroll-images">
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
                     </div>
-                    <div class="child">
-                        <img class="child-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
                     </div>
                 </div>
                 <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
