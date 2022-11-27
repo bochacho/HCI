@@ -12,7 +12,7 @@
 </head>
 
 <style>
-    body{
+body{
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -102,12 +102,12 @@
 }
 .listCard {
     display: grid;
-    grid-template-columns: 20% 50% 30%;
+    grid-template-columns: 20% 40% 10% 10% 10%;
     justify-content: flex-start;
     transition: 0.3s;
     gap: 30px;
     border-radius: 0.5em;  
-    min-width: 50rem;
+    min-width: 60rem;
 }
 .listCard:hover{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -119,44 +119,18 @@
 }
 .listCardMiddle {
     width: 100%;
-    padding-top: ;
+    margin-top: 1em;
     flex-direction: row;
-}
-.listCardPrices {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 .listCardSection {
     display:flex;
     flex-direction: column;
-    justify-content: left;
-    row-gap: 1em;
+    margin-top: 1em;
 }
 .listCardPricesText {
     font-size: 1.2em;
     font-weight: 700;
 }
-
-/* .listCardPrices {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-around;
-}
-.listCardBuyNow {
-    display: inline;
-    font-size: 1.2em;
-    font-weight: 700;
-}
-.listCardBuyNowButton {
-    font-size:120%;
-}
-.listCardBidInput {
-    width: 60%;
-    font-size: 1em;
-} */
 </style>
 
 <body>
@@ -184,16 +158,18 @@
                     <h2>Air Jordan 1</h2>
                     <p>This is a pair of blue jordans</p>
                 </div>
-                <div class="listCardPrices">
-                    <div class="listCardSection">
-                        <p style="white-space: nowrap;">Buy Now Price:</p>
-                        <p class="listCardPricesText">$250</p>
-                    </div>
-                    <div class="listCardSection">
-                        <p style="white-space: nowrap;">Top Bid:</p>
-                        <p class="listCardPricesText">$250</p>
-                    </div>
-                </div> 
+                <div class="listCardSection">
+                    <p style="white-space: nowrap;">End Time:</p>
+                    <p class="listCardPricesText">8:13 PM 12/25/2022</p>
+                </div>
+                <div class="listCardSection">
+                    <p style="white-space: nowrap;">Buy Now Price:</p>
+                    <p class="listCardPricesText">$250</p>
+                </div>
+                <div class="listCardSection">
+                    <p style="white-space: nowrap;">Top Bid:</p>
+                    <p class="listCardPricesText">$250</p>
+                </div>
             </div>
 
         </container>
