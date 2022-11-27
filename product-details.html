@@ -16,40 +16,59 @@
 <style>
 body{
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .topnav{
-    overflow: hidden;
-    background-color: #333;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    height: 3.9em;
+    justify-content: space-between;
+}
+.topnav div{
+    display: flex;
+    justify-content: space-between;
+    gap: 3vw;
 }
 
 .topnav a{
-    float: left;
     color: #f2f2f2;
     text-align: center;
-    padding: 20px 80px;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 1.5em;
 }
-
 .topnav a:hover{
-    background-color: #ddd;
-    color: black
+    color:silver;
+    cursor: pointer;
+}
+.topnav a.active {
+    color: #04AA6D;
 }
 
-.topnav a.active{
-    float: left;
-    padding: 8px 80px;
-    background-color: rgb(101, 101, 101);
-}
+.topnav button{
+    color: #f2f2f2;
+    margin-right: 3%;
+} 
+
+.topnav b{
+    color: #f2f2f2;
+    margin-left: 2%;
+    padding: 0.2%;
+} 
+
+.topnav b:hover{
+    cursor: pointer;
+    background-color:azure;
+    border-radius: 50%;
+} 
 
 .topnav input[type=text] {
-    float: right;
-    padding: 6px;
-    border: none;
-    margin-top: 20px;
-    margin-right: 40px;
-    font-size: 17px;
+  border: none;
+  font-size: 1.2em;
+  margin-right: 2%;
+  border-radius: 1em;
+  text-indent: 2ch;
 }
 
 .PageTitle_h1 {
@@ -89,14 +108,21 @@ body{
 </style>
 
 <body>
-  <nav class="topnav">
-    <a class = "active" href="Index.html"><img src = "Images/Logo_green.png" height = 51px width = 51px></a>
-    <a href="Browse.html">Browse</a>
-    <a href="Sell_page.html">Sell</a>
-    <a href="Bid_watch.html">Bid Watch</a>
-    <a href="Account.html">Account</a>
-    <input type="text" placeholder="Search...">
-  </nav>
+  <div class="topNavDiv">
+    <nav class="topnav">
+        <b href="#home"><img src = "Images/Logo_green.png" height = 50px width = 50px></b>
+        
+        <div>
+            <a class = "active" href="#Browse">Browse</a>
+            <a href="#Sell">Sell</a>
+            <a href="#Bid Watch" style="white-space: nowrap;">Bid Watch</a>
+            <a href="#Account">Account</a>
+        </div>
+
+        <input type="text" placeholder="Search">
+    </nav>
+</div>
+
 
   <!-- product details -->
   <div class = "container">
