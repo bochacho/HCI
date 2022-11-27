@@ -89,83 +89,82 @@ body{
 </style>
 
 <body>
-    <nav class="topnav">
-        <a class = "active" href="#Index">
-        <img src = "Images/Logo_green.png" height = 51px width = 51px></a>
-        <a href="#Browse">Browse</a>
-        <a href="#Sell">Sell</a>
-        <a href="#Bid Watch">Bid Watch</a>
-        <a href="#Account">Account</a>
-        <input type="text" placeholder="Search...">
-    </nav>
+  <nav class="topnav">
+    <a class = "active" href="Index.html"><img src = "Images/Logo_green.png" height = 51px width = 51px></a>
+    <a href="Browse.html">Browse</a>
+    <a href="Sell_page.html">Sell</a>
+    <a href="Bid_watch.html">Bid Watch</a>
+    <a href="Account.html">Account</a>
+    <input type="text" placeholder="Search...">
+  </nav>
 
-    <!-- product details -->
-
-    <div class = "container">
+  <!-- product details -->
+  <div class = "container">
+    <div class = "row">
+      <div class = "col-8">
         <div class = "row">
-            <div class = "col-8">
-                <div class = "row">
-                  <h1 class="PageTitle_h1">Product Details</h1>
-                    <img class="productImage"
-                    src="Images/pokemon_rowlet.png"
-                    alt="rowlet"
-                    >
-                </div>
-                <div class = "row">
-                    <h2 class="subtitle_h2">Description</h2>
-                    <p>This is a Pokemon Rowlet. Ability unknown. Attack unknown</p>
+          <h1 class="PageTitle_h1">Product Details</h1>
 
-                </div>
-            </div>
-            <div class = "col-4 buy_section">
-                <h2 class="subtitle_h2 space_top">Rowlet</h2>
-                  <div class = "row section_spacing">
-
-                    <div class = "row line_space">
-                      <div class = "col">
-                        Asking Price:
-                      </div>
-    
-                      <div class = "col" id = "Price">
-                        $600.00
-                      </div>
-                    </div>
-                     
-                  <button type="button" class="btn btn-success btn-lg">BUY</button>
-                </div>
-                <div class = "row">
-                  <div class = "row">
-                    <div class = "col">
-                      Highest Bid:
-                    </div>
-  
-                    <div class = "col" id = "topBid">
-                      $0.00
-                    </div>
-                  </div>
-                  
-                  <div class = "row line_space">
-                    <div class = "col">
-                      Your Current Bid:
-                    </div>
-  
-                    <div class = "col" id = "CurrentBid">
-                      $0.00
-                    </div>
-                  </div>
-
-                  <div class="input-group mb-3">
-                    <div class="input-group-prepend">
-                      <span class="input-group-text">Your Bid $</span>
-                    </div>
-                    <input type="text" class="form-control" aria-label="Amount">
-                  </div>
-
-                  <button type="button" class="btn btn-primary btn-lg">BID</button>
-                </div>
-            </div>
+          <img class="productImage" src="Images/pokemon_rowlet.png" alt="rowlet">
         </div>
-    </div>
+        
+        <div class = "row">
+          <h2 class="subtitle_h2">Description</h2>
 
+          <p>This is a Pokemon Rowlet. Ability unknown. Attack unknown</p>
+        </div>
+      </div>
+      
+      <div class = "col-4 buy_section">
+        <h2 class="subtitle_h2 space_top">Rowlet</h2>
+        
+        <div class = "row section_spacing">
+          <div class = "row line_space">
+            <div class = "col">
+              Asking Price:
+            </div>
+    
+            <div class = "col" id = "Price">
+              $600.00
+            </div>
+          </div>
+                     
+          <button type="button" class="btn btn-success btn-lg">BUY</button>
+          </div>
+          
+          <div class = "row">
+            <div class = "row">
+              <div class = "col">
+                Highest Bid:
+              </div>
+  
+              <div class = "col" id = "topBid">
+                $0.00
+              </div>
+            </div>
+                  
+            <div class = "row line_space">
+              <div class = "col">
+                Your Current Bid:
+              </div>
+  
+              <div class = "col" id = "CurrentBid">
+                $0.00
+              </div>
+            </div>
+
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Your Bid $</span>
+              </div>
+              
+              <input type="text" class="form-control" aria-label="Amount">
+            </div>
+
+            <button type="button" class="btn btn-primary btn-lg">BID</button>
+          </div>
+        </div>
+      </div>
+  </div>
 </body>
 </html>
