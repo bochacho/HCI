@@ -24,3 +24,10 @@ function newItem(name, description, imgSrc, buyNow, topBid, endDate, id){
     `
 }
 newItem(name="newJordans",description="new Jordans", imgSrc="Images/Logo_green.png", buyNow="$300", topBid="$210", endDate="8:13 PM 12/25/2022", id="1" );
+newItem(name="newJordans",description="new Jordans", imgSrc="Images/Logo_green.png", buyNow="$300", topBid="$210", endDate="8:13 PM 12/25/2022", id="1" );
+newItem(name="newJordans",description="new Jordans", imgSrc="Images/Logo_green.png", buyNow="$300", topBid="$210", endDate="8:13 PM 12/25/2022", id="1" );
+newItem(name="newJordans",description="new Jordans", imgSrc="Images/Logo_green.png", buyNow="$300", topBid="$210", endDate="8:13 PM 12/25/2022", id="1" );
+newItem(name="newJordans",description="new Jordans", imgSrc="Images/Logo_green.png", buyNow="$300", topBid="$210", endDate="8:13 PM 12/25/2022", id="1" );
+newItem(name="newJordans",description="new Jordans", imgSrc="Images/Logo_green.png", buyNow="$300", topBid="$210", endDate="8:13 PM 12/25/2022", id="1" );
+newItem(name="newJordans",description="new Jordans", imgSrc="Images/Logo_green.png", buyNow="$300", topBid="$210", endDate="8:13 PM 12/25/2022", id="1" );
+newItem(name="newJordans",description="new Jordans", imgSrc="Images/Logo_green.png", buyNow="$300", topBid="$210", endDate="8:13 PM 12/25/2022", id="1" );

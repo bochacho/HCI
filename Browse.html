@@ -84,19 +84,38 @@ body{
 }
 
 /* Add some padding inside the card container */
-.container {
-  padding: 2px 16px;
+.mainContainer {
+  display: grid;
+  grid-template-columns: 30% 70%;
+  justify-content: flex-start;
+
 }
-
-.itemsContainer {
-    width: 70%;
-    float: right;
-    margin-right: 8%;
+.filterContainer{
     margin-top: 7%;
-
+    display: flex;
+    margin-left: 5%;
+    overflow-y: scroll;
+    overflow-x: scroll;
+}
+.filterItemsContainer{
+    float: right;
+    margin-top: 7%;
+    margin-right: 5%;
+    overflow-y:auto;
+    overflow-x: hidden;
+    position: static;
+    scroll-behavior: smooth;
+}
+.itemsContainer {
+    float: right;
+    margin-top: 7%;
+    margin-right: 5%;
+    overflow-y:auto;
+    overflow-x: hidden;
+    position: static;
+    scroll-behavior:smooth;
 }
 .listContainer {
-    margin-top: 1%;
     margin-bottom: 3%;
     display: grid
 }
@@ -123,6 +142,7 @@ body{
     width: 100%;
     margin-top: 1em;
     flex-direction: row;
+    overflow-y: hidden;
 }
 .listCardSection {
     display:flex;
@@ -133,6 +153,7 @@ body{
     font-size: 1.2em;
     font-weight: 700;
 }
+
 </style>
 
 
@@ -151,31 +172,39 @@ body{
         </nav>
     </div>
 
-
-    <div class="itemsContainer">
-        <!--Items Container-->
-        <container class="listContainer" id="list-container">
-            <!--ListCard Item-1-->
-            <div id="list-card-container" class="listCard">
-                <img id="list-card-image" src="Images/Jordan1.jpg" class="listCardImage"/>
-                <div class="listCardMiddle" id="list-card-middle">
-                    <h2 id="list-card-middle-title">Air Jordan 1</h2>
-                    <p id="list-card-middle-description">This is a pair of blue jordans</p>
-                </div>
-                <div class="listCardSection" id="list-card-times">
-                    <p id="list-card-times-title" style="white-space: nowrap;">End Time:</p>
-                    <p class="listCardPricesText" id="list-card-times-date">8:13 PM 12/25/2022</p>
-                </div>
-                <div class="listCardSection" id="list-card-buy">
-                    <p style="white-space: nowrap;" id="list-card-buy-text">Buy Now Price:</p>
-                    <p class="listCardPricesText" id="list-card-buy-price">$250</p>
-                </div>
-                <div class="listCardSection" id="list-card-bid">
-                    <p style="white-space: nowrap;" id="list-card-bid-text">Top Bid:</p>
-                    <p class="listCardPricesText" id="list-card-bid-price">$250</p>
-                </div>
+    <div class="mainContainer">
+        <div class="filterContainer">
+            <div class="filterItemsContainer">
+                <form id="filter-form">
+                    
+                </form>
             </div>
-        </container>
+        </div>
+        <div class="itemsContainer">
+            <!--Items Container-->
+            <container class="listContainer" id="list-container">
+                <!--ListCard Item-1-->
+                <div id="list-card-container" class="listCard">
+                    <img id="list-card-image" src="Images/Jordan1.jpg" class="listCardImage"/>
+                    <div class="listCardMiddle" id="list-card-middle">
+                        <h2 id="list-card-middle-title">Air Jordan 1</h2>
+                        <p id="list-card-middle-description">This is a pair of blue jordans</p>
+                    </div>
+                    <div class="listCardSection" id="list-card-times">
+                        <p id="list-card-times-title" style="white-space: nowrap;">End Time:</p>
+                        <p class="listCardPricesText" id="list-card-times-date">8:13 PM 12/25/2022</p>
+                    </div>
+                    <div class="listCardSection" id="list-card-buy">
+                        <p style="white-space: nowrap;" id="list-card-buy-text">Buy Now Price:</p>
+                        <p class="listCardPricesText" id="list-card-buy-price">$250</p>
+                    </div>
+                    <div class="listCardSection" id="list-card-bid">
+                        <p style="white-space: nowrap;" id="list-card-bid-text">Top Bid:</p>
+                        <p class="listCardPricesText" id="list-card-bid-price">$250</p>
+                    </div>
+                </div>
+            </container>
+        </div>
     </div>
 
     <script src="scripts/browse.js"></script>
