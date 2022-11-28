@@ -162,6 +162,21 @@ body{
       const right = document.querySelector(".scroll-images");
       right.scrollBy(930, 0);
     }
+    function makeProduct(image, name, time, topBid, buy, idScroll){
+        var element = document.getElementById(idScroll);
+
+        element.innerHTML += `
+        <div class="product">
+            <a href="product_page.html">
+                <img class="product-img" src=${image} alt="image"/>
+                <b>${name}<br></b>
+                <text>Time Left: ${time}<br></text>
+                <text>Top Bid: $${topBid}<br></text>
+                <text>Buy Now: $${buy}</text>
+            </a>
+        </div>
+        `    
+    }
 </script>
 
 <body>
@@ -174,7 +189,7 @@ body{
                 <a href="Bid_watch.html" style="white-space: nowrap;">Bid Watch</a>
                 <a href="Account.html">Account</a>
             </div>
-            <input type="text" placeholder="Search">
+            <input type="text" placeholder="Search" minlength="1">
         </nav>
     </div>
 
@@ -183,109 +198,48 @@ body{
             <div class="cover">
                 <div class="cover">
                     <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
-                    <div class="scroll-images">
-
-                        <!---->
-                        <div class="product">
-                            <a href="product_page.html">
-                                <img class="product-img" src="Images/Logo_green.png" borderline=10px alt="Avater"/>
-                                <b>Rowlet Plush<br></b>
-                                <text>Time Left: 10 Hours<br></text>
-                                <text>Top Bid: $100<br></text>
-                                <text>Buy Now: $150</text>
-                            </a>
-                        </div>
-                        <!---->
-                        <div class="product">
-                            <a href="product_page.html">
-                                <img class="product-img" src="Images/DJ.jpeg" borderline=10px alt="avater"/>
-                                <b>Rowlet Plush<br></b>
-                                <text>Time Left: 10 Hours<br></text>
-                                <text>Top Bid: $100<br></text>
-                                <text>Buy Now: $150</text>
-                            </a>
-                        </div>
-                        <div class="product">
-                            <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=80%/>
-                            <text>
-                                <b>Rowlet Plush</b>
-                                <br>Time Left: 10 Hours<br>Top Bid: $100<br>Buy Now: $150<br>
-                            </text>
-                        </div>
-                        <div class="product">
-                            <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
-                        </div>
-                        <div class="product">
-                            <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
-                        </div>
-                        <div class="product">
-                            <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
-                        </div>
-                        <div class="product">
-                            <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
-                        </div>
-                        <div class="product">
-                            <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
-                        </div>
-                        <div class="product">
-                            <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
-                        </div>
-                        <div class="product">
-                            <a>See more options</a>
-                        </div>
-                    </div>
+                    <div class="scroll-images" id = "Apparel"></div>
                     <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
                 </div>
             </div>
         <h1 class = "category">Electronics</h1>
-        <div class="cover">
             <div class="cover">
-                <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
-                <div class="scroll-images">
-                    <div class="product">
-                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
-                    </div>
-                    
+                <div class="cover">
+                    <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+                    <div class="scroll-images" id = "Electronics"></div>
+                    <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
                 </div>
-                <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
             </div>
-        </div>
         <h1 class = "category">Trading Cards</h1>
-        <div class="cover">
             <div class="cover">
-                <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
-                <div class="scroll-images">
-                    <div class="product">
-                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
-                    </div>
+                <div class="cover">
+                    <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+                    <div class="scroll-images" id = "Trading Cards"></div>
+                    <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
                 </div>
-                <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
             </div>
-        </div>
         <h1 class = "category">Vehicles</h1>
-        <div class="cover">
             <div class="cover">
-                <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
-                <div class="scroll-images">
-                    <div class="product">
-                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
-                    </div>
+                <div class="cover">
+                    <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+                    <div class="scroll-images" id = "Vehicles"></div>
+                    <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
                 </div>
-                <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
             </div>
-        </div>
         <h1 class = "category">Video Games</h1>
-        <div class="cover">
             <div class="cover">
-                <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
-                <div class="scroll-images">
-                    <div class="product">
-                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
-                    </div>
+                <div class="cover">
+                    <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+                    <div class="scroll-images" id = "Video Games"></div>
+                    <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
                 </div>
-                <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
             </div>
-        </div>
     </items>
+    <script>
+        makeProduct(image = "Images/Logo_green.png", name = "Green Logo", time = "10 Hours", topBid = "100", buy = "150", idScroll = "Apparel")
+        makeProduct(image = "Images/Logo_green.png", name = "Green Logo", time = "10 Hours", topBid = "100", buy = "150", idScroll = "Electronics")
+        makeProduct(image = "Images/Logo_white.png", name = "Green Logo", time = "10 Hours", topBid = "100", buy = "150", idScroll = "Apparel")
+        makeProduct(image = "Images/Logo_white.png", name = "Green Logo", time = "10 Hours", topBid = "100", buy = "150", idScroll = "Apparel")
+    </script>
 </body>
 </html>
