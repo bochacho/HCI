@@ -29,7 +29,7 @@ body{
   text-decoration: underline;
 }
 
-.topnav a.activeNav {
+.topnav a.active {
   color: #04AA6D;
 }
   
