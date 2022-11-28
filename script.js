@@ -3,7 +3,7 @@ function newBid() {
     var value = document.getElementById("bidAmount_textbox").value;
 
     // check if value is numeric
-    if(!isNaN(value)) {
+    if(!isNaN(value) && (value != "")) {
         value = parseFloat(value).toFixed(2);
     
     // assign value to current bid
