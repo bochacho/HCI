@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>22G Auction</title>
+    <script src = "JavaArray.js"></script>
 </head>
 
 <style>
@@ -162,12 +163,12 @@ body{
       const right = document.querySelector(".scroll-images");
       right.scrollBy(930, 0);
     }
-    function makeProduct(image, name, time, topBid, buy, idScroll){
+    function makeProduct(image, name, time, topBid, buy, productPage, idScroll){
         var element = document.getElementById(idScroll);
 
         element.innerHTML += `
         <div class="product">
-            <a href="product_page.html">
+            <a href= ${productPage}>
                 <img class="product-img" src=${image} alt="image"/>
                 <b>${name}<br></b>
                 <text>Time Left: ${time}<br></text>
@@ -205,41 +206,41 @@ body{
         <h1 class = "category">Electronics</h1>
             <div class="cover">
                 <div class="cover">
-                    <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+                    <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
                     <div class="scroll-images" id = "Electronics"></div>
-                    <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+                    <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
                 </div>
             </div>
         <h1 class = "category">Trading Cards</h1>
             <div class="cover">
                 <div class="cover">
-                    <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+                    <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
                     <div class="scroll-images" id = "Trading Cards"></div>
-                    <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+                    <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
                 </div>
             </div>
         <h1 class = "category">Vehicles</h1>
             <div class="cover">
                 <div class="cover">
-                    <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+                    <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
                     <div class="scroll-images" id = "Vehicles"></div>
-                    <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+                    <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
                 </div>
             </div>
         <h1 class = "category">Video Games</h1>
             <div class="cover">
                 <div class="cover">
-                    <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+                    <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
                     <div class="scroll-images" id = "Video Games"></div>
-                    <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+                    <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
                 </div>
             </div>
     </items>
     <script>
-        makeProduct(image = "Images/Logo_green.png", name = "Green Logo", time = "10 Hours", topBid = "100", buy = "150", idScroll = "Apparel")
-        makeProduct(image = "Images/Logo_green.png", name = "Green Logo", time = "10 Hours", topBid = "100", buy = "150", idScroll = "Electronics")
-        makeProduct(image = "Images/Logo_white.png", name = "Green Logo", time = "10 Hours", topBid = "100", buy = "150", idScroll = "Apparel")
-        makeProduct(image = "Images/Logo_white.png", name = "Green Logo", time = "10 Hours", topBid = "100", buy = "150", idScroll = "Apparel")
+        makeProduct(image = "Images/Logo_green.png", name = "Green Logo", time = "10 Hours", topBid = "100", buy = "150", productPage = "Browse.html",idScroll = "Apparel")
+        makeProduct(image = "Images/Logo_green.png", name = "Green Logo", time = "10 Hours", topBid = "100", buy = "150", productPage = "Browse.html",idScroll = "Electronics")
+        makeProduct(image = "Images/Logo_white.png", name = "Green Logo", time = "10 Hours", topBid = "100", buy = "150", productPage = "Browse.html",idScroll = "Apparel")
+        makeProduct(image = "Images/Logo_white.png", name = "Green Logo", time = "10 Hours", topBid = "100", buy = "150", productPage = "Browse.html", idScroll = "Apparel")
     </script>
 </body>
 </html>
