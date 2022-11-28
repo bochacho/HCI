@@ -156,8 +156,8 @@ body{
         <!--Items Container-->
         <container class="listContainer">
             <!--ListCard Item-1-->
-            <div class="listCard" onclick = "getProductPage()">
-                <img src="Images/Jordan1.jpg" class="listCardImage"/>
+            <div class="listCard" onclick = "getProductPage('AirJordan1')">
+                <img id = "productImage" src="Images/Jordan1.jpg" class="listCardImage"/>
                 <div class="listCardMiddle">
                     <h2>Air Jordan 1</h2>
                     <p>This is a pair of blue jordans</p>
@@ -168,11 +168,11 @@ body{
                 </div>
                 <div class="listCardSection">
                     <p style="white-space: nowrap;">Buy Now Price:</p>
-                    <p class="listCardPricesText">$250</p>
+                    <p class="listCardPricesText" id = "Price">$250</p>
                 </div>
                 <div class="listCardSection">
                     <p style="white-space: nowrap;">Top Bid:</p>
-                    <p class="listCardPricesText">$250</p>
+                    <p class="listCardPricesText" id = "topBid">$250</p>
                 </div>
             </div>
 
