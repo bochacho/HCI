@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+body{
+    margin: 0;
+}
+
+.topnav{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    height: 3.9em;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+ }
+ .topnav div{
+    display: flex;
+    justify-content: space-between;
+    gap: 3vw;
+ }
+  
+ .topnav a{
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5em;
+ }
+ .topnav a:hover{
+    color:silver;
+    cursor: pointer;
+ }
+
+ .topnav a.activeNav {
+    color: #04AA6D;
+ }
+  
+ .topnav button{
+    color: #f2f2f2;
+    margin-right: 3%;
+ }
+  
+ .topnavLogo{
+    color: #f2f2f2;
+    margin-left: 2%;
+    padding: 0.2%;
+ }
+  
+ .topnavLogo:hover{
+    cursor: pointer;
+    background-color:azure;
+    border-radius: 50%;
+ }
+  
+ .topnav input[type=text] {
+  border: none;
+  font-size: 1.2em;
+  margin-right: 2%;
+  border-radius: 1em;
+  text-indent: 2ch;
+ }
+ 
+ 
+
+
+
+/* .Opaque{
+    opacity: 0.6;
+}
+.Opaque:hover{
+    opacity: 1;
+} */
+
+
+/* CSS for the toggle switch */
+input[type=checkbox].toggle-switch {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 6em;
+    height: 3em;
+    border-radius: 3em;
+    background-color: #ddd;
+    outline: 0;
+    cursor: pointer;
+    transition: background-color 0.09s ease-in-out;
+    position: relative;
+}
+
+input[type=checkbox].toggle-switch:checked {
+    background-color: rgb(23,172,109);
+}
+
+input[type=checkbox].toggle-switch::after {
+    content: '';
+    width: 3em;
+    height: 3em;
+    background-color: white;
+    border-radius: 3em;
+    position: absolute;
+    transform: scale(0.7);
+    left: 0;
+    transition: left 0.09s ease-in-out;
+    box-shadow: 0 0.1em rgba(0, 0, 0, 0.5);
+}
+
+input[type=checkbox].toggle-switch:checked::after {
+    left: 3em;
+}
+.aligning{
+    
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* CSS for the CATEGORY DROPDOWN */
+
+.dropdown {
+    background-color: #111;
+}
+
+.dropdown a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* On mouse-over */
+  .dropdown a:hover, .dropdown-btn:hover {
+    color: #cfcaca;
+  }
+  
+  
+  
+  /* Add an active class to the active dropdown button */
+  .active {
+    background-color: rgb(23,172,109);
+    color: white;
+  }
+  
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+  }
+  
+  /* Optional: Style the caret down icon */
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
+
+
+
+  /* Colour Coding the form list */
+
+  .col-sm-4{
+    background-color: #64b48990;
+  }
