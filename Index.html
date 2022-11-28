@@ -162,10 +162,12 @@ body{
       const left = document.querySelector(".scroll-images");
       left.scrollBy(-930, 0);
     }
+
     function rightScroll() {
       const right = document.querySelector(".scroll-images");
       right.scrollBy(930, 0);
     }
+
     function makeProduct(image, name, time, topBid, buy, productPage, idScroll){
         var element = document.getElementById(idScroll);
 
@@ -192,7 +194,7 @@ body{
             <div>
                 <a href=”Browse.html”>Browse</a>
                 <a href="Sell_page.html">Sell</a>
-                <a href="Bid_watch.html" style="white-space: nowrap;">Bid Watch</a>
+                <a href="BidWatch.html" style="white-space: nowrap;">Bid Watch</a>
                 <a href="Account.html">Account</a>
             </div>
             <input type="text" placeholder="Search" minlength="1">
@@ -205,6 +207,7 @@ body{
                 <div class="cover">
                     <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
                     <div class="scroll-images" id = "Apparel"></div>
+                    <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/International_Pok%C3%A9mon_logo.svg/1920px-International_Pok%C3%A9mon_logo.svg.png">
                     <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
                 </div>
             </div>
