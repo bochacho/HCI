@@ -63,14 +63,6 @@ body{
 
 
 
-/* .Opaque{
-    opacity: 0.6;
-}
-.Opaque:hover{
-    opacity: 1;
-} */
-
-
 /* CSS for the toggle switch */
 input[type=checkbox].toggle-switch {
     appearance: none;

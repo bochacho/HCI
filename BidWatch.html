@@ -13,22 +13,24 @@
 </head>
 
 <body>
-
-    <div>
-        <nav class="topnav">
-            <b href="#home"><img src = "Images/Logo_green.png" height = 50px width = 50px></b>
-            <a href="#Browse">Browse</a>
+  <div class="topNavDiv" >
+    <nav class="topnav">
+        <a href="#home" class="topnavLogo"><img src = "Images/Logo_green.png" height = 50px width = 50px></a>
+        <div>
+            <a class = "active" href="#Browse">Browse</a>
             <a href="#Sell">Sell</a>
-            <a href="#Bid Watch">Bid Watch</a>
+            <a href="#Bid Watch" style="white-space: nowrap;">Bid Watch</a>
             <a href="#Account">Account</a>
-            <input type="text" placeholder="Search...">
-        </nav>
-    </div>
+        </div>
+        <input type="text" placeholder="Search">
+    </nav>
+</div>
 
 
-      <h1 class="bidWatch1">Current Bids</h1>
-      <p class="bidWatch3">You are currently winning on <b>2</b> bids and losing on <b>1</b> bids</p>
-      <hr class="line">
+    <h1 class="bidWatch1">Current Bids</h1>
+    <p class="bidWatch3">You are currently winning on <b>2</b> bids and losing on <b>1</b> bids</p>
+    <hr class="line">
+      <div class="mainContainer">
       <h2 class="bidWatch2">Winning</h2>
       <div class="itemsContainer">
         <container class="listContainer">
@@ -61,9 +63,9 @@
           </div>
         </container>
       </div>
-
+    </div>
       <hr class="line">
-
+      <div class="mainContainer">
       <h2 class="bidWatch2">Losing</h2>
       <div class="itemsContainer">
         <container class="listContainer">
@@ -85,5 +87,6 @@
           </div>
         </container>
       </div>
+    </div>
 </body>
 </html>
