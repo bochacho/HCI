@@ -11,7 +11,6 @@ body{
     height: 3.9em;
     justify-content: space-between;
     width: 100%;
-    position: fixed;
  }
  .topnav div{
     display: flex;
@@ -175,10 +174,9 @@ body{
   color: gray;
 }
 .line {
-  width:70%;
-  text-align:right;
+  width:90%;
+  /* text-align:left; */
   color: gray;
-  margin-right: 8%;
   background-color: gray;
-  margin-top: 5%
+  margin-top: 8%
 }
