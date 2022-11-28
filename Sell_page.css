@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 body{
     margin: 0;
 }
@@ -36,20 +38,17 @@ body{
   font-size: 17px;
 }
 
-/* .wrapper{
-    display:grid;
-    grid-template-columns: 1fr 1fr ;
-    grid-auto-rows: minmax(100px, auto);
-    
-    
-} */
-.Opaque{
+
+
+/* .Opaque{
     opacity: 0.6;
 }
 .Opaque:hover{
     opacity: 1;
-}
+} */
 
+
+/* CSS for the toggle switch */
 input[type=checkbox].toggle-switch {
     appearance: none;
     -moz-appearance: none;
@@ -65,7 +64,7 @@ input[type=checkbox].toggle-switch {
 }
 
 input[type=checkbox].toggle-switch:checked {
-    background-color: #3af;
+    background-color: rgb(23,172,109);
 }
 
 input[type=checkbox].toggle-switch::after {
@@ -89,3 +88,50 @@ input[type=checkbox].toggle-switch:checked::after {
     display: flex;
     flex-direction: column;
 }
+
+
+/* CSS for the CATEGORY DROPDOWN */
+
+.dropdown {
+    background-color: #111;
+}
+
+.dropdown a, .dropdown-btn {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  /* On mouse-over */
+  .dropdown a:hover, .dropdown-btn:hover {
+    color: #cfcaca;
+  }
+  
+  
+  
+  /* Add an active class to the active dropdown button */
+  .active {
+    background-color: rgb(23,172,109);
+    color: white;
+  }
+  
+  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  .dropdown-container {
+    display: none;
+    background-color: #262626;
+    padding-left: 8px;
+  }
+  
+  /* Optional: Style the caret down icon */
+  .fa-caret-down {
+    float: right;
+    padding-right: 8px;
+  }
