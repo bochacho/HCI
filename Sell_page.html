@@ -31,16 +31,20 @@
 
     <body>
 
-        <nav class="navbar-expand-lg">
-            <div class="container">
-                <a href = "#home"><img src = "Images\Logo_green.png" height = 25px width = 30px></a>
-                <a href="#Browse">Browse</a>
-                 <a href="#Sell"> <u> Sell </u> </a> 
-                <a href="#Bid Watch">Bid Watch</a>
-                <a href="#Account" class = "navbar-brand">Account</a>
-                <input type="text" placeholder="Search...">
-            </div>
-        </nav>
+        <div class="topNavDiv" >
+            <nav class="topnav">
+                <a href="Index.html" class="topnavLogo"><img src = "Images/Logo_green.png" height = 50px width = 50px></a>
+                <div>
+                    <a href=”Browse.html”>Browse</a>
+                    <a class = "active" href= "Sell_page.html">Sell</a>
+                    <a href="#Bid_watch.html" style="white-space: nowrap;">Bid Watch</a>
+                    <a href="Account.html">Account</a>
+                </div>
+                <input type="text" placeholder="Search">
+            </nav>
+        </div>
+      
+     
 
 
 
@@ -48,20 +52,19 @@
         
         <div class = "container">
             <div class = "row">
-                <div class = "col-sm-8">
+                <div class = "col-sm-8" style = "margin-top: auto;">
                     <div class = "row mx-auto" style= "padding-left: 15%; padding-right: 25%; padding-top: 10%;" >
                         <img src="Images\Add_Image.png">
-                        <!-- <a href="upload"></a> -->
                     </div>
-                    <div class = "row mx-auto" style= "padding-left: 26%; padding-right: 33%; " >
+                    <div class = "row mx-auto" style= "padding-left: 24%; padding-right: 33%; " >
                         <button type = "button">Add Image</button>
                     </div>
                     <div class = "row" style = "padding-top: 10%; padding-right: 20px;">
-                        <textarea name= "Product Description" placeholder="Product Description" style="height:200px;font-size:14pt;" maxlength="60"></textarea>
+                        <textarea name= "Product Description" placeholder="Product Description" style="height:150px;font-size:14pt;" maxlength="60"></textarea>
                     </div>
                 </div>
 
-                <div  class = "col-sm-4">
+                <div  class = "col-sm-4" style = "margin-top: auto;">
                     <h2 class="subtitle_h2" style = "padding-top: 10%;">Please enter your details</h2>
                     
                     <div>
@@ -88,14 +91,15 @@
                         <!-- Empty Spacing -->
                         <div class="row" style = "padding-bottom: 20px;" >
                         </div>
-
+                        
+                        <!-- The Toggle Switch -->
                         <div class = "row space_down" style = "margin-left: auto;">
                             <div></div>
                             <div class = "col" style = "padding-right: 5px;">
                                 <h3> Sell</h3>
                             </div> 
                             <div class = "col" style = "padding-left: 5px;">
-                                <input type="checkbox" class="toggle-switch">
+                                <input type="checkbox" id= "chk" class="toggle-switch" onclick = "EnableDisableTextbox(this)">
                             </div>
                             <div class = "col" style = "padding-left: 5px;">
                                 <h3> Ask</h3>
@@ -105,14 +109,13 @@
                         <div class = row style = "padding-bottom: 10px; margin-left: auto;"> 
                             <h3> Min : &nbsp</h3>
                             <B class = "xyz">
-                                <input type = "number" placeholder="Price in $">
+                                <input type = "number" id = "MinID" placeholder="Price in $" disabled>
                             </B>
                         </div> 
                         <h3> Category </h3> 
                         <div class = row style = "padding-bottom: 10px;  margin-left: auto;">
                             <br>
 
-                            <!-- PSuedo dropdown code -->
                             <div class="dropdown">
                                 <button class="dropdown-btn"> <b> Apparel </b>
                                   <i class="fa fa-caret-down"></i>
@@ -210,6 +213,18 @@
             {
                 
             }
+
+            function EnableDisableTextbox(chk)
+            {
+                var txtDisable = document.getElementById("MinID");
+                txtDisable.disabled = chk.checked ? false:true;
+                if(txtDisable.disabled)
+                {
+                    MinID.focus();
+                }
+            }
+
+            
         </script>
     </body>
 </html>
