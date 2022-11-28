@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>22G Auction</title>
+</head>
+
+<style>
+body{
+    margin: 0;
+}
+
+.topnav{
+    overflow: hidden;
+    background-color: #333;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+.topnav a{
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 20px 80px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.topnav a:hover{
+    background-color: #ddd;
+    color: black
+}
+
+.topnav a.active{
+    float: left;
+    padding: 8px 80px;
+    background-color: rgb(101, 101, 101);
+}
+
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 20px;
+    margin-right: 40px;
+    font-size: 17px;
+    height: 18px;
+}
+
+.categories{
+    overflow: hidden;
+}
+
+.categories h1{
+    margin-left: 20px;
+}
+
+.scroll-images {
+    width: 100%;
+    height: 375px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+.product {
+    width: 300px;
+    height: 300px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+    overflow: visible;
+    color: white;
+}
+
+.product b{
+    font-size: 20px;
+}
+
+.product a{
+
+}
+
+.product-img{
+    background-color:#ddd;
+}
+
+.cover {
+    padding: 0px 30px;
+    position: relative;
+    background-color:rgb(49, 49, 49);
+}
+
+.left {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotateY(180deg);
+}
+</style>
+
+<script>
+    function leftScroll() {
+      const left = document.querySelector(".scroll-images");
+      left.scrollBy(-930, 0);
+    }
+    function rightScroll() {
+      const right = document.querySelector(".scroll-images");
+      right.scrollBy(930, 0);
+    }
+</script>
+
+<body>
+    <nav class="topnav">
+        <a class = "active" href="Index.html"><img src = "Images/Logo_green.png" height = 51px width = 51px></a>
+        <a href="Browse.html">Browse</a>
+        <a href="Sell_page.html">Sell</a>
+        <a href="Bid_watch.html">Bid Watch</a>
+        <a href="Account.html">Account</a>
+        <input type="text" placeholder="Search...">
+    </nav>
+
+    <items class="categories">
+        <h1>Apparel</h1>
+            <div class="cover">
+                <div class="cover">
+                    <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=60px width= 30px></button>
+                    <div class="scroll-images">
+                        <div class="product">
+                            <a href="product_page.html">
+                                <img class="product-img" src="Images/Logo_green.png" alt="image" height = 80%/>
+                                <b>
+                                    <br>Rowlet Plush<br>Time Left: 10 Hours<br>Top Bid: $100<br>Buy Now: $150<br>
+                                </b>
+                            </a>
+                        </div>
+                        <div class="product">
+                            <a href="product_page.html">
+                                <img class="product-img" src="Images/Logo_green.png" alt="image" height = 80%/>
+                                <b>
+                                    <br>Rowlet Plush<br>Time Left: 10 Hours<br>Top Bid: $100<br>Buy Now: $150<br>
+                                </b>
+                            </a>
+                        </div>
+                        <div class="product">
+                            <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                        </div>
+                        <div class="product">
+                            <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                        </div>
+                        <div class="product">
+                            <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                        </div>
+                        <div class="product">
+                            <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                        </div>
+                        <div class="product">
+                            <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                        </div>
+                        <div class="product">
+                            <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                        </div>
+                        <div class="product">
+                            <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                        </div>
+                        <div class="product">
+                            <a>See more options</a>
+                        </div>
+                    </div>
+                    <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+                </div>
+            </div>
+        <h1 class = "category">Electronics</h1>
+        <div class="cover">
+            <div class="cover">
+                <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+                <div class="scroll-images">
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    </div>
+                    
+                </div>
+                <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+            </div>
+        </div>
+        <h1 class = "category">Trading Cards</h1>
+        <div class="cover">
+            <div class="cover">
+                <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+                <div class="scroll-images">
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    </div>
+                </div>
+                <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+            </div>
+        </div>
+        <h1 class = "category">Vehicles</h1>
+        <div class="cover">
+            <div class="cover">
+                <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+                <div class="scroll-images">
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    </div>
+                </div>
+                <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+            </div>
+        </div>
+        <h1 class = "category">Video Games</h1>
+        <div class="cover">
+            <div class="cover">
+                <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+                <div class="scroll-images">
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    </div>
+                </div>
+                <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+            </div>
+        </div>
+    </items>
+</body>
+</html>
