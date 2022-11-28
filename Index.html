@@ -118,6 +118,9 @@ body{
     overflow: hidden;
     justify-content: center;
     margin-left: 60px;
+    text-overflow: ellipsis;
+    display:block;
+    width:200px;
 }
 
 .product text{
@@ -170,10 +173,12 @@ body{
         <div class="product">
             <a href= ${productPage}>
                 <img class="product-img" src=${image} alt="image"/>
-                <b>${name}<br></b>
-                <text>Time Left: ${time}<br></text>
-                <text>Top Bid: $${topBid}<br></text>
-                <text>Buy Now: $${buy}</text>
+                <div class="product-text">
+                    <b>${name}<br></b>
+                    <text>Time Left: ${time}<br></text>
+                    <text>Top Bid: $${topBid}<br></text>
+                    <text>Buy Now: $${buy}</text>
+                </div>
             </a>
         </div>
         `    
@@ -239,7 +244,7 @@ body{
     <script>
         makeProduct(image = "Images/Logo_green.png", name = "Green Logo", time = "10 Hours", topBid = "100", buy = "150", productPage = "Browse.html",idScroll = "Apparel")
         makeProduct(image = "Images/Logo_green.png", name = "Green Logo", time = "10 Hours", topBid = "100", buy = "150", productPage = "Browse.html",idScroll = "Electronics")
-        makeProduct(image = "Images/Logo_white.png", name = "Green Logo", time = "10 Hours", topBid = "100", buy = "150", productPage = "Browse.html",idScroll = "Apparel")
+        makeProduct(image = "Images/Logo_white.png", name = "Green Logo hi hello there", time = "10 Hours", topBid = "100", buy = "150", productPage = "Browse.html",idScroll = "Apparel")
         makeProduct(image = "Images/Logo_white.png", name = "Green Logo", time = "10 Hours", topBid = "100", buy = "150", productPage = "Browse.html", idScroll = "Apparel")
     </script>
 </body>
