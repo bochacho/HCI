@@ -22,26 +22,26 @@ var dataArray = [
         subCategory: "Cars"
     },
     {
-        name:"Black Sketchers",
-        description: "Bought these new sketchers, didn't like them as much as I thought. Worn a couple of times, but in good shape.", 
-        imgSrc:"https://www.skechers.ca/dw/image/v2/BDCN_PRD/on/demandware.static/-/Sites-skechers-master/default/dwe58888c7/images/large/232040_BBK.jpg?sw=1120", 
-        buyNow: 156, 
-        topBid: 130, 
-        time: "10 days", 
+        name:"Acer Laptop",
+        description: "Used Acer laptop, couple years old now. Well used, works with most games and has Windows 11 downloaded on it currently.", 
+        imgSrc:"https://images.acer.com/is/image/acer/Nitro5_AN515-57_Backliton_RGB-Black_01a-1?$Product-Cards-XL$", 
+        buyNow: 500, 
+        topBid: 250, 
+        time: "13 days", 
         id: 3, 
-        category: "Apparel",
-        subCategory: "Shoes"
+        category: "Electronics",
+        subCategory: "Laptop"
     },
     {
-        name:"Black Sketchers",
-        description: "Bought these new sketchers, didn't like them as much as I thought. Worn a couple of times, but in good shape.", 
-        imgSrc:"https://www.skechers.ca/dw/image/v2/BDCN_PRD/on/demandware.static/-/Sites-skechers-master/default/dwe58888c7/images/large/232040_BBK.jpg?sw=1120", 
-        buyNow: 156, 
-        topBid: 130, 
-        time: "10 days", 
-        id: 1, 
+        name:"",
+        description: "", 
+        imgSrc:"", 
+        buyNow: 50, 
+        topBid: 30, 
+        time: "3 days", 
+        id: 4, 
         category: "Apparel",
-        subCategory: "Shoes"
+        subCategory: "Jackets"
     },
     {
         name:"Black Sketchers",
