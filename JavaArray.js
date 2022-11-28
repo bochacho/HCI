@@ -33,15 +33,15 @@ var dataArray = [
         subCategory: "Laptop"
     },
     {
-        name:"",
-        description: "", 
-        imgSrc:"", 
-        buyNow: 50, 
-        topBid: 30, 
-        time: "3 days", 
+        name:"God of War",
+        description: "Bought it, played it, getting my money back to buy a new game.", 
+        imgSrc:"https://i5.walmartimages.ca/images/Enlarge/320/586/6000205320586.jpg", 
+        buyNow: 100, 
+        topBid: 80, 
+        time: "10 hours", 
         id: 4, 
-        category: "Apparel",
-        subCategory: "Jackets"
+        category: "Video Games",
+        subCategory: "RPG"
     },
     {
         name:"Black Sketchers",
