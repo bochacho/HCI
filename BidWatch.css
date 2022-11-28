@@ -83,7 +83,7 @@ body{
   line-height: normal;
 }
 .currentBids_name:hover{
-  text-decoration: underline;
+  text-decoration: underline !important;
   /* display: block;
   max-width: 280px;
   float: left;
@@ -93,7 +93,7 @@ body{
   align-items: center; */
   /* vertical-align: middle; */
   /* line-height: normal; */
-  background-color: #7fb6ff;
+  /* background-color: #7fb6ff; */
 }
 .currentBids_timeandprice {
   display: block;
@@ -127,6 +127,7 @@ body{
     margin-bottom: 3%;
     display: grid;
     min-width: 50rem;
+    cursor: pointer;
 }
 .listCard {
     display: grid;
