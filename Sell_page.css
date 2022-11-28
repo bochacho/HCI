@@ -27,6 +27,7 @@ body{
  .topnav a:hover{
     color:silver;
     cursor: pointer;
+    text-decoration: underline;
  }
 
  .topnav a.activeNav {
