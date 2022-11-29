@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>22G Auction-Browse</title>
+    <title>22G Auction</title>
     <link rel="stylesheet" 
         href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
@@ -16,6 +16,7 @@ body{
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
+
 .topnav{
     background-color: black;
     display: flex;
@@ -23,12 +24,14 @@ body{
     height: 3.9em;
     justify-content: space-between;
     width: 100%;
+    position: fixed;
 }
 .topnav div{
     display: flex;
     justify-content: space-between;
     gap: 3vw;
 }
+
 .topnav a{
     color: #f2f2f2;
     text-align: center;
@@ -38,25 +41,28 @@ body{
 .topnav a:hover{
     color:silver;
     cursor: pointer;
-    text-decoration: underline;
- }
+}
 .topnav a.active {
     color: #04AA6D;
 }
+
 .topnav button{
     color: #f2f2f2;
     margin-right: 3%;
 } 
+
 .topnavLogo{
     color: #f2f2f2;
     margin-left: 2%;
     padding: 0.2%;
 } 
+
 .topnavLogo:hover{
     cursor: pointer;
     background-color:azure;
     border-radius: 50%;
 } 
+
 .topnav input[type=text] {
   border: none;
   font-size: 1.2em;
@@ -64,21 +70,25 @@ body{
   border-radius: 1em;
   text-indent: 2ch;
 }
+
 .card {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;
   border-radius: 0.5em;
 }
+
 /* On mouse-over, add a deeper shadow */
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
+
 /* Add some padding inside the card container */
 .mainContainer {
   display: grid;
   grid-template-columns: 30% 70%;
   justify-content: flex-start;
+
 }
 .filterContainer{
     margin-top: 7%;
@@ -152,12 +162,12 @@ body{
 <body>
     <div class="topNavDiv" >
         <nav class="topnav">
-            <a href="#home" class="topnavLogo"><img src = "Images/Logo_green.png" height = 50px width = 50px></a>
+            <a href= Index.html class="topnavLogo"><img src = "Images/Logo_green.png" height = 50px width = 50px></a>
             <div>
-                <a class = "active" href="/Browse.html">Browse</a>
-                <a href="Sell_page.html">Sell</a>
-                <a href="BidWatch.html" style="white-space: nowrap;">Bid Watch</a>
-                <a href="Accounts.html">Account</a>
+                <a class = "active" href="#Browse">Browse</a>
+                <a href="#Sell">Sell</a>
+                <a href="#Bid Watch" style="white-space: nowrap;">Bid Watch</a>
+                <a href="#Account">Account</a>
             </div>
             <input type="text" placeholder="Search">
         </nav>

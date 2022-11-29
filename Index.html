@@ -11,6 +11,7 @@
 <style>
 body{
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .topnav{
@@ -21,13 +22,12 @@ body{
     justify-content: space-between;
     width: 100%;
 }
-
 .topnav div{
     display: flex;
     justify-content: space-between;
     gap: 3vw;
 }
- 
+
 .topnav a{
     color: #f2f2f2;
     text-align: center;
@@ -39,32 +39,19 @@ body{
     cursor: pointer;
 }
 
-.topnav a.active {
-    color: #f2f2f2;
-    margin-left: 2%;
-    padding: 0.2%;
-    cursor: pointer;
-    background-color:azure;
-    border-radius: 50%;
-}
- 
 .topnav button{
     color: #f2f2f2;
     margin-right: 3%;
-}
- 
+} 
+
 .topnavLogo{
-    color: #f2f2f2;
-    margin-left: 5%;
-    padding: 0.2%;
-}
- 
-.topnavLogo:hover{
-    cursor: pointer;
     background-color:azure;
     border-radius: 50%;
-}
- 
+    display:flex;
+    margin-left: 2%;
+    padding: 0.2%;
+} 
+
 .topnav input[type=text] {
     border: none;
     font-size: 1.2em;
@@ -82,7 +69,7 @@ body{
     margin-left: 20px;
 }
 
-.scroll-images {
+.scroll-images1 {
     width: 100%;
     height: 320px;
     display: flex;
@@ -90,7 +77,46 @@ body{
     overflow: hidden;
     scroll-behavior: smooth;
     gap: 25px
+}
 
+.scroll-images2 {
+    width: 100%;
+    height: 320px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    gap: 25px
+}
+
+.scroll-images3 {
+    width: 100%;
+    height: 320px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    gap: 25px
+}
+
+.scroll-images4 {
+    width: 100%;
+    height: 320px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    gap: 25px
+}
+
+.scroll-images5 {
+    width: 100%;
+    height: 320px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    gap: 25px
 }
 
 .product{
@@ -98,9 +124,8 @@ body{
     height: 300px;
     margin-top: 10px;
     margin-bottom: 10px; 
-    color: white;
     display: flex;
-    background-color: darkgray;
+    background-color: white;
     border-radius: 10px;
 }
 .product :hover{
@@ -139,7 +164,7 @@ body{
 
 .product a{
     text-decoration: none;
-    color: white;
+    color: black;
 }
 
 .cover {
@@ -162,47 +187,17 @@ body{
 }
 </style>
 
-<script>
-    function leftScroll() {
-      const left = document.querySelector(".scroll-images");
-      left.scrollBy(-930, 0);
-    }
-
-    function rightScroll() {
-      const right = document.querySelector(".scroll-images");
-      right.scrollBy(930, 0);
-    }
-
-    function makeProduct(image, name, time, topBid, buy, productPage, idScroll){
-        var element = document.getElementById(idScroll);
-
-        element.innerHTML += `
-        <div class="product">
-            <a href= ${productPage}>
-                <img class="product-img" src=${image} alt="image"/>
-                <div class="product-text">
-                    <b>${name}<br></b>
-                    <text>Time Left: ${time}<br></text>
-                    <text>Top Bid: $${topBid}<br></text>
-                    <text>Buy Now: $${buy}</text>
-                </div>
-            </a>
-        </div>
-        `    
-    }
-</script>
-
 <body>
     <div class="topNavDiv" >
         <nav class="topnav">
-            <a class = "active" href="Index.html" class="topnavLogo"><img src = "Images/Logo_green.png" height = 50px width = 50px></a>
+            <text class="topnavLogo"><img src = "Images/Logo_green.png" height = 50px width = 50px></text>
             <div>
-                <a href=”Browse.html”>Browse</a>
-                <a href="Sell_page.html">Sell</a>
-                <a href="BidWatch.html" style="white-space: nowrap;">Bid Watch</a>
-                <a href="Account.html">Account</a>
+                <a href=Browse.html>Browse</a>
+                <a href="#Sell">Sell</a>
+                <a href="#Bid Watch" style="white-space: nowrap;">Bid Watch</a>
+                <a href="#Account">Account</a>
             </div>
-            <input type="text" placeholder="Search" minlength="1">
+            <input type="text" placeholder="Search">
         </nav>
     </div>
 
@@ -210,50 +205,46 @@ body{
         <h1>Apparel</h1>
             <div class="cover">
                 <div class="cover">
-                    <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
-                    <div class="scroll-images" id = "Apparel"></div>
-                    <img src = >
-                    <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
+                    <button class="left" onclick="leftScrollApparel()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
+                    <div class="scroll-images1" id = "Apparel"></div>
+                    <button class="right" onclick="rightScrollApparel()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
                 </div>
             </div>
         <h1 class = "category">Electronics</h1>
             <div class="cover">
                 <div class="cover">
-                    <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
-                    <div class="scroll-images" id = "Electronics"></div>
-                    <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
+                    <button class="left" onclick="leftScrollElectronics()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
+                    <div class="scroll-images2" id = "Electronics"></div>
+                    <button class="right" onclick="rightScrollElectronics()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
                 </div>
             </div>
         <h1 class = "category">Trading Cards</h1>
             <div class="cover">
                 <div class="cover">
-                    <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
-                    <div class="scroll-images" id = "Trading Cards"></div>
-                    <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
+                    <button class="left" onclick="leftScrollCards()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
+                    <div class="scroll-images3" id = "Trading Cards"></div>
+                    <button class="right" onclick="rightScrollCards()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
                 </div>
             </div>
         <h1 class = "category">Vehicles</h1>
             <div class="cover">
                 <div class="cover">
-                    <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
-                    <div class="scroll-images" id = "Vehicles"></div>
-                    <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
+                    <button class="left" onclick="leftScrollCars()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
+                    <div class="scroll-images4" id = "Vehicles"></div>
+                    <button class="right" onclick="rightScrollCars()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
                 </div>
             </div>
         <h1 class = "category">Video Games</h1>
             <div class="cover">
                 <div class="cover">
-                    <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
-                    <div class="scroll-images" id = "Video Games"></div>
-                    <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
+                    <button class="left" onclick="leftScrollVideo()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
+                    <div class="scroll-images5" id = "Video Games"></div>
+                    <button class="right" onclick="rightScrollVideo()"><img src = "Images/Left_arrow.png" height=40px width= 30px></button>
                 </div>
             </div>
     </items>
     <script>
-        makeProduct(image = "Images/Logo_green.png", name = "Green Logo", time = "10 Hours", topBid = "100", buy = "150", productPage = "Browse.html",idScroll = "Apparel")
-        makeProduct(image = "Images/Logo_green.png", name = "Green Logo", time = "10 Hours", topBid = "100", buy = "150", productPage = "Browse.html",idScroll = "Electronics")
-        makeProduct(image = "Images/Logo_white.png", name = "Green Logo hi hello there", time = "10 Hours", topBid = "100", buy = "150", productPage = "Browse.html",idScroll = "Apparel")
-        makeProduct(image = "Images/Logo_white.png", name = "Green Logo", time = "10 Hours", topBid = "100", buy = "150", productPage = "Browse.html", idScroll = "Apparel")
+        addAllProducts()
     </script>
 </body>
 </html>
