@@ -67,9 +67,6 @@ function newItem(product){
     `
 };
 
-// newItem(dataArray[0]);
-// newItem(dataArray[1]);
-
 for (var i = 0; i < dataArray.length; i++) {
     newItem(dataArray[i]);
 }
