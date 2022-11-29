@@ -12,8 +12,9 @@
     integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
     crossorigin="anonymous">
 
-    
-    
+    <!-- script -->
+    <script src = "script.js" type = "application/Javascript">
+    </script>
 </head>
 
 <style>
@@ -82,12 +83,9 @@ body{
 
 .productImage {
    border-radius: 8px;
-   /* width: 450px;
+   width: 450px;
    height: 450px;
-   margin-left: 13%; */
-
-   width: 70%;
-   height: 70%;
+   margin-left: 13%;
 }
 
 .subtitle_h2 {
@@ -101,8 +99,7 @@ body{
 }
 
 .buy_section{
-  /* background-color: lightcyan; */
-  background-color: whitesmoke
+  background-color: lightcyan;
 }
 
 .space_top{
@@ -115,44 +112,41 @@ body{
 </style>
 
 <body>
-  <div class="topNavDiv" >
+  <div class="topNavDiv">
     <nav class="topnav">
-      <a href= Index.html class="topnavLogo"><img src = "Images/Logo_green.png" height = 50px width = 50px></a>
-      
-      <div>
-        <a class = "active" href="Browse.html">Browse</a>
-        <a href="Sell_page.html">Sell</a>
-        <a href="BidWatch.html" style="white-space: nowrap;">Bid Watch</a>
-        <a href="Accounts.html">Account</a>
-      </div>
+        <b href="Index.html"><img src = "Images/Logo_green.png" height = 50px width = 50px></b>
 
-      <input type="text" placeholder="Search">
+        <div>
+            <a href="Browse.html">Browse</a>
+            <a href="Sell_page.html">Sell</a>
+            <a href="BidWatch.html" style="white-space: nowrap;">Bid Watch</a>
+            <a href="Accounts.html">Account</a>
+        </div>
+
+        <input type="text" placeholder="Search">
     </nav>
-  </div>
+</div>
 
 
   <!-- product details -->
-  <div class = "container" id = "container">
+  <div class = "container">
     <div class = "row">
       <div class = "col-8">
         <div class = "row">
           <h1 class="PageTitle_h1">Product Details</h1>
 
-          <img class="productImage" id = "productImage" src="" alt="some fcking image">
+          <img class="productImage" id = "productImage" src="Images/pokemon_rowlet.png" alt="rowlet">
         </div>
         
         <div class = "row">
           <h2 class="subtitle_h2">Description</h2>
 
-          <p  id = "description">some description</p>
+          <p>This is a Pokemon Rowlet. Ability unknown. Attack unknown</p>
         </div>
       </div>
       
       <div class = "col-4 buy_section">
-        <h2 class="subtitle_h2 space_top" id = "productName">some product name</h2>
-        <div class = "productId" id = "productId" style = "visibility: hidden;">
-          id
-        </div>
+        <h2 class="subtitle_h2 space_top" id = "productName">Rowlet</h2>
         
         <div class = "row section_spacing">
           <div class = "row line_space">
@@ -160,52 +154,47 @@ body{
               Asking Price:
             </div>
     
-            <div class = "col" id = "price">
-              $0.00
+            <div class = "col" id = "Price">
+              $600.00
             </div>
           </div>
                      
           <button type="button" class="btn btn-success btn-lg">BUY</button>
-        </div>
+          </div>
           
-        <div class = "row">
           <div class = "row">
-            <div class = "col">
-              Highest Bid:
-            </div>
+            <div class = "row">
+              <div class = "col">
+                Highest Bid:
+              </div>
   
-            <div class = "col" id = "topBid">
-              $0.00
+              <div class = "col" id = "topBid">
+                $0.00
+              </div>
             </div>
-          </div>
                   
-          <div class = "row line_space">
-            <div class = "col">
-              Your Current Bid:
-            </div>
+            <div class = "row line_space">
+              <div class = "col">
+                Your Current Bid:
+              </div>
   
-            <div class = "col" id = "currentBid">
-              $0.00
+              <div class = "col" id = "CurrentBid">
+                $0.00
+              </div>
             </div>
-          </div>
 
-          <div class="input-group mb-3">
-            <div class="input-group-prepend">
-              <span class="input-group-text">Your Bid $</span>
-            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text">Your Bid $</span>
+              </div>
               
-            <input type="text" placeholder="Enter bidding amount" class="form-control" id = "bidAmount_textbox" aria-label="Amount">
-          </div>
+              <input type="text" placeholder="Enter bid" class="form-control" id = "bidAmount_textbox" aria-label="Amount">
+            </div>
 
-          <button type="button" class="btn btn-primary btn-lg" onclick = "newBid()">BID</button>
+            <button type="button" class="btn btn-primary btn-lg" onclick = "newBid()">BID</button>
+          </div>
         </div>
       </div>
-    </div>
   </div>
 </body>
-
-<!-- script -->
-<script src = "scripts/script.js" type = "application/Javascript"></script>
-<script src = "scripts/JavaArray.js"></script>
-
 </html>
