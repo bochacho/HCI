@@ -20,7 +20,7 @@ var dataArray = [
         time: "5 days", 
         id: 2,
         category: "Vehicles",
-        subCategory: "Cars",
+        subCategory: "Sedan",
         yourBid: 0
     },
     {
@@ -430,12 +430,42 @@ function makeProduct(id, image, name, time, topBid, buy, idScroll){
     `    
 }
 
+const types = {
+    "Apparel": ["Shirts", "Pants", "Shoes", "Jackets", "Other"],
+    "Trading Cards": ["Pokemon", "Yu-gi-oh", "Magic the Gathering", "Chaotic", "Other"],
+    "Video games": ["Racing", "Shooting", "Multiplayer", "RPG", "Open World", "Puzzle", "Other"],
+    "Electronics": ["Laptops", "Cell Phones", "Headphones", "Consoles", "TVs", "Speakers", "Other"],
+    "Vehicles": ["Sedan", "Sports Cars", "Hatchback", "SUV", "Motorbike", "Other"]
+}
+
 function addAllProducts(){
     for(let i = 0; i < dataArray.length; i++){
         makeProduct(dataArray[i].id, dataArray[i].imgSrc,dataArray[i].name,dataArray[i].time,dataArray[i].topBid,dataArray[i].buyNow,dataArray[i].category)
     }
 }
+function createFilters(){
+    var element = document.getElementById("filter-code");
 
+    for( var temp in types){
+        element.innerHTML +=`
+        <div><span class="caret" id="span-${temp}" onclick="spanOpener('span-${temp}', 'input-${temp}', 'parent-${temp}')"><input type="checkbox" name="dropdown-group" value="${temp}" id="input-${temp}">${temp}</span>
+            <ul class="nested" id="parent-${temp}">
+            </ul>
+        </div>
+        `
+    }
+}
+
+function createSubFilters(){
+    for( var temp in types){
+        var element = document.getElementById(`parent-${temp}`);
+        for (var vals of types[temp]){
+            element.innerHTML+= `
+            <div class="checkbox-container"><input type="checkbox" id="input-${temp}-${vals}" name="dropdown-group" value=${vals}><label for="input-${temp}-${vals}">${vals}</label></div>
+            `
+        }
+    }
+}
 
 var selectedItem = 0;
 function newItem(product){
@@ -445,8 +475,8 @@ function newItem(product){
         <div id="list-card-container-${product.id}" class="listCard" onclick = "openItem('${product.id}')">
             <img id="list-card-image-${product.id}" src=${product.imgSrc} class="listCardImage"/>
             <div class="listCardMiddle" id="list-card-middle-${product.id}">
-                <h2 id="list-card-middle-title-${product.id}">${product.name}</h2>
-                <p id="list-card-middle-description-${product.id}">${product.description}</p>
+                <h2 class="listCardMiddleTitle" id="list-card-middle-title-${product.id}">${product.name}</h2>
+                <p class="listCardMiddleText" id="list-card-middle-description-${product.id}">${product.description}</p>
             </div>
             <div class="listCardSection" id="list-card-times-${product.id}">
                 <p id="list-card-times-title-${product.id}" style="white-space: nowrap;">Time Left:</p>
@@ -465,13 +495,61 @@ function newItem(product){
 };
 
 function allItemsByFilters(filters){
-    if(!filters){
-        element = document.getElementById("list-container");
-        element.innerHTML = '';
+    element = document.getElementById("list-container");
+    element.innerHTML = '';
+    if(!filters || filters.length == 0){
         for(let i = 0; i < dataArray.length; i++){
             newItem(dataArray[i]);
         }
     }
+    else {
+        for(let i = 0; i < dataArray.length; i++){
+            if(filters.includes(dataArray[i].subCategory)){
+                newItem(dataArray[i]);
+            }
+            else if(filters.includes(dataArray[i].category)){
+                const found = filters.find( filter => types[dataArray[i].category].includes(filter))
+                if (!found){
+                    newItem(dataArray[i]);
+                }
+            }  
+        }
+    }
+    if(!element.innerHTML){
+        element.innerHTML = `
+            <img src="Images/muchEmpty.jpeg" class="muchEmpty"/>
+        `
+    }
+}
+
+function spanOpener(spanId, inputId, childId){
+    var toggler = document.getElementById(spanId);
+    var check = document.getElementById(inputId);
+    check.checked = !check.checked;
+    if(!check.checked){
+        var parent = document.getElementById(childId)
+        var toChangeInputs = parent.getElementsByTagName('input');
+        for(var i = 0; i < toChangeInputs.length; i++){
+            toChangeInputs[i].checked = false;
+        }
+    } 
+    toggler.parentElement.querySelector(".nested").classList.toggle("active");
+    toggler.classList.toggle("caret-down");
+}
+
+
+function handleSubmit(){
+    var markedCheckbox = document.getElementsByName('dropdown-group');
+    var filters = []
+    for (var checkbox of markedCheckbox) {
+        if (checkbox.checked){
+            filters.push(checkbox.value);  
+        }
+    }  
+    allItemsByFilters(filters);
+}
+function handleClear(){
+    allItemsByFilters();
 }
 
 function openItem(itemId){
