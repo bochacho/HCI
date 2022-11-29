@@ -8,7 +8,8 @@ var dataArray = [
         time: "10 days", 
         id: 1, 
         category: "Apparel",
-        subCategory: "Shoes"
+        subCategory: "Shoes",
+        yourBid: 0
     },
     {
         name:"2023 Hyundai Sonata",
@@ -19,7 +20,8 @@ var dataArray = [
         time: "5 days", 
         id: 2,
         category: "Vehicles",
-        subCategory: "Cars"
+        subCategory: "Cars",
+        yourBid: 0
     },
     {
         name:"Acer Laptop",
@@ -30,7 +32,8 @@ var dataArray = [
         time: "13 days", 
         id: 3, 
         category: "Electronics",
-        subCategory: "Laptop"
+        subCategory: "Laptop",
+        yourBid: 0
     },
     {
         name:"God of War",
@@ -41,7 +44,8 @@ var dataArray = [
         time: "10 hours", 
         id: 4, 
         category: "Video Games",
-        subCategory: "RPG"
+        subCategory: "RPG",
+        yourBid: 0
     },
     {
         name:"Pokemon Black 2",
@@ -52,7 +56,8 @@ var dataArray = [
         time: "10 days", 
         id: 5, 
         category: "Video Games",
-        subCategory: "RPG"
+        subCategory: "RPG",
+        yourBid: 0
     },
     {
         name:"Pokemon White",
@@ -63,7 +68,8 @@ var dataArray = [
         time: "13 days", 
         id: 6, 
         category: "Video Games",
-        subCategory: "RPG"
+        subCategory: "RPG",
+        yourBid: 0
     },
     {
         name:"Jordan 6 Rings Shoes",
@@ -74,7 +80,8 @@ var dataArray = [
         time: "6 days", 
         id: 7,
         category: "Apparel",
-        subCategory: "Shoes"
+        subCategory: "Shoes",
+        yourBid: 0
     },
     {
         name:"David Outwear Salvador Leather Jacket",
@@ -85,7 +92,8 @@ var dataArray = [
         time: "15 hours", 
         id: 8, 
         category: "Apparel",
-        subCategory: "Jackets"
+        subCategory: "Jackets",
+        yourBid: 0
     },
     {
         name:"3 in 1 Down Jacket",
@@ -96,7 +104,8 @@ var dataArray = [
         time: "14 days", 
         id: 9, 
         category: "Apparel",
-        subCategory: "Jackets"
+        subCategory: "Jackets",
+        yourBid: 0
     },
     {
         name:"Black Flannel Long Sleeved Shirt",
@@ -107,7 +116,8 @@ var dataArray = [
         time: "3 days", 
         id: 10, 
         category: "Apparel",
-        subCategory: "Shirts"
+        subCategory: "Shirts",
+        yourBid: 0
     },
     {
         name:"2022 Nissan Armada",
@@ -118,7 +128,8 @@ var dataArray = [
         time: "11 days", 
         id: 11, 
         category: "Vehicles",
-        subCategory: "SUV"
+        subCategory: "SUV",
+        yourBid: 0
     },
     {
         name:"Playstation 5 Disc Console",
@@ -129,7 +140,8 @@ var dataArray = [
         time: "12 days", 
         id: 12,
         category: "Electronics",
-        subCategory: "Consoles"
+        subCategory: "Consoles",
+        yourBid: 0
     },
     {
         name: "Black Weight Work Pants",
@@ -140,7 +152,8 @@ var dataArray = [
         time: "6 days", 
         id: 13, 
         category: "Apparel",
-        subCategory: "Pants"
+        subCategory: "Pants",
+        yourBid: 0
     },
     {
         name:"Playstation 5 Disc Console",
@@ -151,7 +164,8 @@ var dataArray = [
         time: "4 days", 
         id: 14,
         category: "Electronics",
-        subCategory: "Consoles"
+        subCategory: "Consoles",
+        yourBid: 0
     },
     {
         name: "Green Lamborghini",
@@ -162,7 +176,8 @@ var dataArray = [
         time: "4 hours", 
         id: 15, 
         category: "Vehicles",
-        subCategory: "Sports Cars"
+        subCategory: "Sports Cars",
+        yourBid: 0
     },
     {
         name:"Playstation 5 Console",
@@ -173,7 +188,8 @@ var dataArray = [
         time: "14 days", 
         id: 16,
         category: "Electronics",
-        subCategory: "Consoles"
+        subCategory: "Consoles",
+        yourBid: 0
     },
     {
         name: "Pokemon TCG: Lost Origin Booster Box",
@@ -184,7 +200,8 @@ var dataArray = [
         time: "8 days", 
         id: 17,
         category: "Trading Cards",
-        subCategory: "Pokemon"
+        subCategory: "Pokemon",
+        yourBid: 0
     },
     {
         name:"Pokemon TCG: Darkness Ablaze Booster Box",
@@ -195,7 +212,8 @@ var dataArray = [
         time: "10 days", 
         id: 18, 
         category: "Trading Cards",
-        subCategory: "Pokemon"
+        subCategory: "Pokemon",
+        yourBid: 0
     },
     {
         name: "Mana Crypt",
@@ -206,7 +224,8 @@ var dataArray = [
         time: "4 days", 
         id: 19, 
         category: "Trading Cards",
-        subCategory: "Magic the Gathering"
+        subCategory: "Magic the Gathering",
+        yourBid: 0
     },
     {
         name: "Mana Crypt",
@@ -217,7 +236,8 @@ var dataArray = [
         time: "5 days", 
         id: 20, 
         category: "Trading Cards",
-        subCategory: "Magic the Gathering"
+        subCategory: "Magic the Gathering",
+        yourBid: 0
     },
     {
         name: "1st Edition Charizard Holofoil",
@@ -228,7 +248,8 @@ var dataArray = [
         time: "7 days", 
         id: 21, 
         category: "Trading Cards",
-        subCategory: "Pokemon"
+        subCategory: "Pokemon",
+        yourBid: 0
     },
     {
         name: "Charizard GX Detective Pikachu",
@@ -239,7 +260,8 @@ var dataArray = [
         time: "8 days", 
         id: 22,
         category: "Trading Cards",
-        subCategory: "Pokemon"
+        subCategory: "Pokemon",
+        yourBid: 0
     },
     {
         name: "Rockband 4 Full Kit",
@@ -250,7 +272,8 @@ var dataArray = [
         time: "15 hours", 
         id: 23, 
         category: "Video Games",
-        subCategory: "Other"
+        subCategory: "Other",
+        yourBid: 0
     },
     {
         name:"Rockband 4",
@@ -261,7 +284,8 @@ var dataArray = [
         time: "11 days", 
         id: 24, 
         category: "Video Games",
-        subCategory: "Other"
+        subCategory: "Other",
+        yourBid: 0
     },
     {
         name: "Omen Laptop",
@@ -272,7 +296,8 @@ var dataArray = [
         time: "14 days", 
         id: 25, 
         category: "Electronics",
-        subCategory: "Laptops"
+        subCategory: "Laptops",
+        yourBid: 0
     },
     {
         name: "Omen Laptop",
@@ -283,7 +308,8 @@ var dataArray = [
         time: "11 days", 
         id: 26, 
         category: "Electronics",
-        subCategory: "Laptop"
+        subCategory: "Laptop",
+        yourBid: 0
     },
     {
         name: "Forza 7 for Xbox One",
@@ -294,7 +320,8 @@ var dataArray = [
         time: "3 days", 
         id: 27,
         category: "Video Games",
-        subCategory: "Racing"
+        subCategory: "Racing",
+        yourBid: 0
     },
     {
         name: "Pokemon Platinum",
@@ -305,7 +332,8 @@ var dataArray = [
         time: "8 days", 
         id: 28, 
         category: "Video Games",
-        subCategory: "RPG"
+        subCategory: "RPG",
+        yourBid: 0
     },
     {
         name: "Pokemon Pearl",
@@ -316,7 +344,8 @@ var dataArray = [
         time: "5 days", 
         id: 29, 
         category: "Video Games",
-        subCategory: "RPG"
+        subCategory: "RPG",
+        yourBid: 0
     },
     {
         name: "Pokemon Brilliant Diamond",
@@ -327,7 +356,8 @@ var dataArray = [
         time: "3 days", 
         id: 30, 
         category: "Video Games",
-        subCategory: "RPG"
+        subCategory: "RPG",
+        yourBid: 0
     }
 ]
 
@@ -443,6 +473,27 @@ function allItemsByFilters(filters){
     }
 }
 
-function openItem(itemId){
-    
+function fillBidWatch(){
+    var element = document.getElementById("why");
+
+    for(let i = 0; i < dataArray.length; i++){
+        if(dataArray[i].yourBid == 0){
+            element.innerHTML += `
+            <div class="listCard">
+
+                <img class="listCardImage" src=${dataArray[i].imgSrc}>
+
+                <div class="listCardMiddle">
+                    <a class="currentBids_name">${dataArray[i].name}</a>
+                    <div>
+                        <p class="currentBids_timeandprice">Time Left: </p>
+                        <p class="currentBids_timeandprice">${dataArray[i].time}</p>
+                    </div>
+                </div>
+
+                <p class="currentBids_price">My bid: <br> $${dataArray[i].yourBid}</p>
+            </div>
+            `
+        }
+    }
 }
