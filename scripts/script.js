@@ -8,10 +8,11 @@ function newBid() {
             window.alert("Bidding amount should be greater than 0!!!")
             return;
         }
+        console.log(value);
         value = parseFloat(value).toFixed(2);
     
         // assign value to current bid
-        document.getElementById("CurrentBid").innerHTML = "$" + value;
+        document.getElementById("currentBid").innerHTML = "$" + value;
 
         // compare to highest bid
         var topBid = document.getElementById("topBid").innerHTML;
@@ -27,7 +28,7 @@ function newBid() {
         document.getElementById("topBid").innerHTML = "$" + topBid;
 
         // highest bid to price
-        var price = document.getElementById("Price").innerHTML;
+        var price = document.getElementById("price").innerHTML;
         price = parseFloat(price.replace("$", "")).toFixed(2);
         console.log("new bid = " + value);
         console.log(price);
@@ -40,7 +41,11 @@ function newBid() {
 
         console.log(price);
         price = parseFloat(price).toFixed(2);
-        document.getElementById("Price").innerHTML = "$" + price;
+        document.getElementById("price").innerHTML = "$" + price;
+
+        // get product id
+        var id = document.getElementById("productId").innerHTML;
+        setCurrentBid(id, price, topBid, value);
 
     }
     else{
@@ -79,10 +84,13 @@ var productName = sessionStorage.getItem("productName").trim();
 var price = sessionStorage.getItem("productPrice").trim();
 var topBid = sessionStorage.getItem("productTopBid").trim();
 var details = sessionStorage.getItem("productDetails").trim();
-
+var id = sessionStorage.getItem("productId").trim();
+var currentBid = sessionStorage.getItem("productCurrentBid").trim();
 
 document.getElementById("productImage").src = image;
+document.getElementById("productId").innerHTML = id;
 document.getElementById("productName").innerHTML = productName;
-document.getElementById("Price").innerHTML = "$" + price;
+document.getElementById("price").innerHTML = "$" + price;
 document.getElementById("topBid").innerHTML = "$" + topBid;
+document.getElementById("currentBid").innerHTML = "$" + currentBid;
 document.getElementById("description").innerHTML = details;

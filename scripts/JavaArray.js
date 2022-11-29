@@ -484,13 +484,39 @@ function openItem(itemId){
             flag = 1
         }
     }
-    
+    sessionStorage.setItem("productId", dataArray[i].id);
     sessionStorage.setItem("productName", dataArray[i].name);
     sessionStorage.setItem("productImageSrc", dataArray[i].imgSrc);
     sessionStorage.setItem("productPrice", dataArray[i].buyNow);
     sessionStorage.setItem("productTopBid", dataArray[i].topBid);
     sessionStorage.setItem("productDetails", dataArray[i].description);
+    sessionStorage.setItem("productCurrentBid", dataArray[i].yourBid);
     window.open("product_details.html");
+}
+
+function setCurrentBid(itemId, newPrice, newTopBid, newBid){
+    var i = -1;
+    var flag = 0
+    while (i < dataArray.length && flag == 0) {
+        i++;
+
+        if (dataArray[i].id == itemId) {
+            flag = 1
+            console.log("bid:" + newBid);
+            console.log("new price:" + newPrice);
+            console.log("top bid:" + newTopBid);
+            
+        }
+    }
+
+    dataArray[i].yourBid = newBid;
+    dataArray[i].buyNow = newPrice;
+    dataArray[i].topBid = newTopBid;
+    console.log("db bid:" + dataArray[i].yourBid);
+    console.log("db price:" + dataArray[i].buyNow);
+    console.log("db topbid:" + dataArray[i].topBid);
+
+    console.log("db bid:" + dataArray[i].yourBid);
 }
 
 function fillBidWatch(){
