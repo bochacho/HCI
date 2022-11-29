@@ -40,10 +40,10 @@
                         <img src="Images\Add_Image.png">
                     </div>
                     <div class = "row mx-auto" style= "padding-left: 24%; padding-right: 33%; " >
-                        <button class = "button1" type = "button">Add Image</button>
+                        <button class = "button1" type = "button" name = "productImage">Add Image</button>
                     </div>
                     <div class = "row" style = "padding-top: 10%; padding-right: 20px;">
-                        <textarea name= "Product Description" placeholder="Product Description" style="height:150px;font-size:14pt;" maxlength="60"></textarea>
+                        <textarea name = "Product Description" placeholder="Product Description" style="height:150px;font-size:14pt;" maxlength="60"></textarea>
                     </div>
                 </div>
 
@@ -53,7 +53,7 @@
                     <div>
 
                         <div class = "row" style = "padding-bottom: 10px; margin-left: auto; margin-right: auto;">
-                            <input type = "text" placeholder="Enter Product Name">
+                            <input type = "text" name = "prodName" placeholder="Enter Product Name">
                         </div>
 
                         <div class = "row space_down">
@@ -68,7 +68,7 @@
                             </div> 
                             
                             <div class = "row" style=" margin-left: auto; margin-right: auto;">
-                                <input type = "number" placeholder="Price in $">
+                                <input type = "number" name = "sellingPrice" placeholder="Price in $">
                             </div>
                             <br>
                         </div>
@@ -103,7 +103,7 @@
                             </div>
 
                             <B class = "xyz">
-                                <input type = "number" id = "MinID" placeholder="Price in $" >
+                                <input type = "number" id = "MinID" name = "startingBid" placeholder="Price in $" >
                             </B>
                         </div> 
                         <h3 style="color : white"> Category </h3> 
@@ -260,6 +260,20 @@
                     MinID.focus();
                 }
             }
+
+
+            // This below code extracts the input from the form in an object of Javascript.
+            console.log(document.querySelectorAll('#Add Image input'));
+
+            const form = document.querySelector('form');
+
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const fd = new FormData(form);
+                const obj = Object.fromEntries(fd);
+                console.log(obj);
+            })
+
 
             
         </script>
