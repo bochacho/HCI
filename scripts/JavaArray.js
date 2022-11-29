@@ -433,7 +433,7 @@ function makeProduct(id, image, name, time, topBid, buy, idScroll){
 const types = {
     "Apparel": ["Shirts", "Pants", "Shoes", "Jackets", "Other"],
     "Trading Cards": ["Pokemon", "Yu-gi-oh", "Magic the Gathering", "Chaotic", "Other"],
-    "Video games": ["Racing", "Shooting", "Multiplayer", "RPG", "Open World", "Puzzle", "Other"],
+    "Video Games": ["Racing", "Shooting", "Multiplayer", "RPG", "Open World", "Puzzle", "Other"],
     "Electronics": ["Laptops", "Cell Phones", "Headphones", "Consoles", "TVs", "Speakers", "Other"],
     "Vehicles": ["Sedan", "Sports Cars", "Hatchback", "SUV", "Motorbike", "Other"]
 }
@@ -448,7 +448,22 @@ function createFilters(){
 
     for( var temp in types){
         element.innerHTML +=`
-        <div><span class="caret" id="span-${temp}" onclick="spanOpener('span-${temp}', 'input-${temp}', 'parent-${temp}')"><input type="checkbox" name="dropdown-group" value="${temp}" id="input-${temp}">${temp}</span>
+        <div>
+            <span 
+                class="caret" 
+                id="span-${temp}" 
+                onclick="spanOpener('span-${temp}', 'input-${temp}', 'parent-${temp}')"
+            >
+            <label for="input-${temp}">
+                <input 
+                    type="checkbox" 
+                    name="dropdown-group" 
+                    value="${temp}" 
+                    id="input-${temp}"
+                >
+                    ${temp}
+            </label
+            </span>
             <ul class="nested" id="parent-${temp}">
             </ul>
         </div>
@@ -505,7 +520,11 @@ function allItemsByFilters(filters){
     else {
         for(let i = 0; i < dataArray.length; i++){
             if(filters.includes(dataArray[i].subCategory)){
-                newItem(dataArray[i]);
+                if (dataArray[i].subCategory === "Other" & filters.includes(dataArray[i].category)){
+                    newItem(dataArray[i]);
+                }else if(dataArray[i].subCategory !== "Other"){
+                    newItem(dataArray[i]);
+                }
             }
             else if(filters.includes(dataArray[i].category)){
                 const found = filters.find( filter => types[dataArray[i].category].includes(filter))
@@ -525,19 +544,19 @@ function allItemsByFilters(filters){
 function spanOpener(spanId, inputId, childId){
     var toggler = document.getElementById(spanId);
     var check = document.getElementById(inputId);
-    check.checked = !check.checked;
-    if(!check.checked){
+    if(check.checked){
+        toggler.parentElement.querySelector(".nested").classList.add("active")
+        toggler.classList.add("caret-down", true);
+    }else{
+        toggler.parentElement.querySelector(".nested").classList.remove("active")
+        toggler.classList.remove("caret-down");
         var parent = document.getElementById(childId)
         var toChangeInputs = parent.getElementsByTagName('input');
         for(var i = 0; i < toChangeInputs.length; i++){
             toChangeInputs[i].checked = false;
         }
-    } 
-    toggler.parentElement.querySelector(".nested").classList.toggle("active");
-    toggler.classList.toggle("caret-down");
+    }
 }
-
-
 function handleSubmit(){
     var markedCheckbox = document.getElementsByName('dropdown-group');
     var filters = []
