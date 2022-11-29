@@ -474,17 +474,19 @@ function allItemsByFilters(filters){
 }
 
 function fillBidWatch(){
-    var element = document.getElementById("why");
+    var element = document.getElementById("Winning");
+    var winning = 0;
 
     for(let i = 0; i < dataArray.length; i++){
         if(dataArray[i].yourBid == 0){
+            winning++;
             element.innerHTML += `
             <div class="listCard">
 
                 <img class="listCardImage" src=${dataArray[i].imgSrc}>
 
                 <div class="listCardMiddle">
-                    <a class="currentBids_name">${dataArray[i].name}</a>
+                    <text class="currentBids_name">${dataArray[i].name}</text>
                     <div>
                         <p class="currentBids_timeandprice">Time Left: </p>
                         <p class="currentBids_timeandprice">${dataArray[i].time}</p>
@@ -496,4 +498,8 @@ function fillBidWatch(){
             `
         }
     }
+
+    element = document.getElementById("WinLose");
+
+    element.innerHTML = `You are currently winning on&nbsp<b>${winning}</b>&nbspbids and losing on&nbsp<b>0</b>&nbspbids`
 }
