@@ -486,14 +486,14 @@ function fillBidWatch(){
                 <img class="listCardImage" src=${dataArray[i].imgSrc}>
 
                 <div class="listCardMiddle">
-                    <text class="currentBids_name">${dataArray[i].name}</text>
-                    <div>
+                    <text class="currentBids_name"  style = "margin-top: 1em;">${dataArray[i].name}</text>
+                </div>
+                    <div style = "display:flex; flex-direction: column; margin-top: 1em;">
                         <p class="currentBids_timeandprice">Time Left: </p>
                         <p class="currentBids_timeandprice">${dataArray[i].time}</p>
                     </div>
-                </div>
 
-                <p class="currentBids_price">My bid: <br> $${dataArray[i].yourBid}</p>
+                <p class="currentBids_price"  style = "margin-top: 1em;">My bid: <br> $${dataArray[i].yourBid}</p>
             </div>
             `
         }

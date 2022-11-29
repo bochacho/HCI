@@ -2,6 +2,7 @@
 
 body{
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .topnav{
@@ -29,7 +30,7 @@ body{
     cursor: pointer;
  }
 
- .topnav a.activeNav {
+ .topnav a.active{
     color: #04AA6D;
  }
   
@@ -77,7 +78,7 @@ body{
   vertical-align: middle;
   line-height: normal;
 }
-.currentBids_name:hover{
+/* .currentBids_name:hover{
   display: block;
   max-width: 30%;
   font-size: 20px;
@@ -87,7 +88,7 @@ body{
   vertical-align: middle;
   line-height: normal;
   text-decoration: underline;
-}
+} */
 .currentBids_timeandprice {
   display: block;
   white-space: nowrap;
@@ -113,17 +114,18 @@ body{
 .itemsContainer {
     width: 70%;
     float: right;
+    margin-right: 8%;
     position:relative;
 }
 .listContainer {
-    margin-top: 10%;
+    margin-top: 2%;
     margin-bottom: 3%;
     display: grid;
     min-width: 50rem;
 }
 .listCard {
     display: grid;
-    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: 25% 25% 25% 25%;
     justify-content: flex-start;
     transition: 0.3s;
     gap: 30px;
@@ -133,9 +135,13 @@ body{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 .listCardImage {
-    width: 100%;
-    border-radius: 0.5em;
-    margin: 2%;
+  width: 100%;
+  height: 11vw;
+  border-radius: 0.5em;
+  margin: 2%;
+  align-items: center;
+  justify-content: center;
+  object-fit:contain;
 }
 .listCardMiddle {
     width: 100%;
@@ -178,5 +184,4 @@ body{
   /* text-align:left; */
   color: gray;
   background-color: gray;
-  margin-top: 8%
 }
