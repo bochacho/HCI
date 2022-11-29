@@ -17,20 +17,29 @@ function newBid() {
         var topBid = document.getElementById("topBid").innerHTML;
         topBid = parseFloat(topBid.replace("$", "")).toFixed(2);
 
-        if(value > topBid){
+        if(parseFloat(value) > parseFloat(topBid)){
+            console.log("value > topBid");
             topBid = value;
         }
+
+        topBid = parseFloat(topBid).toFixed(2);
 
         document.getElementById("topBid").innerHTML = "$" + topBid;
 
         // highest bid to price
         var price = document.getElementById("Price").innerHTML;
         price = parseFloat(price.replace("$", "")).toFixed(2);
+        console.log("new bid = " + value);
+        console.log(price);
+        console.log(topBid);
 
-        if(topBid >= price) {
+        if(parseFloat(topBid) > parseFloat(price)) {
+            console.log("newBid > price");
             price = (120 * topBid / 100).toFixed(2);
         }
 
+        console.log(price);
+        price = parseFloat(price).toFixed(2);
         document.getElementById("Price").innerHTML = "$" + price;
 
     }
@@ -44,7 +53,6 @@ function newBid() {
 }
 
 function getProductPage(product) {
-    console.log("next time debug");
     // get product name
     var name = document.getElementById("list-card-middle-title-" + product).innerHTML;
     // get image src
@@ -76,5 +84,3 @@ document.getElementById("productName").innerHTML = productName;
 document.getElementById("Price").innerHTML = price;
 document.getElementById("topBid").innerHTML = topBid;
 document.getElementById("details").innerHTML = details;
-
-sessionStorage.clear();
