@@ -1,3 +1,75 @@
+// function productPage(product){
+//     var element = document.getElementById("list-container");
+
+//     element.innerHTML = `
+//     <div class = "row">
+//         <div class = "col-8">
+//             <div class = "row">
+//                 <h1 class="PageTitle_h1">Product Details</h1>
+
+//                 <img class="productImage" id = "productImage" src=${product.imgSrc} alt=${product.name}>
+//             </div>
+      
+//             <div class = "row">
+//                 <h2 class="subtitle_h2">Description</h2>
+
+//                 <p  id = "details">${product.details}</p>
+//             </div>
+//         </div>
+    
+//         <div class = "col-4 buy_section">
+//             <h2 class="subtitle_h2 space_top" id = "productName">${product.name}</h2>
+      
+//             <div class = "row section_spacing">
+//                 <div class = "row line_space">
+//                     <div class = "col">
+//                         Buy Now Price:
+//                     </div>
+  
+//                     <div class = "col" id = "Price">
+//                     ${product.buyNow}
+//                     </div>
+//                 </div>
+                   
+//                 <button type="button" class="btn btn-success btn-lg">BUY</button>
+//             </div>
+        
+//             <div class = "row">
+//                 <div class = "row">
+//                     <div class = "col">
+//                         Highest Bid:
+//                     </div>
+
+//                     <div class = "col" id = "topBid">
+//                     ${product.topBid}
+//                     </div>
+//                 </div>
+                
+//                 <div class = "row line_space">
+//                     <div class = "col">
+//                         Your Current Bid:
+//                     </div>
+
+//                     <div class = "col" id = "CurrentBid">
+//                         $0.00
+//                     </div>
+//                 </div>
+
+//                 <div class="input-group mb-3">
+//                     <div class="input-group-prepend">
+//                         <span class="input-group-text">Your Bid $</span>
+//                     </div>
+            
+//                     <input type="text" placeholder="Enter bidding amount" class="form-control" id = "bidAmount_textbox" aria-label="Amount">
+//                 </div>
+
+//                 <button type="button" class="btn btn-primary btn-lg" onclick = "newBid()">BID</button>
+//             </div>
+//         </div>
+//     </div>
+//     `
+// }
+
 function newBid() {
     // get value from text box
     var value = document.getElementById("bidAmount_textbox").value;
