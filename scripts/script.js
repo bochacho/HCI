@@ -83,6 +83,6 @@ var details = sessionStorage.getItem("productDetails").trim();
 
 document.getElementById("productImage").src = image;
 document.getElementById("productName").innerHTML = productName;
-document.getElementById("Price").innerHTML = price;
-document.getElementById("topBid").innerHTML = topBid;
+document.getElementById("Price").innerHTML = "$" + price;
+document.getElementById("topBid").innerHTML = "$" + topBid;
 document.getElementById("description").innerHTML = details;

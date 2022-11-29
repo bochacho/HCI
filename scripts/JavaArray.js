@@ -424,11 +424,11 @@ function newItem(product){
             </div>
             <div class="listCardSection" id="list-card-buy-${product.id}">
                 <p style="white-space: nowrap;" id="list-card-buy-text-${product.id}">Buy Now Price:</p>
-                <p class="listCardPricesText" id="list-card-buy-price-${product.id}">${product.buyNow}</p>
+                <p class="listCardPricesText" id="list-card-buy-price-${product.id}">$${product.buyNow}</p>
             </div>
             <div class="listCardSection" id="list-card-bid-${product.id}">
                 <p style="white-space: nowrap;" id="list-card-bid-text-${product.id}">Top Bid:</p>
-                <p class="listCardPricesText" id="list-card-bid-price-${product.id}">${product.topBid}</p>
+                <p class="listCardPricesText" id="list-card-bid-price-${product.id}">$${product.topBid}</p>
             </div>
         </div>
     `
