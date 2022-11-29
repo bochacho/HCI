@@ -192,16 +192,10 @@ input[type=checkbox].toggle-switch:checked::after {
     background-color: #04AA6D;
     border: none;
     border-radius: 9px;
-    box-shadow: 0 9px rgb(111, 109, 109);
   }
   
   .button:hover {background-color: #04AA6D}
   
-  .button:active {
-    background-color: #04AA6D;
-    box-shadow: 0 5px rgb(111, 109, 109);
-    transform: translateY(4px);
-  }
 
 
   /*
