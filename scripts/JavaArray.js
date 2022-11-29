@@ -411,19 +411,20 @@ function rightScrollVideo() {
     right.scrollBy(930, 0);
 }
 
-function makeProduct(image, name, time, topBid, buy, idScroll){
+function makeProduct(id, image, name, time, topBid, buy, idScroll){
     var element = document.getElementById(idScroll);
 
     element.innerHTML += `
-    <div class="product">
-        <a href= "Browse.html">
-            <img class="product-img" src=${image} alt="image"/>
+    <div class="product" onclick = "openItem('${id}')">
+        <a>
+            <img class="product-img" id = "productImageSrc" src=${image} alt="image"/>
             <div class="product-text">
-                <b>${name}<br></b>
-                <text>Time Left: ${time}<br></text>
-                <text>Top Bid: $${topBid}<br></text>
+                <b id = "productName">${name}<br></b>
+                <text>Time Left:${time}</text>
+                <text>Top Bid: $${topBid}</text>
                 <text>Buy Now: $${buy}</text>
             </div>
+            <div class = "productId" id = "productId" style = "visibility: hidden">${id}</div>
         </a>
     </div>
     `    
@@ -431,7 +432,7 @@ function makeProduct(image, name, time, topBid, buy, idScroll){
 
 function addAllProducts(){
     for(let i = 0; i < dataArray.length; i++){
-        makeProduct(dataArray[i].imgSrc,dataArray[i].name,dataArray[i].time,dataArray[i].topBid,dataArray[i].buyNow,dataArray[i].category)
+        makeProduct(dataArray[i].id, dataArray[i].imgSrc,dataArray[i].name,dataArray[i].time,dataArray[i].topBid,dataArray[i].buyNow,dataArray[i].category)
     }
 }
 
@@ -441,7 +442,7 @@ function newItem(product){
     var element = document.getElementById("list-container");
 
     element.innerHTML += `
-        <div id="list-card-container-${product.id}" onclick="()=> openItem(${product.id})" class="listCard">
+        <div id="list-card-container-${product.id}" class="listCard" onclick = "openItem('${product.id}')">
             <img id="list-card-image-${product.id}" src=${product.imgSrc} class="listCardImage"/>
             <div class="listCardMiddle" id="list-card-middle-${product.id}">
                 <h2 id="list-card-middle-title-${product.id}">${product.name}</h2>
@@ -453,11 +454,11 @@ function newItem(product){
             </div>
             <div class="listCardSection" id="list-card-buy-${product.id}">
                 <p style="white-space: nowrap;" id="list-card-buy-text-${product.id}">Buy Now Price:</p>
-                <p class="listCardPricesText" id="list-card-buy-price-${product.id}">${product.buyNow}</p>
+                <p class="listCardPricesText" id="list-card-buy-price-${product.id}">$${product.buyNow}</p>
             </div>
             <div class="listCardSection" id="list-card-bid-${product.id}">
                 <p style="white-space: nowrap;" id="list-card-bid-text-${product.id}">Top Bid:</p>
-                <p class="listCardPricesText" id="list-card-bid-price-${product.id}">${product.topBid}</p>
+                <p class="listCardPricesText" id="list-card-bid-price-${product.id}">$${product.topBid}</p>
             </div>
         </div>
     `
@@ -473,6 +474,51 @@ function allItemsByFilters(filters){
     }
 }
 
+function openItem(itemId){
+    var i = -1;
+    var flag = 0
+    while (i < dataArray.length && flag == 0) {
+        i++;
+
+        if (dataArray[i].id == itemId) {
+            flag = 1
+        }
+    }
+    sessionStorage.setItem("productId", dataArray[i].id);
+    sessionStorage.setItem("productName", dataArray[i].name);
+    sessionStorage.setItem("productImageSrc", dataArray[i].imgSrc);
+    sessionStorage.setItem("productPrice", dataArray[i].buyNow);
+    sessionStorage.setItem("productTopBid", dataArray[i].topBid);
+    sessionStorage.setItem("productDetails", dataArray[i].description);
+    sessionStorage.setItem("productCurrentBid", dataArray[i].yourBid);
+    window.open("product_details.html");
+}
+
+function setCurrentBid(itemId, newPrice, newTopBid, newBid){
+    var i = -1;
+    var flag = 0
+    while (i < dataArray.length && flag == 0) {
+        i++;
+
+        if (dataArray[i].id == itemId) {
+            flag = 1
+            console.log("bid:" + newBid);
+            console.log("new price:" + newPrice);
+            console.log("top bid:" + newTopBid);
+            
+        }
+    }
+
+    dataArray[i].yourBid = newBid;
+    dataArray[i].buyNow = newPrice;
+    dataArray[i].topBid = newTopBid;
+    console.log("db bid:" + dataArray[i].yourBid);
+    console.log("db price:" + dataArray[i].buyNow);
+    console.log("db topbid:" + dataArray[i].topBid);
+
+    console.log("db bid:" + dataArray[i].yourBid);
+}
+
 function fillBidWatch(){
     var element = document.getElementById("Winning");
     var winning = 0;
@@ -481,7 +527,7 @@ function fillBidWatch(){
         if(dataArray[i].yourBid > 0){
             winning++;
             element.innerHTML += `
-            <div class="listCard">
+            <div class="listCard"  onclick = "openItem('${dataArray[i].id}')">
 
                 <img class="listCardImage" src=${dataArray[i].imgSrc}>
 
