@@ -1,61 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
 body{
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .topnav{
-    overflow: hidden;
-    background-color: #333;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  height: 3.9em;
+  justify-content: space-between;
+  width: 100%;
+}
+.topnav div{
+  display: flex;
+  justify-content: space-between;
+  gap: 3vw;
 }
 .topnav a{
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 20px 80px;
-    text-decoration: none;
-    font-size: 30px;
-}
-.topnav b{
-    float: left;
-    color: #f2f2f2;
-    padding: 10px 80px;
+  color: #f2f2f2;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5em;
 }
 .topnav a:hover{
-    background-color: #ddd;
-    color: black
+  color:silver;
+  cursor: pointer;
+  text-decoration: underline;
 }
-.topnav b:hover{
-    background-color: #ddd;
-    color: black
+
+.topnav a.active {
+  color: #04AA6D;
 }
+  
+.topnav button{
+  color: #f2f2f2;
+  margin-right: 3%;
+}
+  
+.topnavLogo{
+  color: #f2f2f2;
+  margin-left: 2%;
+  padding: 0.2%;
+}
+  
+.topnavLogo:hover{
+    cursor: pointer;
+    background-color:azure;
+    border-radius: 50%;
+}
+  
 .topnav input[type=text] {
-  float: right;
-  padding: 6px;
   border: none;
-  margin-top: 20px;
-  margin-right: 40px;
-  font-size: 17px;
+  font-size: 1.2em;
+  margin-right: 2%;
+  border-radius: 1em;
+  text-indent: 2ch;
+}
+
+.mainContainer2 {
+  display: flex;
+  grid-template-columns: 30% 70%;
+  margin-left: 8%;
+  margin-right: 8%;
+}
+.mainContainer {
+  display: flex;
+  grid-template-columns: 30% 70%;
+  justify-content: flex-start;
+  margin-left: 8%;
+  margin-right: 8%;
 }
 .currentBids_name {
   display: block;
-  max-width: 280px;
+  width: 50%;
+  max-width: 50%;
   float: left;
   font-size: 20px;
   text-align: center;
   justify-content: center;
   align-items: center;
-  vertical-align: middle;
+  /* vertical-align: middle; */
   line-height: normal;
 }
 .currentBids_name:hover{
-  display: block;
-  max-width: 30%;
+  text-decoration: underline !important;
+  /* display: block;
+  max-width: 280px;
+  float: left;
   font-size: 20px;
   text-align: center;
   justify-content: center;
-  align-items: center;
-  vertical-align: middle;
-  line-height: normal;
-  text-decoration: underline;
+  align-items: center; */
+  /* vertical-align: middle; */
+  /* line-height: normal; */
+  /* background-color: #7fb6ff; */
 }
 .currentBids_timeandprice {
   display: block;
@@ -89,6 +128,7 @@ body{
     margin-bottom: 3%;
     display: grid;
     min-width: 50rem;
+    cursor: pointer;
 }
 .listCard {
     display: grid;
@@ -100,6 +140,7 @@ body{
 }
 .listCard:hover{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    cursor: pointer;
 }
 .listCardImage {
     width: 100%;
@@ -109,7 +150,6 @@ body{
 .listCardMiddle {
     width: 100%;
     flex-direction: column;
-    /* background-color: pink; */
 }
 .listCardEnd {
     width: 100%;
@@ -125,7 +165,7 @@ body{
   width: 70%;
   float: right;
   margin-right: 8%;
-  margin-top: 2%;
+  margin-top: 3%;
   margin-bottom: 0%;
 }
 .bidWatch2{
@@ -136,16 +176,14 @@ body{
 }
 .bidWatch3{
   width: 70%;
-  float: right;
   margin-right: 8%;
-  margin-top: 0%;
+  margin-top: 5%;
   color: gray;
+  font-size: large;
 }
 .line {
-  width:70%;
-  text-align:right;
+  width:90%;
   color: gray;
-  margin-right: 8%;
   background-color: gray;
-  margin-top: 5%
+  margin-top: 3%
 }

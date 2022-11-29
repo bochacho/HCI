@@ -35,6 +35,7 @@ var dataArray = [
         id:"3",
         category: 1,
         subCategory: 11,
+        inBidWatch: true,
     }
 ]
 
@@ -67,6 +68,12 @@ function newItem(product){
     `
 };
 
-for (var i = 0; i < dataArray.length; i++) {
-    newItem(dataArray[i]);
+function allItemsByFilters(filters){
+    if(!filters){
+        element = document.getElementById("list-container");
+        element.innerHTML = '';
+        for(let i = 0; i < dataArray.length; i++){
+            newItem(dataArray[i]);
+        }
+    }
 }

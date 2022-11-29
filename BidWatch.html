@@ -4,27 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>22G Auction</title>
+    <title>22G Auction-Bid Watch</title>
     <link rel="stylesheet" href="BidWatch.css">
+    <link rel="stylesheet" 
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
+    crossorigin="anonymous"/>
 </head>
 
 <body>
+  <div class="topNavDiv" >
+    <nav class="topnav">
+        <a href="Index.html" class="topnavLogo"><img src = "Images/Logo_green.png" height = 50px width = 50px></a>
+        <div>
+            <a href="Browse.html">Browse</a>
+            <a href="Sell_page.html">Sell</a>
+            <a class = "active" href="BidWatch.html" style="white-space: nowrap;">Bid Watch</a>
+            <a href="Accounts.html">Account</a>
+        </div>
+        <input type="text" placeholder="Search">
+    </nav>
+</div>
 
-    <div>
-        <nav class="topnav">
-            <b href="#home"><img src = "Images/Logo_green.png" height = 50px width = 50px></b>
-            <a href="#Browse">Browse</a>
-            <a href="#Sell">Sell</a>
-            <a href="#Bid Watch">Bid Watch</a>
-            <a href="#Account">Account</a>
-            <input type="text" placeholder="Search...">
-        </nav>
-    </div>
+    <div class="mainContainer2">
+    <h1 class="bidWatch1">Current Bids</h1>
+    <p class="bidWatch3">You are currently winning on <b>2</b> bids and losing on <b>1</b> bids</p>
+  </div>  
+    <hr class="line">
 
 
-      <h1 class="bidWatch1">Current Bids</h1>
-      <p class="bidWatch3">You are currently winning on <b>2</b> bids and losing on <b>1</b> bids</p>
-      <hr class="line">
+      <div class="mainContainer">
       <h2 class="bidWatch2">Winning</h2>
       <div class="itemsContainer">
         <container class="listContainer">
@@ -57,9 +66,9 @@
           </div>
         </container>
       </div>
-
+    </div>
       <hr class="line">
-
+      <div class="mainContainer">
       <h2 class="bidWatch2">Losing</h2>
       <div class="itemsContainer">
         <container class="listContainer">
@@ -81,5 +90,6 @@
           </div>
         </container>
       </div>
+    </div>
 </body>
 </html>

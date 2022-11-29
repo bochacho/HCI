@@ -134,7 +134,7 @@ function getProductPage(product) {
     // get top bid
     var topBid = document.getElementById("list-card-bid-price-" + product).innerHTML;
     // get details
-    var details = document.getElementById("list-card-middle-details-" + product).innerHTML;
+    var details = document.getElementById("list-card-middle-description-" + product).innerHTML;
 
     sessionStorage.setItem("productName", name);
     sessionStorage.setItem("productImageSrc", image);
@@ -155,4 +155,4 @@ document.getElementById("productImage").src = image;
 document.getElementById("productName").innerHTML = productName;
 document.getElementById("Price").innerHTML = price;
 document.getElementById("topBid").innerHTML = topBid;
-document.getElementById("details").innerHTML = details;
+document.getElementById("description").innerHTML = details;
