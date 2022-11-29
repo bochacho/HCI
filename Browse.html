@@ -87,28 +87,72 @@ body{
 /* Add some padding inside the card container */
 .mainContainer {
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 25% 75%;
   justify-content: flex-start;
   margin-left: 8%;
   margin-right: 8%;
 
 }
 .filterContainer{
-    margin-top: 7%;
-    display: flex;
-    margin-left: 5%;
-    overflow-y: scroll;
-    overflow-x: scroll;
-}
-.filterItemsContainer{
     float: right;
-    margin-top: 7%;
-    margin-right: 5%;
-    overflow-y:auto;
-    overflow-x: hidden;
+    margin-top: 7rem;
     position: static;
-    scroll-behavior: smooth;
+    scroll-behavior:smooth;
 }
+.filterContainer div{
+    font-size: large;
+    font-weight: 500;
+}
+.filterContainer button{
+    border-radius: 0.5em;
+    font-size: 1.2em;
+    padding-left: 2%;
+    padding-right: 2%;
+    background:#04AA6D;
+    color:white;
+    border-style:none;
+
+}
+
+.filterItemsContainer{
+    display: block;
+}
+.caret {
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari 3.1+ */
+  -moz-user-select: none; /* Firefox 2+ */
+  -ms-user-select: none; /* IE 10+ */
+  user-select: none;
+}
+
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 6px;
+}
+
+.caret-down::before {
+  -ms-transform: rotate(90deg); /* IE 9 */
+  -webkit-transform: rotate(90deg); /* Safari */
+  transform: rotate(90deg);  
+}
+
+.nested {
+  display: none;
+}
+.nested label:hover{
+    cursor: pointer;
+}
+
+.checkbox-container {
+    display: block;
+}
+
+.active {
+  display: block;
+}
+
 .itemsContainer {
     float: right;
     margin-top: 10%;
@@ -117,11 +161,12 @@ body{
 }
 .listContainer {
     margin-bottom: 3%;
-    display: grid;
+    display: block;
+    min-width: 58em;
 }
 .listCard {
     display: grid;
-    grid-template-columns: 20% 40% 10% 10% 10%;
+    grid-template-columns: 20% 40% 8% 12% 10%;
     justify-content: flex-start;
     transition: 0.3s;
     gap: 30px;
@@ -133,7 +178,7 @@ body{
 }
 .listCardImage {
     width: 100%;
-    height: 11vw;
+    height: 11rem;
     border-radius: 0.5em;
     margin: 2%;
     align-items: center;
@@ -141,9 +186,18 @@ body{
     object-fit:contain;
 }
 .listCardMiddle {
+    display: block;
     width: 100%;
+    max-height: 30rem;
     margin-top: 1em;
-    overflow-y: scroll;
+}
+.listCardMiddleTitle{
+    display: flex;
+}
+.listCardMiddleText {
+    text-overflow:ellipsis;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 .listCardSection {
     display:flex;
@@ -154,7 +208,10 @@ body{
     font-size: 1.2em;
     font-weight: 700;
 }
-
+.muchEmpty{
+    display: flex;
+    max-height: 50vh;
+}
 </style>
 
 
@@ -172,12 +229,19 @@ body{
             <input type="text" placeholder="Search">
         </nav>
     </div>
-
     <div class="mainContainer">
         <div class="filterContainer">
             <div class="filterItemsContainer">
-                <form id="filter-form">
-                    
+                <h3>Filters</h3>
+                <form id="filter-form" >
+                    <div id="filter-code">
+                        <script>{
+                            createFilters();
+                            createSubFilters();
+                        }</script>
+                    </div>
+                    <button  type="reset" onclick="handleClear()">Clear</button>
+                    <button type="button" onclick="handleSubmit()" >Apply</button>
                 </form>
             </div>
         </div>
@@ -188,7 +252,7 @@ body{
             </container>
         </div>
     </div>
-    <script>allItemsByFilters()</script>
+    <script>allItemsByFilters([])</script>
 
 </body>
 </html>
