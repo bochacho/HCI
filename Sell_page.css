@@ -58,13 +58,9 @@ body{
   border-radius: 1em;
   text-indent: 2ch;
  }
- 
- 
-
-
 
 /* CSS for the toggle switch */
-input[type=checkbox].toggle-switch {
+/* input[type=checkbox].toggle-switch {
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -102,13 +98,13 @@ input[type=checkbox].toggle-switch:checked::after {
     
     display: flex;
     flex-direction: column;
-}
+} */
 
 
 /* CSS for the CATEGORY DROPDOWN */
 
 .dropdown {
-    background-color: #111;
+    background-color: rgb(255,255,255);
 }
 
 .dropdown a, .dropdown-btn {
@@ -156,5 +152,5 @@ input[type=checkbox].toggle-switch:checked::after {
   /* Colour Coding the form list */
 
   .col-sm-4{
-    background-color: #64b48990;
+    background-color: rgb(49,49,49);
   }
