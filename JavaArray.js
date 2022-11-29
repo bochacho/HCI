@@ -478,7 +478,7 @@ function fillBidWatch(){
     var winning = 0;
 
     for(let i = 0; i < dataArray.length; i++){
-        if(dataArray[i].yourBid == 0){
+        if(dataArray[i].yourBid > 0){
             winning++;
             element.innerHTML += `
             <div class="listCard">
