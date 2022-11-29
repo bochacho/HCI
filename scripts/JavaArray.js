@@ -381,19 +381,20 @@ function rightScrollVideo() {
     right.scrollBy(930, 0);
 }
 
-function makeProduct(image, name, time, topBid, buy, idScroll){
+function makeProduct(id, image, name, time, topBid, buy, idScroll){
     var element = document.getElementById(idScroll);
 
     element.innerHTML += `
-    <div class="product">
-        <a href= "Browse.html">
-            <img class="product-img" src=${image} alt="image"/>
+    <div class="product" onclick = "openItem('${id}')">
+        <a>
+            <img class="product-img" id = "productImageSrc" src=${image} alt="image"/>
             <div class="product-text">
-                <b>${name}<br></b>
-                <text>Time Left: ${time}<br></text>
-                <text>Top Bid: $${topBid}<br></text>
+                <b id = "productName">${name}<br></b>
+                <text>Time Left:${time}</text>
+                <text>Top Bid: $${topBid}</text>
                 <text>Buy Now: $${buy}</text>
             </div>
+            <div class = "productId" id = "productId" style = "visibility: hidden">${id}</div>
         </a>
     </div>
     `    
@@ -401,7 +402,7 @@ function makeProduct(image, name, time, topBid, buy, idScroll){
 
 function addAllProducts(){
     for(let i = 0; i < dataArray.length; i++){
-        makeProduct(dataArray[i].imgSrc,dataArray[i].name,dataArray[i].time,dataArray[i].topBid,dataArray[i].buyNow,dataArray[i].category)
+        makeProduct(dataArray[i].id, dataArray[i].imgSrc,dataArray[i].name,dataArray[i].time,dataArray[i].topBid,dataArray[i].buyNow,dataArray[i].category)
     }
 }
 
@@ -411,7 +412,7 @@ function newItem(product){
     var element = document.getElementById("list-container");
 
     element.innerHTML += `
-        <div id="list-card-container-${product.id}" class="listCard" onclick = "getProductPage('${product.id}')">
+        <div id="list-card-container-${product.id}" class="listCard" onclick = "openItem('${product.id}')">
             <img id="list-card-image-${product.id}" src=${product.imgSrc} class="listCardImage"/>
             <div class="listCardMiddle" id="list-card-middle-${product.id}">
                 <h2 id="list-card-middle-title-${product.id}">${product.name}</h2>
@@ -444,5 +445,20 @@ function allItemsByFilters(filters){
 }
 
 function openItem(itemId){
+    var i = -1;
+    var flag = 0
+    while (i < dataArray.length && flag == 0) {
+        i++;
+
+        if (dataArray[i].id == itemId) {
+            flag = 1
+        }
+    }
     
+    sessionStorage.setItem("productName", dataArray[i].name);
+    sessionStorage.setItem("productImageSrc", dataArray[i].imgSrc);
+    sessionStorage.setItem("productPrice", dataArray[i].buyNow);
+    sessionStorage.setItem("productTopBid", dataArray[i].topBid);
+    sessionStorage.setItem("productDetails", dataArray[i].description);
+    window.open("product_details.html");
 }
