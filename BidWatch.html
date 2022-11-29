@@ -10,6 +10,7 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
     crossorigin="anonymous"/>
+    <script src = "JavaArray.js"></script>
 </head>
 
 <body>
@@ -26,70 +27,32 @@
     </nav>
 </div>
 
-    <div class="mainContainer2">
-    <h1 class="bidWatch1">Current Bids</h1>
-    <p class="bidWatch3">You are currently winning on <b>2</b> bids and losing on <b>1</b> bids</p>
+  <div class="mainContainer">
+    <h1 class="bidWatch2">Current Bids</h1>
+  </div>
+  <div class = "mainContainer">
+    <p class="bidWatch3" id = "WinLose" style = "margin-bottom:0%"></p>
   </div>  
     <hr class="line">
 
 
-      <div class="mainContainer">
-      <h2 class="bidWatch2">Winning</h2>
+    <div class="mainContainer">
+        <h2 class="bidWatch2" style = "margin-bottom:0%;">Winning</h2>
+    </div>
+    <div class="mainContainer">
       <div class="itemsContainer">
-        <container class="listContainer">
-          <div class="listCard">
-            <!-- image -->
-            <img class="listCardImage" src="Images/shoes.webp" alt="NikeShoes">
-            <!-- product -->
-            <div class="listCardMiddle">
-              <a class="currentBids_name">Nike Wearallday Shoes white/orange/blue</a>
-              <!-- time -->
-              <p class="currentBids_timeandprice">End time: </p>
-              <p class="currentBids_timeandprice">8:13 PM 12/25/2022</p>
-            </div>
-            <!-- price -->
-            <p class="currentBids_price">My bid: <br> $ 50.99</p>
-          </div>
-
-            <div class="listCard">
-            <!-- image -->
-            <img class="listCardImage" src="Images/airpods.webp" alt="Airpods">
-            <!-- product -->
-            <div class="listCardMiddle">
-              <a class="currentBids_name">Apple AirPods Max Headphones Silver</a>
-              <!-- time -->
-              <p class="currentBids_timeandprice">End time: </p>
-              <p class="currentBids_timeandprice">12:30 PM 12/7/2022</p>
-            </div>
-            <!-- price -->
-            <p class="currentBids_price">My bid: <br> $ 900.30</p>
-          </div>
-        </container>
+        <container class="listContainer" id = "Winning"></container>
       </div>
     </div>
       <hr class="line">
       <div class="mainContainer">
       <h2 class="bidWatch2">Losing</h2>
       <div class="itemsContainer">
-        <container class="listContainer">
-          <div class="listCard">
-            <!-- image -->
-            <img class="listCardImage" src="Images/card.jpg" alt="pokemonCards">
-            <!-- product -->
-              <div class="listCardMiddle">
-              <a class="currentBids_name">Pokémon Cards Limited Edition</a>
-              <!-- time -->
-              <p class="currentBids_timeandprice">End time: </p>
-              <p class="currentBids_timeandprice">4:29 PM 11/28/2022</p>
-            </div>
-            <!-- price -->
-            <div class="listCardEnd">
-              <p class="currentBids_losingprice">My bid:<br>$ 120.68</p>
-              <p class="currentBids_price">Current bid:<br> $ 150.33</p>
-            </div>
-          </div>
-        </container>
+        <container class="listContainer"></container>
       </div>
     </div>
+    <script>
+      fillBidWatch()
+    </script>
 </body>
 </html>
