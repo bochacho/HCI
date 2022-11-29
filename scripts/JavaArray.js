@@ -9,7 +9,7 @@ var dataArray = [
         id: 1, 
         category: "Apparel",
         subCategory: "Shoes",
-        yourBid: 0
+        yourBid: 20
     },
     {
         name:"2023 Hyundai Sonata",
@@ -524,7 +524,7 @@ function fillBidWatch(){
     var winning = 0;
 
     for(let i = 0; i < dataArray.length; i++){
-        if(dataArray[i].yourBid == 0){
+        if(dataArray[i].yourBid > 0){
             winning++;
             element.innerHTML += `
             <div class="listCard"  onclick = "openItem('${dataArray[i].id}')">
