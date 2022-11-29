@@ -474,7 +474,6 @@ function allItemsByFilters(filters){
     }
 }
 
-<<<<<<< HEAD:scripts/JavaArray.js
 function openItem(itemId){
     var i = -1;
     var flag = 0
@@ -493,7 +492,7 @@ function openItem(itemId){
     sessionStorage.setItem("productDetails", dataArray[i].description);
     window.open("product_details.html");
 }
-=======
+
 function fillBidWatch(){
     var element = document.getElementById("Winning");
     var winning = 0;
@@ -502,7 +501,7 @@ function fillBidWatch(){
         if(dataArray[i].yourBid == 0){
             winning++;
             element.innerHTML += `
-            <div class="listCard">
+            <div class="listCard"  onclick = "openItem('${dataArray[i].id}')">
 
                 <img class="listCardImage" src=${dataArray[i].imgSrc}>
 
@@ -524,4 +523,3 @@ function fillBidWatch(){
 
     element.innerHTML = `You are currently winning on&nbsp<b>${winning}</b>&nbspbids and losing on&nbsp<b>0</b>&nbspbids`
 }
->>>>>>> 509868eec3fab3391f37cb08742d996fab1b9d0c:JavaArray.js
