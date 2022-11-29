@@ -52,25 +52,27 @@ function newBid() {
     document.getElementById("bidAmount_textbox").value = "";
 }
 
-function getProductPage(product) {
-    // get product name
-    var name = document.getElementById("list-card-middle-title-" + product).innerHTML;
-    // get image src
-    var image = document.getElementById("list-card-image-"+ product).src;
-    //get price
-    var price = document.getElementById("list-card-buy-price-" + product).innerHTML;
-    // get top bid
-    var topBid = document.getElementById("list-card-bid-price-" + product).innerHTML;
-    // get details
-    var details = document.getElementById("list-card-middle-description-" + product).innerHTML;
+/*was being used to move from browse.html page to product_details.html page
+It has now been replaced by openItem() function in JavaArray.js*/
+// function getProductPage(product) {
+//     // get product name
+//     var name = document.getElementById("list-card-middle-title-" + product).innerHTML;
+//     // get image src
+//     var image = document.getElementById("list-card-image-"+ product).src;
+//     //get price
+//     var price = document.getElementById("list-card-buy-price-" + product).innerHTML;
+//     // get top bid
+//     var topBid = document.getElementById("list-card-bid-price-" + product).innerHTML;
+//     // get details
+//     var details = document.getElementById("list-card-middle-description-" + product).innerHTML;
 
-    sessionStorage.setItem("productName", name);
-    sessionStorage.setItem("productImageSrc", image);
-    sessionStorage.setItem("productPrice", price);
-    sessionStorage.setItem("productTopBid", topBid);
-    sessionStorage.setItem("productDetails", details);
-    window.open("product_details.html");
-};
+//     sessionStorage.setItem("productName", name);
+//     sessionStorage.setItem("productImageSrc", image);
+//     sessionStorage.setItem("productPrice", price);
+//     sessionStorage.setItem("productTopBid", topBid);
+//     sessionStorage.setItem("productDetails", details);
+//     window.open("product_details.html");
+// };
 
 var image = sessionStorage.getItem("productImageSrc").trim();
 var productName = sessionStorage.getItem("productName").trim();
