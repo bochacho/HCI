@@ -406,3 +406,43 @@ function addAllProducts(){
 }
 
 
+var selectedItem = 0;
+function newItem(product){
+    var element = document.getElementById("list-container");
+
+    element.innerHTML += `
+        <div id="list-card-container-${product.id}" onclick="()=> openItem(${product.id})" class="listCard">
+            <img id="list-card-image-${product.id}" src=${product.imgSrc} class="listCardImage"/>
+            <div class="listCardMiddle" id="list-card-middle-${product.id}">
+                <h2 id="list-card-middle-title-${product.id}">${product.name}</h2>
+                <p id="list-card-middle-description-${product.id}">${product.description}</p>
+            </div>
+            <div class="listCardSection" id="list-card-times-${product.id}">
+                <p id="list-card-times-title-${product.id}" style="white-space: nowrap;">Time Left:</p>
+                <p class="listCardPricesText" id="list-card-times-date-${product.id}">${product.time}</p>
+            </div>
+            <div class="listCardSection" id="list-card-buy-${product.id}">
+                <p style="white-space: nowrap;" id="list-card-buy-text-${product.id}">Buy Now Price:</p>
+                <p class="listCardPricesText" id="list-card-buy-price-${product.id}">${product.buyNow}</p>
+            </div>
+            <div class="listCardSection" id="list-card-bid-${product.id}">
+                <p style="white-space: nowrap;" id="list-card-bid-text-${product.id}">Top Bid:</p>
+                <p class="listCardPricesText" id="list-card-bid-price-${product.id}">${product.topBid}</p>
+            </div>
+        </div>
+    `
+};
+
+function allItemsByFilters(filters){
+    if(!filters){
+        element = document.getElementById("list-container");
+        element.innerHTML = '';
+        for(let i = 0; i < dataArray.length; i++){
+            newItem(dataArray[i]);
+        }
+    }
+}
+
+function openItem(itemId){
+    
+}
