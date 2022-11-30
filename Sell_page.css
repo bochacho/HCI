@@ -214,7 +214,7 @@ input[type=checkbox].toggle-switch:checked::after {
     cursor: pointer;
   }
 
-  .btn_btn-success_btn-lg:hover {
+  .btn btn-success btn-lg:hover {
     background-color: #04aa6d5d;
   }
 
@@ -222,4 +222,52 @@ input[type=checkbox].toggle-switch:checked::after {
 
   .col-sm-4{
     background-color: rgb(49,49,49);
+  }
+
+  .filter-code{
+    background-color: white;
+    border-radius: 10px;
+  }
+
+  .caret {
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none;
+  }
+  
+  .caret::before {
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+  }
+  
+  .caret-down::before {
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Safari */
+    transform: rotate(90deg);  
+  }
+  
+  .nested {
+    display: none;
+  }
+  .nested label:hover{
+      cursor: pointer;
+  }
+  
+  .checkbox-container {
+      display: block;
+  }
+  
+  .active {
+    display: block;
+    background-color:  white;
+    color: black;
+  }
+  
+  #drop_zone {
+    border: 5px solid blue;
+    height: 25rem;
+
   }
