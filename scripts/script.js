@@ -34,7 +34,7 @@ function newBid() {
         console.log(price);
         console.log(topBid);
 
-        if(parseFloat(topBid) > parseFloat(price)) {
+        if(parseFloat(topBid) > parseFloat(price)/1.2) {
             console.log("newBid > price");
             price = (120 * topBid / 100).toFixed(2);
         }

@@ -514,24 +514,28 @@ function allItemsByFilters(filters){
     element.innerHTML = '';
     if(!filters || filters.length == 0){
         for(let i = 0; i < dataArray.length; i++){
-            newItem(dataArray[i]);
+            if((dataArray[i].name).toLowerCase().includes(document.getElementById("SearchBar").value.toLowerCase())){
+                newItem(dataArray[i]);
+            }
         }
     }
     else {
         for(let i = 0; i < dataArray.length; i++){
-            if(filters.includes(dataArray[i].subCategory)){
-                if (dataArray[i].subCategory === "Other" & filters.includes(dataArray[i].category)){
-                    newItem(dataArray[i]);
-                }else if(dataArray[i].subCategory !== "Other"){
-                    newItem(dataArray[i]);
+            if((dataArray[i].name).toLowerCase().includes(document.getElementById("SearchBar").value.toLowerCase())){
+                if(filters.includes(dataArray[i].subCategory)){
+                    if (dataArray[i].subCategory === "Other" & filters.includes(dataArray[i].category)){
+                        newItem(dataArray[i]);
+                    }else if(dataArray[i].subCategory !== "Other"){
+                        newItem(dataArray[i]);
+                    }
                 }
+                else if(filters.includes(dataArray[i].category)){
+                    const found = filters.find( filter => types[dataArray[i].category].includes(filter))
+                    if (!found){
+                        newItem(dataArray[i]);
+                    }
+                }  
             }
-            else if(filters.includes(dataArray[i].category)){
-                const found = filters.find( filter => types[dataArray[i].category].includes(filter))
-                if (!found){
-                    newItem(dataArray[i]);
-                }
-            }  
         }
     }
     if(!element.innerHTML){
@@ -663,4 +667,14 @@ function getArray(){
     else{
         dataArray = JSON.parse(sub);
     }
+}
+
+function saveAndSearch(){
+    var searchText = document.getElementById("SearchBar").value;
+    sessionStorage.setItem("searchText", searchText);
+}
+
+function setSearch(){
+    document.getElementById("SearchBar").value = sessionStorage.getItem("searchText");
+    sessionStorage.setItem("searchText", "");
 }
