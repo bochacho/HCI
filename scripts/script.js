@@ -12,12 +12,17 @@ function newBid() {
         value = parseFloat(value).toFixed(2);
     
         // assign value to current bid
-        document.getElementById("currentBid").innerHTML = "$" + value;
 
         // compare to highest bid
         var topBid = document.getElementById("topBid").innerHTML;
         topBid = parseFloat(topBid.replace("$", "")).toFixed(2);
 
+        if(value < topBid){
+            window.alert("Bidding amount should be greater than the topBid!!!")
+            return;
+        } 
+
+        document.getElementById("currentBid").innerHTML = "$" + value;
         if(parseFloat(value) > parseFloat(topBid)){
             console.log("value > topBid");
             topBid = value;

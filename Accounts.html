@@ -87,7 +87,10 @@ body{
                 <a href="BidWatch.html" style="white-space: nowrap;">Bid Watch</a>
                 <a class = "active" href="Accounts.html">Account</a>
             </div>
-            <input type="text" placeholder="Search">
+            <form onsubmit="saveAndSearch()" action = "Browse.html" style = "margin-right:3%;">
+                <input type="text" id = "SearchBar" placeholder="Search">
+                <input type="submit" hidden>
+            </form>
         </nav>
     </div>
     <img src="Images/UnderConstruction.jpeg" class="const">
