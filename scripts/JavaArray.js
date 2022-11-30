@@ -645,10 +645,10 @@ function fillBidWatch(){
                 </div>
                     <div style = "display:flex; flex-direction: column; margin-top: 1em;">
                         <p class="currentBids_timeandprice">Time Left: </p>
-                        <p class="currentBids_timeandprice">${dataArray[i].time}</p>
+                        <p class="currentBids_timeandprice"><b>${dataArray[i].time}</b></p>
                     </div>
 
-                <p class="currentBids_price"  style = "margin-top: 1em;">My bid: <br> $${dataArray[i].yourBid}</p>
+                <p class="currentBids_price"  style = "margin-top: 0.85em;">My bid: <br> <b>$${dataArray[i].yourBid}</b></p>
             </div>
             `
         }
