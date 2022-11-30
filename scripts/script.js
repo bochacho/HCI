@@ -46,7 +46,6 @@ function newBid() {
         // get product id
         var id = document.getElementById("productId").innerHTML;
         setCurrentBid(id, price, topBid, value);
-
     }
     else{
         window.alert("Enter numeric values only")

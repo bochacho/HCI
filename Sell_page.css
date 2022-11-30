@@ -152,33 +152,71 @@ input[type=checkbox].toggle-switch:checked::after {
     outline: none;
   }
   
-  /* On mouse-over */
+  
   .dropdown a:hover, .dropdown-btn:hover {
     color: #cfcaca;
   }
   
   
   
-  /* Add an active class to the active dropdown button */
+  
   .active {
     background-color: rgb(23,172,109);
     color: white;
   }
   
-  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  
   .dropdown-container {
     display: none;
     background-color: #262626;
     padding-left: 8px;
   }
   
-  /* Optional: Style the caret down icon */
+  
   .fa-caret-down {
     float: right;
     padding-right: 8px;
   }
 
 
+/* CSS for Buttons  */
+  .button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 9px;
+  }
+  
+  .button:hover {background-color: #04aa6d5d}
+  
+
+
+  /*
+  ---------------------
+  */
+  .button1 {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .btn_btn-success_btn-lg:hover {
+    background-color: #04aa6d5d;
+  }
 
   /* Colour Coding the form list */
 

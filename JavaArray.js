@@ -9,7 +9,7 @@ var dataArray = [
         id: 1, 
         category: "Apparel",
         subCategory: "Shoes",
-        yourBid: 20
+        yourBid: 0
     },
     {
         name:"2023 Hyundai Sonata",
@@ -20,7 +20,7 @@ var dataArray = [
         time: "5 days", 
         id: 2,
         category: "Vehicles",
-        subCategory: "Sedan",
+        subCategory: "Cars",
         yourBid: 0
     },
     {
@@ -411,87 +411,41 @@ function rightScrollVideo() {
     right.scrollBy(930, 0);
 }
 
-function makeProduct(id, image, name, time, topBid, buy, idScroll){
+function makeProduct(image, name, time, topBid, buy, idScroll){
     var element = document.getElementById(idScroll);
 
     element.innerHTML += `
-    <div class="product" onclick = "openItem('${id}')">
-        <a>
-            <img class="product-img" id = "productImageSrc" src=${image} alt="image"/>
+    <div class="product">
+        <a href= "Browse.html">
+            <img class="product-img" src=${image} alt="image"/>
             <div class="product-text">
-                <b id = "productName">${name}<br></b>
-                <text>Time Left:${time}</text>
-                <text>Top Bid: $${topBid}</text>
+                <b>${name}<br></b>
+                <text>Time Left: ${time}<br></text>
+                <text>Top Bid: $${topBid}<br></text>
                 <text>Buy Now: $${buy}</text>
             </div>
-            <div class = "productId" id = "productId" style = "visibility: hidden">${id}</div>
         </a>
     </div>
     `    
 }
 
-const types = {
-    "Apparel": ["Shirts", "Pants", "Shoes", "Jackets", "Other"],
-    "Trading Cards": ["Pokemon", "Yu-gi-oh", "Magic the Gathering", "Chaotic", "Other"],
-    "Video Games": ["Racing", "Shooting", "Multiplayer", "RPG", "Open World", "Puzzle", "Other"],
-    "Electronics": ["Laptops", "Cell Phones", "Headphones", "Consoles", "TVs", "Speakers", "Other"],
-    "Vehicles": ["Sedan", "Sports Cars", "Hatchback", "SUV", "Motorbike", "Other"]
-}
-
 function addAllProducts(){
     for(let i = 0; i < dataArray.length; i++){
-        makeProduct(dataArray[i].id, dataArray[i].imgSrc,dataArray[i].name,dataArray[i].time,dataArray[i].topBid,dataArray[i].buyNow,dataArray[i].category)
-    }
-}
-function createFilters(){
-    var element = document.getElementById("filter-code");
-
-    for( var temp in types){
-        element.innerHTML +=`
-        <div>
-            <span 
-                class="caret" 
-                id="span-${temp}" 
-                onclick="spanOpener('span-${temp}', 'input-${temp}', 'parent-${temp}')"
-            >
-            <label for="input-${temp}">
-                <input 
-                    type="checkbox" 
-                    name="dropdown-group" 
-                    value="${temp}" 
-                    id="input-${temp}"
-                >
-                    ${temp}
-            </label
-            </span>
-            <ul class="nested" id="parent-${temp}">
-            </ul>
-        </div>
-        `
+        makeProduct(dataArray[i].imgSrc,dataArray[i].name,dataArray[i].time,dataArray[i].topBid,dataArray[i].buyNow,dataArray[i].category)
     }
 }
 
-function createSubFilters(){
-    for( var temp in types){
-        var element = document.getElementById(`parent-${temp}`);
-        for (var vals of types[temp]){
-            element.innerHTML+= `
-            <div class="checkbox-container"><input type="checkbox" id="input-${temp}-${vals}" name="dropdown-group" value=${vals}><label for="input-${temp}-${vals}">${vals}</label></div>
-            `
-        }
-    }
-}
 
 var selectedItem = 0;
 function newItem(product){
     var element = document.getElementById("list-container");
 
     element.innerHTML += `
-        <div id="list-card-container-${product.id}" class="listCard" onclick = "openItem('${product.id}')">
+        <div id="list-card-container-${product.id}" onclick="()=> openItem(${product.id})" class="listCard">
             <img id="list-card-image-${product.id}" src=${product.imgSrc} class="listCardImage"/>
             <div class="listCardMiddle" id="list-card-middle-${product.id}">
-                <h2 class="listCardMiddleTitle" id="list-card-middle-title-${product.id}">${product.name}</h2>
-                <p class="listCardMiddleText" id="list-card-middle-description-${product.id}">${product.description}</p>
+                <h2 id="list-card-middle-title-${product.id}">${product.name}</h2>
+                <p id="list-card-middle-description-${product.id}">${product.description}</p>
             </div>
             <div class="listCardSection" id="list-card-times-${product.id}">
                 <p id="list-card-times-title-${product.id}" style="white-space: nowrap;">Time Left:</p>
@@ -499,122 +453,24 @@ function newItem(product){
             </div>
             <div class="listCardSection" id="list-card-buy-${product.id}">
                 <p style="white-space: nowrap;" id="list-card-buy-text-${product.id}">Buy Now Price:</p>
-                <p class="listCardPricesText" id="list-card-buy-price-${product.id}">$${product.buyNow}</p>
+                <p class="listCardPricesText" id="list-card-buy-price-${product.id}">${product.buyNow}</p>
             </div>
             <div class="listCardSection" id="list-card-bid-${product.id}">
                 <p style="white-space: nowrap;" id="list-card-bid-text-${product.id}">Top Bid:</p>
-                <p class="listCardPricesText" id="list-card-bid-price-${product.id}">$${product.topBid}</p>
+                <p class="listCardPricesText" id="list-card-bid-price-${product.id}">${product.topBid}</p>
             </div>
         </div>
     `
 };
 
 function allItemsByFilters(filters){
-    element = document.getElementById("list-container");
-    element.innerHTML = '';
-    if(!filters || filters.length == 0){
+    if(!filters){
+        element = document.getElementById("list-container");
+        element.innerHTML = '';
         for(let i = 0; i < dataArray.length; i++){
             newItem(dataArray[i]);
         }
     }
-    else {
-        for(let i = 0; i < dataArray.length; i++){
-            if(filters.includes(dataArray[i].subCategory)){
-                if (dataArray[i].subCategory === "Other" & filters.includes(dataArray[i].category)){
-                    newItem(dataArray[i]);
-                }else if(dataArray[i].subCategory !== "Other"){
-                    newItem(dataArray[i]);
-                }
-            }
-            else if(filters.includes(dataArray[i].category)){
-                const found = filters.find( filter => types[dataArray[i].category].includes(filter))
-                if (!found){
-                    newItem(dataArray[i]);
-                }
-            }  
-        }
-    }
-    if(!element.innerHTML){
-        element.innerHTML = `
-            <img src="Images/muchEmpty.jpeg" class="muchEmpty"/>
-        `
-    }
-}
-
-function spanOpener(spanId, inputId, childId){
-    var toggler = document.getElementById(spanId);
-    var check = document.getElementById(inputId);
-    if(check.checked){
-        toggler.parentElement.querySelector(".nested").classList.add("active")
-        toggler.classList.add("caret-down", true);
-    }else{
-        toggler.parentElement.querySelector(".nested").classList.remove("active")
-        toggler.classList.remove("caret-down");
-        var parent = document.getElementById(childId)
-        var toChangeInputs = parent.getElementsByTagName('input');
-        for(var i = 0; i < toChangeInputs.length; i++){
-            toChangeInputs[i].checked = false;
-        }
-    }
-}
-function handleSubmit(){
-    var markedCheckbox = document.getElementsByName('dropdown-group');
-    var filters = []
-    for (var checkbox of markedCheckbox) {
-        if (checkbox.checked){
-            filters.push(checkbox.value);  
-        }
-    }  
-    allItemsByFilters(filters);
-}
-function handleClear(){
-    allItemsByFilters();
-}
-
-function openItem(itemId){
-    var i = -1;
-    var flag = 0
-    while (i < dataArray.length && flag == 0) {
-        i++;
-
-        if (dataArray[i].id == itemId) {
-            flag = 1
-        }
-    }
-    sessionStorage.setItem("productId", dataArray[i].id);
-    sessionStorage.setItem("productName", dataArray[i].name);
-    sessionStorage.setItem("productImageSrc", dataArray[i].imgSrc);
-    sessionStorage.setItem("productPrice", dataArray[i].buyNow);
-    sessionStorage.setItem("productTopBid", dataArray[i].topBid);
-    sessionStorage.setItem("productDetails", dataArray[i].description);
-    sessionStorage.setItem("productCurrentBid", dataArray[i].yourBid);
-    window.open("product_details.html");
-}
-
-function setCurrentBid(itemId, newPrice, newTopBid, newBid){
-    var i = -1;
-    var flag = 0
-    while (i < dataArray.length && flag == 0) {
-        i++;
-
-        if (dataArray[i].id == itemId) {
-            flag = 1
-            console.log("bid:" + newBid);
-            console.log("new price:" + newPrice);
-            console.log("top bid:" + newTopBid);
-            
-        }
-    }
-
-    dataArray[i].yourBid = newBid;
-    dataArray[i].buyNow = newPrice;
-    dataArray[i].topBid = newTopBid;
-    sessionStorage.setItem("dataArray", JSON.stringify(yourArray));
-    console.log("db bid:" + dataArray[i].yourBid);
-    console.log("db price:" + dataArray[i].buyNow);
-    console.log("db topbid:" + dataArray[i].topBid);
-
-    console.log("db bid:" + dataArray[i].yourBid);
 }
 
 function fillBidWatch(){
@@ -622,10 +478,10 @@ function fillBidWatch(){
     var winning = 0;
 
     for(let i = 0; i < dataArray.length; i++){
-        if(dataArray[i].yourBid > 0){
+        if(dataArray[i].yourBid > 0 == dataArray[i].topBid){
             winning++;
             element.innerHTML += `
-            <div class="listCard"  onclick = "openItem('${dataArray[i].id}')">
+            <div class="listCard">
 
                 <img class="listCardImage" src=${dataArray[i].imgSrc}>
 
@@ -648,12 +504,10 @@ function fillBidWatch(){
     element.innerHTML = `You are currently winning on&nbsp<b>${winning}</b>&nbspbids and losing on&nbsp<b>0</b>&nbspbids`
 }
 
+function storeArray(){
+    sessionStorage.setItem('myItem', JSON.stringify(dataArray));
+}
+
 function getArray(){
-    var sub = sessionStorage.getItem("dataArray");
-    if(sub == null){
-        sessionStorage.setItem("dataArray", JSON.stringify(yourArray));
-    }
-    else{
-        dataArray = JSON.parse(sub);
-    }
+    dataArray = JSON.parse(sessionStorage.getItem('myItem'));
 }
