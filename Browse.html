@@ -98,7 +98,6 @@ body{
 .filterContainer{
     float: right;
     margin-top: 7rem;
-    position: static;
     scroll-behavior:smooth;
 }
 .filterContainer div{
@@ -108,8 +107,8 @@ body{
 .filterContainer button{
     border-radius: 0.5em;
     font-size: 1.2em;
-    padding-left: 2%;
-    padding-right: 2%;
+    padding-left: 6%;
+    padding-right: 6%;
     background:#04AA6D;
     color:white;
     border-style:none;
@@ -117,7 +116,12 @@ body{
 }
 
 .filterItemsContainer{
-    display: block;
+    height: 500px;
+    width:20vw;
+    overflow: scroll;
+    position: fixed;
+    overflow-x: hidden;
+    margin-left:-5%;
 }
 .caret {
   cursor: pointer;
@@ -235,20 +239,23 @@ body{
     </div>
     <div class="mainContainer">
         <div class="filterContainer">
-            <div class="filterItemsContainer">
-                <h3>Filters</h3>
-                <form id="filter-form" >
+            <form id="filter-form" >
+                <div class="filterItemsContainer">
+                    <h3>Filters</h3>
                     <div id="filter-code">
                         <script>{
                             createFilters();
                             createSubFilters();
                         }</script>
                     </div>
+                </div>
+                <div style="position:fixed; display:flex;margin-top:70vh; gap:10px; margin-left:-5%;">
                     <button  type="reset" onclick="handleClear()">Clear</button>
                     <button type="button" onclick="handleSubmit()" >Apply</button>
-                </form>
-            </div>
+                </div>
+            </form>
         </div>
+
         <div class="itemsContainer">
             <!--Items Container-->
             <container class="listContainer" id="list-container">
