@@ -478,7 +478,7 @@ function fillBidWatch(){
     var winning = 0;
 
     for(let i = 0; i < dataArray.length; i++){
-        if(dataArray[i].yourBid > 0){
+        if(dataArray[i].yourBid > 0 == dataArray[i].topBid){
             winning++;
             element.innerHTML += `
             <div class="listCard">
@@ -502,4 +502,18 @@ function fillBidWatch(){
     element = document.getElementById("WinLose");
 
     element.innerHTML = `You are currently winning on&nbsp<b>${winning}</b>&nbspbids and losing on&nbsp<b>0</b>&nbspbids`
+}
+
+function storeArray(){
+    dataArray[1].yourBid = 20;
+    sessionStorage.setItem('myItem', JSON.stringify(dataArray));
+
+    var val = JSON.parse(sessionStorage.getItem('myItem'));
+
+    console.log(val);
+}
+
+function getArray(){
+    dataArray = JSON.parse(sessionStorage.getItem('myItem'));
+    console.log(dataArray);
 }
