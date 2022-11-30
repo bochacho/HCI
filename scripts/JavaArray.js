@@ -9,7 +9,7 @@ var dataArray = [
         id: 1, 
         category: "Apparel",
         subCategory: "Shoes",
-        yourBid: 20
+        yourBid: 0
     },
     {
         name:"2023 Hyundai Sonata",
@@ -606,10 +606,17 @@ function setCurrentBid(itemId, newPrice, newTopBid, newBid){
         }
     }
 
-    dataArray[i].yourBid = newBid;
-    dataArray[i].buyNow = newPrice;
-    dataArray[i].topBid = newTopBid;
-    sessionStorage.setItem("dataArray", JSON.stringify(yourArray));
+    dataArray[i].yourBid = parseFloat(newBid).toFixed(2);
+    dataArray[i].buyNow = parseFloat(newPrice).toFixed(2);
+    dataArray[i].topBid = parseFloat(newTopBid).toFixed(2);
+    sessionStorage.setItem("productId", dataArray[i].id);
+    sessionStorage.setItem("productName", dataArray[i].name);
+    sessionStorage.setItem("productImageSrc", dataArray[i].imgSrc);
+    sessionStorage.setItem("productPrice", dataArray[i].buyNow);
+    sessionStorage.setItem("productTopBid", dataArray[i].topBid);
+    sessionStorage.setItem("productDetails", dataArray[i].description);
+    sessionStorage.setItem("productCurrentBid", dataArray[i].yourBid);
+    sessionStorage.setItem("dataArray", JSON.stringify(dataArray));
     console.log("db bid:" + dataArray[i].yourBid);
     console.log("db price:" + dataArray[i].buyNow);
     console.log("db topbid:" + dataArray[i].topBid);
@@ -622,7 +629,7 @@ function fillBidWatch(){
     var winning = 0;
 
     for(let i = 0; i < dataArray.length; i++){
-        if(dataArray[i].yourBid > 0){
+        if(parseFloat(dataArray[i].yourBid).toFixed(2) > 0){
             winning++;
             element.innerHTML += `
             <div class="listCard"  onclick = "openItem('${dataArray[i].id}')">
@@ -651,7 +658,7 @@ function fillBidWatch(){
 function getArray(){
     var sub = sessionStorage.getItem("dataArray");
     if(sub == null){
-        sessionStorage.setItem("dataArray", JSON.stringify(yourArray));
+        sessionStorage.setItem("dataArray", JSON.stringify(dataArray));
     }
     else{
         dataArray = JSON.parse(sub);
