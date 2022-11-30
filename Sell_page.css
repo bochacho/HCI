@@ -2,6 +2,7 @@
 
 body{
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif !important;
 }
 
 .topnav{
@@ -11,6 +12,7 @@ body{
     height: 3.9em;
     justify-content: space-between;
     width: 100%;
+    position: fixed;
  }
  .topnav div{
     display: flex;
@@ -27,7 +29,6 @@ body{
  .topnav a:hover{
     color:silver;
     cursor: pointer;
-    text-decoration: underline;
  }
 
  .topnav a.activeNav {
