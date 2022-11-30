@@ -36,14 +36,15 @@
         <div class = "container">
             <div class = "row">
                 <div class = "col-sm-8" >
-                    <div class = "row mx-auto" style= "padding-left: 15%; padding-right: 25%; padding-top: 5%;" >
-                        <img src="https://cdn1.iconfinder.com/data/icons/material-design-icons-light/24/plus-box-512.png">
+                    <div class = "row mx-auto" style= "padding-left: 15%; padding-right: 25%; padding-top: 5%;" title="drag and drop your image here">
+                        <text style="display: flex; justify-content:center; margin-left: auto; margin-right:auto;">Drag and drop your image</text>
+                        <img id="to-change" ondrop="dropHandler(event, id)" ondragover="dragOverHandler(event);" src="https://cdn1.iconfinder.com/data/icons/material-design-icons-light/24/plus-box-512.png">
                     </div>
-                    <div class = "row" style= "padding-left: 24%; padding-right: 33%; " >
-                        <button class = "btn btn-success btn-lg" type = "button" name = "productImage">Add Image</button>
-                    </div>
+                    <!-- <div class = "row" style= "padding-left: 24%; padding-right: 33%; " >
+                        <button  class = "btn btn-success btn-lg" type = "button" name = "productImage">Add Image</button>
+                    </div> -->
                     <div class = "row" style = "padding-top: 10%; padding-right: 20px;">
-                        <textarea name = "Product Description" placeholder="Product Description" style="height:150px;font-size:14pt;" maxlength="60"></textarea>
+                        <textarea required name = "Product Description" placeholder="Product Description" style="height:150px;font-size:14pt;" maxlength="60"></textarea>
                     </div>
                 </div>
 
@@ -53,7 +54,7 @@
                     <div>
 
                         <div class = "row" style = "padding-bottom: 10px; margin-left: auto; margin-right: auto; ">
-                            <input type = "text" name = "prodName" placeholder="Enter Product Name" style = "border-radius: 20px; text-indent: 2ch;">
+                            <input required type = "text" name = "prodName" placeholder="Enter Product Name" style = "border-radius: 20px; text-indent: 2ch;">
                         </div>
 
                         <div class = "row space_down">
@@ -68,7 +69,7 @@
                             </div> 
                             
                             <div class = "row" style=" margin-left: auto; margin-right: auto;">
-                                <input type = "number" name = "sellingPrice" placeholder="Price in $" style = "border-radius: 20px; text-indent: 2ch;">
+                                <input required type = "number" name = "sellingPrice" placeholder="Price in $" style = "border-radius: 20px; text-indent: 2ch;">
                             </div>
                             <br>
                         </div>
@@ -103,9 +104,9 @@
                             </div>
 
                             <B class = "row" style=" margin-left: auto; margin-right: auto;">
-                                <input type = "number" id = "MinID" name = "startingBid" placeholder="Price in $" style = "border-radius: 20px; text-indent: 2ch;">
+                                <input required type = "number" id = "MinID" name = "startingBid" placeholder="Price in $" style = "border-radius: 20px; text-indent: 2ch;">
                             </B>
-                        </div> -->
+                        </div> 
                         <div class = "row space_down" style = "padding-bottom: 10px;  color: white;">
                         <div class = "col" style="color : white; margin-left: auto; margin-right: auto;">
                             <h3 style = "color:white;"> Category: </h3> 
@@ -116,10 +117,9 @@
                             </span>
                         </div>
                         </div> 
-                        <div class = row style = "padding-bottom: 10px;  margin-left: auto;">
-                            <br>
+                        <div id= "filter-code" class = "row filter-code" style = "padding-bottom: 10px;  margin-left: auto; margin-right: auto;">
 
-                            <div class="dropdown">
+                            <!-- <div class="dropdown">
                                 <button class="dropdown-btn" type="button"> <b> Apparel </b>
                                   <i class="fa fa-caret-down"></i>
                                 </button>
@@ -163,8 +163,8 @@
                                     <button id = '22' onclick = "collapse(id)" type="button" name = "highlightButton"> TVs </button>
                                     <button id = '23' onclick = "collapse(id)" type="button" name = "highlightButton"> Speakers </button>
                                     <button id = '24' onclick = "collapse(id)" type="button" name = "highlightButton"> Other  </button>
-                                </div>
-                                <button class="dropdown-btn" type="button"> <b>Vehicles</b>
+                                </div> -->
+                                <!-- <button class="dropdown-btn" type="button"> <b>Vehicles</b>
                                     <i class="fa fa-caret-down"></i>
                                 </button>
                                 <div class="dropdown-container">
@@ -175,8 +175,75 @@
                                     <button id = '29' onclick = "collapse(id)" type="button" name = "highlightButton"> Motorbikes </button>
                                     <button id = '30' onclick = "collapse(id)" type="button" name = "highlightButton"> Other </button>
                                     
-                                </div>
-                              </div>
+                                </div> -->
+                                <script>{
+                                    const types = {
+                                        "Apparel": ["Shirts", "Pants", "Shoes", "Jackets", "Other"],
+                                        "Trading Cards": ["Pokemon", "Yu-gi-oh", "Magic the Gathering", "Chaotic", "Other"],
+                                        "Video Games": ["Racing", "Shooting", "Multiplayer", "RPG", "Open World", "Puzzle", "Other"],
+                                        "Electronics": ["Laptops", "Cell Phones", "Headphones", "Consoles", "TVs", "Speakers", "Other"],
+                                        "Vehicles": ["Sedan", "Sports Cars", "Hatchback", "SUV", "Motorbike", "Other"]
+                                    }
+
+                                    function createFilters(){
+                                        var element = document.getElementById("filter-code");
+
+                                        for( var temp in types){
+                                            element.innerHTML +=`
+                                            <div>
+                                                <span 
+                                                    class="caret" 
+                                                    id="span-${temp}" 
+                                                    onclick="spanOpener('span-${temp}', 'input-${temp}', 'parent-${temp}')"
+                                                >
+                                                <label for="input-${temp}">
+                                                    <input 
+                                                        type="checkbox" 
+                                                        name="dropdown-group" 
+                                                        value="${temp}" 
+                                                        id="input-${temp}"
+                                                    >
+                                                        ${temp}
+                                                </label
+                                                </span>
+                                                <ul class="nested" id="parent-${temp}">
+                                                </ul>
+                                            </div>
+                                            `
+                                        }
+                                    }
+
+                                    function createSubFilters(){
+                                        for( var temp in types){
+                                            var element = document.getElementById(`parent-${temp}`);
+                                            for (var vals of types[temp]){
+                                                element.innerHTML+= `
+                                                <div class="checkbox-container"><input type="checkbox" id="input-${temp}-${vals}" name="dropdown-group" value=${vals}><label for="input-${temp}-${vals}">${vals}</label></div>
+                                                `
+                                            }
+                                        }
+                                    }
+                                    function spanOpener(spanId, inputId, childId){
+                                        var toggler = document.getElementById(spanId);
+                                        var check = document.getElementById(inputId);
+                                        if(check.checked){
+                                            toggler.parentElement.querySelector(".nested").classList.add("active")
+                                            toggler.classList.add("caret-down", true);
+                                        }else{
+                                            toggler.parentElement.querySelector(".nested").classList.remove("active")
+                                            toggler.classList.remove("caret-down");
+                                            var parent = document.getElementById(childId)
+                                            var toChangeInputs = parent.getElementsByTagName('input');
+                                            for(var i = 0; i < toChangeInputs.length; i++){
+                                                toChangeInputs[i].checked = false;
+                                            }
+                                        }
+                                    }
+
+
+                                    createFilters();
+                                    createSubFilters();
+                                }</script>
 
                         </div>
                         <div class="row" style = "padding-bottom: 150px;" ></div>
@@ -196,8 +263,23 @@
         <!-- Script for the dropdown functioning -->
         <script>
             /* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
-            
-            
+
+            function dropHandler(ev, imgId) {
+                console.log('File(s) dropped');
+
+                // Prevent default behavior (Prevent file from being opened)
+                ev.preventDefault();
+                var uploadFile =  ev.dataTransfer.files[0];
+                const element = document.getElementById(imgId)
+                element.src = window.URL.createObjectURL(uploadFile);
+            }
+            function dragOverHandler(ev) {
+                console.log('File(s) in drop zone');
+
+                // Prevent default behavior (Prevent file from being opened)
+                ev.preventDefault();
+            }
+                            
                 var dropdown = document.getElementsByClassName("dropdown-btn");
                 var i;
 
@@ -259,6 +341,7 @@
                 }
             }
 
+    
             function EnableDisableTextbox(chk)
             {
                 var txtDisable = document.getElementById("MinID");
@@ -279,6 +362,7 @@
                 e.preventDefault();
                 const fd = new FormData(form);
                 const obj = Object.fromEntries(fd);
+
                 console.log(obj);
             })
 
