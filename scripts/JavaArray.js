@@ -646,3 +646,10 @@ function fillBidWatch(){
 
     element.innerHTML = `You are currently winning on&nbsp<b>${winning}</b>&nbspbids and losing on&nbsp<b>0</b>&nbspbids`
 }
+
+function getArray(){
+    var sub = sessionStorage.getItem("dataArray");
+    if(sub == null){
+        sessionStorage.setItem("dataArray", JSON.stringify(yourArray));
+    }
+}
