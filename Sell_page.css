@@ -29,7 +29,8 @@ body{
     color:silver;
     cursor: pointer;
  }
- .topnav a.active {
+
+ .topnav a.activeNav {
     color: #04AA6D;
  }
   

@@ -15,6 +15,10 @@ body{
 .topnav{
     overflow: hidden;
     background-color: #333;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .topnav a{
@@ -44,72 +48,188 @@ body{
     margin-top: 20px;
     margin-right: 40px;
     font-size: 17px;
+    height: 18px;
 }
 
 .categories{
     overflow: hidden;
 }
 
-.categories h1.category{
-    float: left;
+.categories h1{
     margin-left: 20px;
-    
 }
 
-.categories div.selected{
-    background-color:rgb(101, 101, 101);
+.scroll-images {
+    width: 100%;
+    height: 375px;
     display: flex;
-    padding: 20px;
-}
-.categories .selected img{
-    float: left;
-    margin-left: 20px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    scroll-behavior: smooth;
 }
 
-.categories .selected b{
-    margin-left: 20px;
+.product {
+    width: 300px;
+    height: 300px;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px; 
+    overflow: visible;
     color: white;
-    font-size: 30px;
 }
 
-.categories .selected description{
-    margin-left: 20px;
-    color: white;
-    font-size: 17px;
+.product b{
+    font-size: 20px;
+}
+
+.product a{
+
+}
+
+.product-img{
+    background-color:#ddd;
+}
+
+.cover {
+    padding: 0px 30px;
+    position: relative;
+    background-color:rgb(49, 49, 49);
+}
+
+.left {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.right {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%) rotateY(180deg);
 }
 </style>
 
+<script>
+    function leftScroll() {
+      const left = document.querySelector(".scroll-images");
+      left.scrollBy(-930, 0);
+    }
+    function rightScroll() {
+      const right = document.querySelector(".scroll-images");
+      right.scrollBy(930, 0);
+    }
+</script>
+
 <body>
     <nav class="topnav">
-        <a class = "active" href="#Index"><img src = "Images/Logo_green.png" height = 51px width = 51px></a>
-        <a href="#Browse">Browse</a>
-        <a href="#Sell">Sell</a>
-        <a href="#Bid Watch">Bid Watch</a>
-        <a href="#Account">Account</a>
+        <a class = "active" href="Index.html"><img src = "Images/Logo_green.png" height = 51px width = 51px></a>
+        <a href="Browse.html">Browse</a>
+        <a href="Sell_page.html">Sell</a>
+        <a href="Bid_watch.html">Bid Watch</a>
+        <a href="Account.html">Account</a>
         <input type="text" placeholder="Search...">
     </nav>
 
     <items class="categories">
         <h1>Apparel</h1>
-        <div class = selected>
-            <img src = "Images/Logo_white.png" height = 400px width = 400px>
-            <b>Rowlet Plush</b>
-            <description>It's fluffy and I love it and you need it, but you'll have to pay for it</description>
-            <input type = "image">
-        </div>
-
+            <div class="cover">
+                <div class="cover">
+                    <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=60px width= 30px></button>
+                    <div class="scroll-images">
+                        <div class="product">
+                            <a href="product_page.html">
+                                <img class="product-img" src="Images/Logo_green.png" alt="image" height = 80%/>
+                                <b>
+                                    <br>Rowlet Plush<br>Time Left: 10 Hours<br>Top Bid: $100<br>Buy Now: $150<br>
+                                </b>
+                            </a>
+                        </div>
+                        <div class="product">
+                            <a href="product_page.html">
+                                <img class="product-img" src="Images/Logo_green.png" alt="image" height = 80%/>
+                                <b>
+                                    <br>Rowlet Plush<br>Time Left: 10 Hours<br>Top Bid: $100<br>Buy Now: $150<br>
+                                </b>
+                            </a>
+                        </div>
+                        <div class="product">
+                            <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                        </div>
+                        <div class="product">
+                            <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                        </div>
+                        <div class="product">
+                            <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                        </div>
+                        <div class="product">
+                            <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                        </div>
+                        <div class="product">
+                            <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                        </div>
+                        <div class="product">
+                            <img class="product-img" src="Images/Logo_white.png" alt="image" height=100% weight=100%/>
+                        </div>
+                        <div class="product">
+                            <img class="product-img" src="Images/pokemon_rowlet.png" alt="image" height=100% weight=100%/>
+                        </div>
+                        <div class="product">
+                            <a>See more options</a>
+                        </div>
+                    </div>
+                    <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+                </div>
+            </div>
         <h1 class = "category">Electronics</h1>
-        <selected></selected>
-        <row></row>
+        <div class="cover">
+            <div class="cover">
+                <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+                <div class="scroll-images">
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    </div>
+                    
+                </div>
+                <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+            </div>
+        </div>
         <h1 class = "category">Trading Cards</h1>
-        <selected></selected>
-        <row></row>
+        <div class="cover">
+            <div class="cover">
+                <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+                <div class="scroll-images">
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    </div>
+                </div>
+                <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+            </div>
+        </div>
         <h1 class = "category">Vehicles</h1>
-        <selected></selected>
-        <row></row>
+        <div class="cover">
+            <div class="cover">
+                <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+                <div class="scroll-images">
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    </div>
+                </div>
+                <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+            </div>
+        </div>
         <h1 class = "category">Video Games</h1>
-        <selected></selected>
-        <row></row>
+        <div class="cover">
+            <div class="cover">
+                <button class="left" onclick="leftScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+                <div class="scroll-images">
+                    <div class="product">
+                        <img class="product-img" src="Images/Logo_green.png" alt="image" height=100% weight=100%/>
+                    </div>
+                </div>
+                <button class="right" onclick="rightScroll()"><img src = "Images/Left_arrow.png" height=20px width= 10px></button>
+            </div>
+        </div>
     </items>
 </body>
 </html>
