@@ -11,7 +11,6 @@ body{
     height: 3.9em;
     justify-content: space-between;
     width: 100%;
-    position: fixed;
  }
  .topnav div{
     display: flex;
@@ -28,6 +27,7 @@ body{
  .topnav a:hover{
     color:silver;
     cursor: pointer;
+    text-decoration: underline;
  }
 
  .topnav a.activeNav {
@@ -58,21 +58,9 @@ body{
   border-radius: 1em;
   text-indent: 2ch;
  }
- 
- 
-
-
-
-/* .Opaque{
-    opacity: 0.6;
-}
-.Opaque:hover{
-    opacity: 1;
-} */
-
 
 /* CSS for the toggle switch */
-input[type=checkbox].toggle-switch {
+/* input[type=checkbox].toggle-switch {
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -110,13 +98,44 @@ input[type=checkbox].toggle-switch:checked::after {
     
     display: flex;
     flex-direction: column;
+} */
+
+
+/*  The hovering text CSS */
+
+.hovertext {
+  position: relative;
+  border-bottom: 1px dotted white;
+}
+
+.hovertext:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  width: 140px;
+  background-color: white;
+  color: black;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  transition: opacity 1s ease-in-out;
+
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+}
+
+.hovertext:hover:before {
+  opacity: 1;
+  visibility: visible;
 }
 
 
 /* CSS for the CATEGORY DROPDOWN */
 
 .dropdown {
-    background-color: #111;
+    background-color: rgb(255,255,255);
 }
 
 .dropdown a, .dropdown-btn {
@@ -133,36 +152,122 @@ input[type=checkbox].toggle-switch:checked::after {
     outline: none;
   }
   
-  /* On mouse-over */
+  
   .dropdown a:hover, .dropdown-btn:hover {
     color: #cfcaca;
   }
   
   
   
-  /* Add an active class to the active dropdown button */
+  
   .active {
     background-color: rgb(23,172,109);
     color: white;
   }
   
-  /* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+  
   .dropdown-container {
     display: none;
     background-color: #262626;
     padding-left: 8px;
   }
   
-  /* Optional: Style the caret down icon */
+  
   .fa-caret-down {
     float: right;
     padding-right: 8px;
   }
 
 
+/* CSS for Buttons  */
+  .button {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 18px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #04AA6D;
+    border: none;
+    border-radius: 9px;
+  }
+  
+  .button:hover {background-color: #04aa6d5d}
+  
+
+
+  /*
+  ---------------------
+  */
+  .button1 {
+    background-color: #04AA6D; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+
+  .btn btn-success btn-lg:hover {
+    background-color: #04aa6d5d;
+  }
 
   /* Colour Coding the form list */
 
   .col-sm-4{
-    background-color: #64b48990;
+    background-color: rgb(49,49,49);
+  }
+
+  .filter-code{
+    background-color: white;
+    border-radius: 10px;
+  }
+
+  .caret {
+    cursor: pointer;
+    -webkit-user-select: none; /* Safari 3.1+ */
+    -moz-user-select: none; /* Firefox 2+ */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none;
+  }
+  
+  .caret::before {
+    color: black;
+    display: inline-block;
+    margin-right: 6px;
+  }
+  
+  .caret-down::before {
+    -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Safari */
+    transform: rotate(90deg);  
+  }
+  
+  .nested {
+    display: none;
+  }
+  .nested label:hover{
+      cursor: pointer;
+  }
+  
+  .checkbox-container {
+      display: block;
+  }
+  
+  .active {
+    display: block;
+    background-color:  white;
+    color: black;
+  }
+  
+  #drop_zone {
+    border: 5px solid blue;
+    height: 25rem;
+
   }

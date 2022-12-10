@@ -21,6 +21,7 @@ var dataArray = [
         id:2,
         category: 1,
         subCategory: 11,
+        inBidWatch: true,
     }
 ]
 

@@ -9,6 +9,7 @@
         href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" 
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" 
         crossorigin="anonymous"/>
+    <script src = "JavaArray.js"></script>
 </head>
 
 <style>
@@ -88,6 +89,8 @@ body{
   display: grid;
   grid-template-columns: 30% 70%;
   justify-content: flex-start;
+  margin-left: 8%;
+  margin-right: 8%;
 
 }
 .filterContainer{
@@ -108,10 +111,7 @@ body{
 }
 .itemsContainer {
     float: right;
-    margin-top: 7%;
-    margin-right: 5%;
-    overflow-y:auto;
-    overflow-x: hidden;
+    margin-top: 10%;
     position: static;
     scroll-behavior:smooth;
 }
@@ -126,23 +126,23 @@ body{
     transition: 0.3s;
     gap: 30px;
     border-radius: 0.5em;  
-    min-width: 60rem;
-    max-height: 11vw;
 }
 .listCard:hover{
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    cursor: pointer;
 }
 .listCardImage {
     width: 100%;
+    height: 11vw;
     border-radius: 0.5em;
     margin: 2%;
-    max-height: 10vw;
+    align-items: center;
+    justify-content: center;
     object-fit:contain;
 }
 .listCardMiddle {
     width: 100%;
     margin-top: 1em;
-    flex-direction: row;
     overflow-y: scroll;
 }
 .listCardSection {
@@ -162,12 +162,12 @@ body{
 <body>
     <div class="topNavDiv" >
         <nav class="topnav">
-            <a href="#home" class="topnavLogo"><img src = "Images/Logo_green.png" height = 50px width = 50px></a>
+            <a href= Index.html class="topnavLogo"><img src = "Images/Logo_green.png" height = 50px width = 50px></a>
             <div>
-                <a class = "active" href="#Browse">Browse</a>
-                <a href="#Sell">Sell</a>
-                <a href="#Bid Watch" style="white-space: nowrap;">Bid Watch</a>
-                <a href="#Account">Account</a>
+                <a class = "active" href="Browse.html">Browse</a>
+                <a href="Sell_page.html">Sell</a>
+                <a href="BidWatch.html" style="white-space: nowrap;">Bid Watch</a>
+                <a href="Accounts.html">Account</a>
             </div>
             <input type="text" placeholder="Search">
         </nav>
@@ -185,29 +185,11 @@ body{
             <!--Items Container-->
             <container class="listContainer" id="list-container">
                 <!--ListCard Item-1-->
-                <div id="list-card-container" class="listCard">
-                    <img id="list-card-image" src="Images/Jordan1.jpg" class="listCardImage"/>
-                    <div class="listCardMiddle" id="list-card-middle">
-                        <h2 id="list-card-middle-title">Air Jordan 1</h2>
-                        <p id="list-card-middle-description">This is a pair of blue jordans</p>
-                    </div>
-                    <div class="listCardSection" id="list-card-times">
-                        <p id="list-card-times-title" style="white-space: nowrap;">End Time:</p>
-                        <p class="listCardPricesText" id="list-card-times-date">8:13 PM 12/25/2022</p>
-                    </div>
-                    <div class="listCardSection" id="list-card-buy">
-                        <p style="white-space: nowrap;" id="list-card-buy-text">Buy Now Price:</p>
-                        <p class="listCardPricesText" id="list-card-buy-price">$250</p>
-                    </div>
-                    <div class="listCardSection" id="list-card-bid">
-                        <p style="white-space: nowrap;" id="list-card-bid-text">Top Bid:</p>
-                        <p class="listCardPricesText" id="list-card-bid-price">$250</p>
-                    </div>
-                </div>
             </container>
         </div>
     </div>
+    <script>allItemsByFilters()
+    getArray()</script>
 
-    <script src="scripts/browse.js"></script>
 </body>
 </html>
