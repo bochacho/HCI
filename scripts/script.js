@@ -8,6 +8,7 @@ function newBid() {
             window.alert("Bidding amount should be greater than 0!!!")
             return;
         }
+        
         console.log(value);
         value = parseFloat(value).toFixed(2);
     
@@ -17,10 +18,10 @@ function newBid() {
         var topBid = document.getElementById("topBid").innerHTML;
         topBid = parseFloat(topBid.replace("$", "")).toFixed(2);
 
-        if(value < topBid){
+        if(parseFloat(value) < parseFloat(topBid)){
             window.alert("Bidding amount should be greater than the topBid!!!")
             return;
-        } 
+        }
 
         document.getElementById("currentBid").innerHTML = "$" + value;
         if(parseFloat(value) > parseFloat(topBid)){
